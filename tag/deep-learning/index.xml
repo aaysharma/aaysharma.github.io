@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep-Learning | Academic</title>
-    <link>https://example.com/tag/deep-learning/</link>
-      <atom:link href="https://example.com/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <title>Deep-Learning | Amatya</title>
+    <link>https://aaysharma.github.io/tag/deep-learning/</link>
+      <atom:link href="https://aaysharma.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep-Learning</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Apr 2021 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <url>https://aaysharma.github.io/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
       <title>Deep-Learning</title>
-      <link>https://example.com/tag/deep-learning/</link>
+      <link>https://aaysharma.github.io/tag/deep-learning/</link>
     </image>
     
     <item>
       <title>Mitigating Dataset Imbalance via Joint Generation &amp; Classification</title>
-      <link>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</link>
+      <link>https://aaysharma.github.io/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</link>
       <pubDate>Thu, 15 Apr 2021 13:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</guid>
+      <guid>https://aaysharma.github.io/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</guid>
       <description>
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/RCDfGywknZs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;

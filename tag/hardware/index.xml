@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hardware | Academic</title>
-    <link>https://example.com/tag/hardware/</link>
-      <atom:link href="https://example.com/tag/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <title>Hardware | Amatya</title>
+    <link>https://aaysharma.github.io/tag/hardware/</link>
+      <atom:link href="https://aaysharma.github.io/tag/hardware/index.xml" rel="self" type="application/rss+xml" />
     <description>Hardware</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Nov 2019 08:16:43 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <url>https://aaysharma.github.io/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
       <title>Hardware</title>
-      <link>https://example.com/tag/hardware/</link>
+      <link>https://aaysharma.github.io/tag/hardware/</link>
     </image>
     
     <item>
       <title>TinyC Compiler</title>
-      <link>https://example.com/project/tiny-c/</link>
+      <link>https://aaysharma.github.io/project/tiny-c/</link>
       <pubDate>Fri, 08 Nov 2019 08:16:43 +0000</pubDate>
-      <guid>https://example.com/project/tiny-c/</guid>
+      <guid>https://aaysharma.github.io/project/tiny-c/</guid>
       <description>&lt;!--StartFragment--&gt;
 &lt;p&gt;&lt;em&gt;Compilers Course Project&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Implemented a Compiler for language TinyC, a subset of C with a reduced subset of functionalities with a parser and lexer with output as non-optimized machine-level assembly language instructions using Yacc, BISON, FLEX, C, C++.&lt;/p&gt;

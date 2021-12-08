@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computer-Vision | Academic</title>
-    <link>https://example.com/tag/computer-vision/</link>
-      <atom:link href="https://example.com/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <title>Computer-Vision | Amatya</title>
+    <link>https://aaysharma.github.io/tag/computer-vision/</link>
+      <atom:link href="https://aaysharma.github.io/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     <description>Computer-Vision</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 08:16:43 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <url>https://aaysharma.github.io/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
       <title>Computer-Vision</title>
-      <link>https://example.com/tag/computer-vision/</link>
+      <link>https://aaysharma.github.io/tag/computer-vision/</link>
     </image>
     
     <item>
       <title>Image Augmentation and Auxiliary Loss Duo</title>
-      <link>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</link>
+      <link>https://aaysharma.github.io/project/image-augmentation-and-auxiliary-loss-duo/</link>
       <pubDate>Mon, 08 Nov 2021 08:16:43 +0000</pubDate>
-      <guid>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</guid>
+      <guid>https://aaysharma.github.io/project/image-augmentation-and-auxiliary-loss-duo/</guid>
       <description>&lt;!--StartFragment--&gt;
 &lt;p&gt;Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on &lt;a href=&#34;https://arxiv.org/abs/1910.01741&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Improving Sample Efficiency in Model-Free Reinforcement Learning from Images&lt;/a&gt;.&lt;/p&gt;
 &lt;!--EndFragment--&gt;

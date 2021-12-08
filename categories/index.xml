@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | Academic</title>
-    <link>https://example.com/categories/</link>
-      <atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Categories | Amatya</title>
+    <link>https://aaysharma.github.io/categories/</link>
+      <atom:link href="https://aaysharma.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <url>https://aaysharma.github.io/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
       <title>Categories</title>
-      <link>https://example.com/categories/</link>
+      <link>https://aaysharma.github.io/categories/</link>
     </image>
     
   </channel>
