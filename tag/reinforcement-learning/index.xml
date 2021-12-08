@@ -1,30 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reinforcement-Learning | Academic</title>
-    <link>https://example.com/tag/reinforcement-learning/</link>
-      <atom:link href="https://example.com/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
-    <description>Reinforcement-Learning</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 08:16:43 +0000</lastBuildDate>
-    <image>
-      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
-      <title>Reinforcement-Learning</title>
-      <link>https://example.com/tag/reinforcement-learning/</link>
-    </image>
-    
-    <item>
-      <title>Image Augmentation and Auxiliary Loss Duo</title>
-      <link>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</link>
-      <pubDate>Mon, 08 Nov 2021 08:16:43 +0000</pubDate>
-      <guid>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</guid>
-      <description>&lt;!--StartFragment--&gt;
-&lt;p&gt;Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on &lt;a href=&#34;https://arxiv.org/abs/1910.01741&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Improving Sample Efficiency in Model-Free Reinforcement Learning from Images&lt;/a&gt;.&lt;/p&gt;
-&lt;!--EndFragment--&gt;
-&lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSgnGj9mJBJECYuW-pkoDgrhOAbuEm0cG2qcs5UpDPGhMsxSn7jcNzMJltnYtFmCtPWb_-QhyZ2a1cB/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reinforcement-Learning | Academic</title><link>https://example.com/tag/reinforcement-learning/</link><atom:link href="https://example.com/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml"/><description>Reinforcement-Learning</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 08:16:43 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url><title>Reinforcement-Learning</title><link>https://example.com/tag/reinforcement-learning/</link></image><item><title>Image Augmentation and Auxiliary Loss Duo</title><link>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</link><pubDate>Mon, 08 Nov 2021 08:16:43 +0000</pubDate><guid>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</guid><description>&lt;!--StartFragment-->
+&lt;p>Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on &lt;a href="https://arxiv.org/abs/1910.01741" target="_blank" rel="noopener">Improving Sample Efficiency in Model-Free Reinforcement Learning from Images&lt;/a>.&lt;/p>
+&lt;!--EndFragment-->
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSgnGj9mJBJECYuW-pkoDgrhOAbuEm0cG2qcs5UpDPGhMsxSn7jcNzMJltnYtFmCtPWb_-QhyZ2a1cB/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item></channel></rss>
