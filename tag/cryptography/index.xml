@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cryptography | Academic</title><link>https://example.com/tag/cryptography/</link><atom:link href="https://example.com/tag/cryptography/index.xml" rel="self" type="application/rss+xml"/><description>Cryptography</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jul 2021 08:18:13 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url><title>Cryptography</title><link>https://example.com/tag/cryptography/</link></image><item><title>HTTP Authentication</title><link>https://example.com/project/http-authentication/</link><pubDate>Thu, 15 Jul 2021 08:18:13 +0000</pubDate><guid>https://example.com/project/http-authentication/</guid><description>&lt;!--StartFragment-->
-&lt;p>Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.&lt;/p>
-&lt;!--EndFragment--></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptography | Academic</title>
+    <link>https://example.com/tag/cryptography/</link>
+      <atom:link href="https://example.com/tag/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cryptography</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jul 2021 08:18:13 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <title>Cryptography</title>
+      <link>https://example.com/tag/cryptography/</link>
+    </image>
+    
+    <item>
+      <title>HTTP Authentication</title>
+      <link>https://example.com/project/http-authentication/</link>
+      <pubDate>Thu, 15 Jul 2021 08:18:13 +0000</pubDate>
+      <guid>https://example.com/project/http-authentication/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

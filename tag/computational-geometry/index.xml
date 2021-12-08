@@ -1,12 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computational-Geometry | Academic</title><link>https://example.com/tag/computational-geometry/</link><atom:link href="https://example.com/tag/computational-geometry/index.xml" rel="self" type="application/rss+xml"/><description>Computational-Geometry</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 21:50:17 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url><title>Computational-Geometry</title><link>https://example.com/tag/computational-geometry/</link></image><item><title>Two Dimensional Guillotine Strip Packing</title><link>https://example.com/publication/strippack/</link><pubDate>Tue, 07 Dec 2021 21:50:17 +0000</pubDate><guid>https://example.com/publication/strippack/</guid><description/></item><item><title>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</title><link>https://example.com/publication/2ggk/</link><pubDate>Tue, 06 Jul 2021 21:33:50 +0000</pubDate><guid>https://example.com/publication/2ggk/</guid><description>&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</title><link>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</link><pubDate>Mon, 31 May 2021 13:00:00 +0000</pubDate><guid>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</guid><description>&lt;!--
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/JFnH7nRP6XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
--->
-&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>The Art Gallery Problem: A Survey</title><link>https://example.com/publication/the-art-gallery-problem-a-survey/</link><pubDate>Fri, 01 Jan 2021 05:05:00 +0000</pubDate><guid>https://example.com/publication/the-art-gallery-problem-a-survey/</guid><description>&lt;!-- &lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQjNNrxAw0tKXHPS7qR_I6eQ9ZaCo_90IPkos09j96UaSK1WSyUZVK4ileqGZ47cLeBqaWC4oGAPYgl/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div> --></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computational-Geometry | Academic</title>
+    <link>https://example.com/tag/computational-geometry/</link>
+      <atom:link href="https://example.com/tag/computational-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computational-Geometry</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 21:50:17 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <title>Computational-Geometry</title>
+      <link>https://example.com/tag/computational-geometry/</link>
+    </image>
+    
+    <item>
+      <title>Two Dimensional Guillotine Strip Packing</title>
+      <link>https://example.com/publication/strippack/</link>
+      <pubDate>Tue, 07 Dec 2021 21:50:17 +0000</pubDate>
+      <guid>https://example.com/publication/strippack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</title>
+      <link>https://example.com/publication/2ggk/</link>
+      <pubDate>Tue, 06 Jul 2021 21:33:50 +0000</pubDate>
+      <guid>https://example.com/publication/2ggk/</guid>
+      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</title>
+      <link>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</link>
+      <pubDate>Mon, 31 May 2021 13:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JFnH7nRP6XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Art Gallery Problem: A Survey</title>
+      <link>https://example.com/publication/the-art-gallery-problem-a-survey/</link>
+      <pubDate>Fri, 01 Jan 2021 05:05:00 +0000</pubDate>
+      <guid>https://example.com/publication/the-art-gallery-problem-a-survey/</guid>
+      <description>&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQjNNrxAw0tKXHPS7qR_I6eQ9ZaCo_90IPkos09j96UaSK1WSyUZVK4ileqGZ47cLeBqaWC4oGAPYgl/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

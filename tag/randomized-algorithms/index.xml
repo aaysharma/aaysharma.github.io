@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Randomized-Algorithms | Academic</title><link>https://example.com/tag/randomized-algorithms/</link><atom:link href="https://example.com/tag/randomized-algorithms/index.xml" rel="self" type="application/rss+xml"/><description>Randomized-Algorithms</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Apr 2021 07:28:36 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url><title>Randomized-Algorithms</title><link>https://example.com/tag/randomized-algorithms/</link></image><item><title>Online Randomized Weighted k-server problem</title><link>https://example.com/project/online-randomized-weighted-k-server-problem/</link><pubDate>Thu, 15 Apr 2021 07:28:36 +0000</pubDate><guid>https://example.com/project/online-randomized-weighted-k-server-problem/</guid><description>&lt;!--StartFragment-->
-&lt;p>Formulation of online randomized algorithm for a variant of weighted k-server problem, mitigating the gap between established upper bound and lower bound complexities&lt;/p>
-&lt;!--EndFragment--></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Randomized-Algorithms | Academic</title>
+    <link>https://example.com/tag/randomized-algorithms/</link>
+      <atom:link href="https://example.com/tag/randomized-algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <description>Randomized-Algorithms</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Apr 2021 07:28:36 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <title>Randomized-Algorithms</title>
+      <link>https://example.com/tag/randomized-algorithms/</link>
+    </image>
+    
+    <item>
+      <title>Online Randomized Weighted k-server problem</title>
+      <link>https://example.com/project/online-randomized-weighted-k-server-problem/</link>
+      <pubDate>Thu, 15 Apr 2021 07:28:36 +0000</pubDate>
+      <guid>https://example.com/project/online-randomized-weighted-k-server-problem/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Formulation of online randomized algorithm for a variant of weighted k-server problem, mitigating the gap between established upper bound and lower bound complexities&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

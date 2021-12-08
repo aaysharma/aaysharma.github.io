@@ -1,53 +1,226 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic</title><link>https://example.com/</link><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><description>Academic</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Dec 2021 07:13:23 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url><title>Academic</title><link>https://example.com/</link></image><item><title>Parameterized Complexity of Network Modifications for Binary Networked Public Good Games</title><link>https://example.com/publication/ndds/</link><pubDate>Wed, 08 Dec 2021 07:13:23 +0000</pubDate><guid>https://example.com/publication/ndds/</guid><description>&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRw7GrBXKcS8GUMCIypujzbxdN7AiSw40HaRGe0OWR27ayjQnTBV2MkDnLGePz1lE6iZfABA_eMN5jD/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>Two Dimensional Guillotine Strip Packing</title><link>https://example.com/publication/strippack/</link><pubDate>Tue, 07 Dec 2021 21:50:17 +0000</pubDate><guid>https://example.com/publication/strippack/</guid><description/></item><item><title>Image Augmentation and Auxiliary Loss Duo</title><link>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</link><pubDate>Mon, 08 Nov 2021 08:16:43 +0000</pubDate><guid>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</guid><description>&lt;!--StartFragment-->
-&lt;p>Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on &lt;a href="https://arxiv.org/abs/1910.01741" target="_blank" rel="noopener">Improving Sample Efficiency in Model-Free Reinforcement Learning from Images&lt;/a>.&lt;/p>
-&lt;!--EndFragment-->
-&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSgnGj9mJBJECYuW-pkoDgrhOAbuEm0cG2qcs5UpDPGhMsxSn7jcNzMJltnYtFmCtPWb_-QhyZ2a1cB/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>HTTP Authentication</title><link>https://example.com/project/http-authentication/</link><pubDate>Thu, 15 Jul 2021 08:18:13 +0000</pubDate><guid>https://example.com/project/http-authentication/</guid><description>&lt;!--StartFragment-->
-&lt;p>Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.&lt;/p>
-&lt;!--EndFragment--></description></item><item><title>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</title><link>https://example.com/publication/2ggk/</link><pubDate>Tue, 06 Jul 2021 21:33:50 +0000</pubDate><guid>https://example.com/publication/2ggk/</guid><description>&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</title><link>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</link><pubDate>Mon, 31 May 2021 13:00:00 +0000</pubDate><guid>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</guid><description>&lt;!--
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/JFnH7nRP6XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
--->
-&lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div></description></item><item><title>Mitigating Dataset Imbalance via Joint Generation &amp; Classification</title><link>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</link><pubDate>Thu, 15 Apr 2021 13:00:00 +0000</pubDate><guid>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/RCDfGywknZs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;!-- &lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div> --></description></item><item><title>Online Randomized Weighted k-server problem</title><link>https://example.com/project/online-randomized-weighted-k-server-problem/</link><pubDate>Thu, 15 Apr 2021 07:28:36 +0000</pubDate><guid>https://example.com/project/online-randomized-weighted-k-server-problem/</guid><description>&lt;!--StartFragment-->
-&lt;p>Formulation of online randomized algorithm for a variant of weighted k-server problem, mitigating the gap between established upper bound and lower bound complexities&lt;/p>
-&lt;!--EndFragment--></description></item><item><title>On Parameterized Complexity of Liquid Democracy</title><link>https://example.com/talk/on-parameterized-complexity-of-liquid-democracy/</link><pubDate>Thu, 11 Feb 2021 13:00:00 +0000</pubDate><guid>https://example.com/talk/on-parameterized-complexity-of-liquid-democracy/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/JFnH7nRP6XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;!-- &lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div> --></description></item><item><title>On Parameterized Complexity of Liquid Democracy</title><link>https://example.com/publication/liquid-democracy/</link><pubDate>Thu, 07 Jan 2021 21:51:08 +0000</pubDate><guid>https://example.com/publication/liquid-democracy/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/JFnH7nRP6XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description></item><item><title>The Art Gallery Problem: A Survey</title><link>https://example.com/publication/the-art-gallery-problem-a-survey/</link><pubDate>Fri, 01 Jan 2021 05:05:00 +0000</pubDate><guid>https://example.com/publication/the-art-gallery-problem-a-survey/</guid><description>&lt;!-- &lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQjNNrxAw0tKXHPS7qR_I6eQ9ZaCo_90IPkos09j96UaSK1WSyUZVK4ileqGZ47cLeBqaWC4oGAPYgl/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div> --></description></item><item><title>Bidimensionality-Parameterized Algorithms</title><link>https://example.com/talk/bidimensionality-parameterized-algorithms/</link><pubDate>Sun, 15 Nov 2020 13:00:00 +0000</pubDate><guid>https://example.com/talk/bidimensionality-parameterized-algorithms/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/jgl-7Kc_ziI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;!-- &lt;div class="responsive-wrap">
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
-&lt;/div> --></description></item><item><title>Gaussian Process Kernels</title><link>https://example.com/project/gaussian-process-kernels-https-aaysharma-github-io-data-aml_report_gaussianprocess-pdf/</link><pubDate>Sun, 08 Nov 2020 08:19:18 +0000</pubDate><guid>https://example.com/project/gaussian-process-kernels-https-aaysharma-github-io-data-aml_report_gaussianprocess-pdf/</guid><description>&lt;p>A term project on Local and Global Approximation techniques for Gaussian Process Kernels, followed by experiments on numerous approximation prevailing techniques.&lt;/p></description></item><item><title>Parameterized Complexity of Margin of Victory</title><link>https://example.com/project/parameterized-complexity-of-margin-of-victory/</link><pubDate>Wed, 08 Apr 2020 07:34:40 +0000</pubDate><guid>https://example.com/project/parameterized-complexity-of-margin-of-victory/</guid><description>&lt;!--StartFragment-->
-&lt;p>Developed Parameterized Algorithms for Game-Theoretic problem of computing Margin of Victory for tournament solutions&lt;/p>
-&lt;!--EndFragment--></description></item><item><title>RISC Processor</title><link>https://example.com/project/risc-processor/</link><pubDate>Fri, 08 Nov 2019 08:16:43 +0000</pubDate><guid>https://example.com/project/risc-processor/</guid><description>&lt;!--StartFragment-->
-&lt;p>&lt;em>Computer Architecture Course Project&lt;/em>&lt;/p>
-&lt;p>Developed a Reduced Instruction Set Computer Processor and simulated on FPGA Spartan 3 boards using VERILOG&lt;/p>
-&lt;!--EndFragment--></description></item><item><title>TinyC Compiler</title><link>https://example.com/project/tiny-c/</link><pubDate>Fri, 08 Nov 2019 08:16:43 +0000</pubDate><guid>https://example.com/project/tiny-c/</guid><description>&lt;!--StartFragment-->
-&lt;p>&lt;em>Compilers Course Project&lt;/em>&lt;/p>
-&lt;p>Implemented a Compiler for language TinyC, a subset of C with a reduced subset of functionalities with a parser and lexer with output as non-optimized machine-level assembly language instructions using Yacc, BISON, FLEX, C, C++.&lt;/p>
-&lt;!--EndFragment--></description></item><item><title>Shoten : An e-BookStore</title><link>https://example.com/project/shoten-an-e-bookstore/</link><pubDate>Mon, 08 Apr 2019 08:21:11 +0000</pubDate><guid>https://example.com/project/shoten-an-e-bookstore/</guid><description>&lt;p>&lt;em>Software Engineering Course Term Project&lt;/em>&lt;/p>
-&lt;p>Full Stack development of online bookstore employing HTML, CSS, JSP and MySQL&lt;/p></description></item><item><title/><link>https://example.com/admin/config.yml</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/admin/config.yml</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>https://example.com/</link>
+      <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Dec 2021 07:13:23 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5e75c4de5e0bd0f3c11711dd74d053f9_293020_512x512_fill_lanczos_center_3.png</url>
+      <title>Academic</title>
+      <link>https://example.com/</link>
+    </image>
+    
+    <item>
+      <title>Parameterized Complexity of Network Modifications for Binary Networked Public Good Games</title>
+      <link>https://example.com/publication/ndds/</link>
+      <pubDate>Wed, 08 Dec 2021 07:13:23 +0000</pubDate>
+      <guid>https://example.com/publication/ndds/</guid>
+      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRw7GrBXKcS8GUMCIypujzbxdN7AiSw40HaRGe0OWR27ayjQnTBV2MkDnLGePz1lE6iZfABA_eMN5jD/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Two Dimensional Guillotine Strip Packing</title>
+      <link>https://example.com/publication/strippack/</link>
+      <pubDate>Tue, 07 Dec 2021 21:50:17 +0000</pubDate>
+      <guid>https://example.com/publication/strippack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Augmentation and Auxiliary Loss Duo</title>
+      <link>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</link>
+      <pubDate>Mon, 08 Nov 2021 08:16:43 +0000</pubDate>
+      <guid>https://example.com/project/image-augmentation-and-auxiliary-loss-duo/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on &lt;a href=&#34;https://arxiv.org/abs/1910.01741&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Improving Sample Efficiency in Model-Free Reinforcement Learning from Images&lt;/a&gt;.&lt;/p&gt;
+&lt;!--EndFragment--&gt;
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSgnGj9mJBJECYuW-pkoDgrhOAbuEm0cG2qcs5UpDPGhMsxSn7jcNzMJltnYtFmCtPWb_-QhyZ2a1cB/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HTTP Authentication</title>
+      <link>https://example.com/project/http-authentication/</link>
+      <pubDate>Thu, 15 Jul 2021 08:18:13 +0000</pubDate>
+      <guid>https://example.com/project/http-authentication/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+    <item>
+      <title>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</title>
+      <link>https://example.com/publication/2ggk/</link>
+      <pubDate>Tue, 06 Jul 2021 21:33:50 +0000</pubDate>
+      <guid>https://example.com/publication/2ggk/</guid>
+      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</title>
+      <link>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</link>
+      <pubDate>Mon, 31 May 2021 13:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/on-guillotine-separable-packings-for-the-two-dimensional-geometric-knapsack-problem/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JFnH7nRP6XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS6fZigZlZMpINDInb_4eWYAmCTKKq2B-As2aw2xXV-oSm02Nku-IpLFIYEsxMDkd_EmoxsGU9Er8wL/embed?start=true&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mitigating Dataset Imbalance via Joint Generation &amp; Classification</title>
+      <link>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</link>
+      <pubDate>Thu, 15 Apr 2021 13:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/mitigating-dataset-imbalance-via-joint-generation-classification/</guid>
+      <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RCDfGywknZs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Online Randomized Weighted k-server problem</title>
+      <link>https://example.com/project/online-randomized-weighted-k-server-problem/</link>
+      <pubDate>Thu, 15 Apr 2021 07:28:36 +0000</pubDate>
+      <guid>https://example.com/project/online-randomized-weighted-k-server-problem/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Formulation of online randomized algorithm for a variant of weighted k-server problem, mitigating the gap between established upper bound and lower bound complexities&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+    <item>
+      <title>On Parameterized Complexity of Liquid Democracy</title>
+      <link>https://example.com/talk/on-parameterized-complexity-of-liquid-democracy/</link>
+      <pubDate>Thu, 11 Feb 2021 13:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/on-parameterized-complexity-of-liquid-democracy/</guid>
+      <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JFnH7nRP6XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Parameterized Complexity of Liquid Democracy</title>
+      <link>https://example.com/publication/liquid-democracy/</link>
+      <pubDate>Thu, 07 Jan 2021 21:51:08 +0000</pubDate>
+      <guid>https://example.com/publication/liquid-democracy/</guid>
+      <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JFnH7nRP6XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>The Art Gallery Problem: A Survey</title>
+      <link>https://example.com/publication/the-art-gallery-problem-a-survey/</link>
+      <pubDate>Fri, 01 Jan 2021 05:05:00 +0000</pubDate>
+      <guid>https://example.com/publication/the-art-gallery-problem-a-survey/</guid>
+      <description>&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQjNNrxAw0tKXHPS7qR_I6eQ9ZaCo_90IPkos09j96UaSK1WSyUZVK4ileqGZ47cLeBqaWC4oGAPYgl/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bidimensionality-Parameterized Algorithms</title>
+      <link>https://example.com/talk/bidimensionality-parameterized-algorithms/</link>
+      <pubDate>Sun, 15 Nov 2020 13:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/bidimensionality-parameterized-algorithms/</guid>
+      <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/jgl-7Kc_ziI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQfik9gcMZRriKf2-nmmNUP1pngtdkEw1kJ6jDhBCNTwWES_ljKQOy9vdzaQgGGjd85NZt-FE4dJ-HN/embed?start=true&amp;amp;loop=true&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gaussian Process Kernels</title>
+      <link>https://example.com/project/gaussian-process-kernels-https-aaysharma-github-io-data-aml_report_gaussianprocess-pdf/</link>
+      <pubDate>Sun, 08 Nov 2020 08:19:18 +0000</pubDate>
+      <guid>https://example.com/project/gaussian-process-kernels-https-aaysharma-github-io-data-aml_report_gaussianprocess-pdf/</guid>
+      <description>&lt;p&gt;A term project on Local and Global Approximation techniques for Gaussian Process Kernels, followed by experiments on numerous approximation prevailing techniques.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Parameterized Complexity of Margin of Victory</title>
+      <link>https://example.com/project/parameterized-complexity-of-margin-of-victory/</link>
+      <pubDate>Wed, 08 Apr 2020 07:34:40 +0000</pubDate>
+      <guid>https://example.com/project/parameterized-complexity-of-margin-of-victory/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Developed Parameterized Algorithms for Game-Theoretic problem of computing Margin of Victory for tournament solutions&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+    <item>
+      <title>RISC Processor</title>
+      <link>https://example.com/project/risc-processor/</link>
+      <pubDate>Fri, 08 Nov 2019 08:16:43 +0000</pubDate>
+      <guid>https://example.com/project/risc-processor/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;&lt;em&gt;Computer Architecture Course Project&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Developed a Reduced Instruction Set Computer Processor and simulated on FPGA Spartan 3 boards using VERILOG&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+    <item>
+      <title>TinyC Compiler</title>
+      <link>https://example.com/project/tiny-c/</link>
+      <pubDate>Fri, 08 Nov 2019 08:16:43 +0000</pubDate>
+      <guid>https://example.com/project/tiny-c/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;&lt;em&gt;Compilers Course Project&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Implemented a Compiler for language TinyC, a subset of C with a reduced subset of functionalities with a parser and lexer with output as non-optimized machine-level assembly language instructions using Yacc, BISON, FLEX, C, C++.&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shoten : An e-BookStore</title>
+      <link>https://example.com/project/shoten-an-e-bookstore/</link>
+      <pubDate>Mon, 08 Apr 2019 08:21:11 +0000</pubDate>
+      <guid>https://example.com/project/shoten-an-e-bookstore/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Software Engineering Course Term Project&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Full Stack development of online bookstore employing HTML, CSS, JSP and MySQL&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
