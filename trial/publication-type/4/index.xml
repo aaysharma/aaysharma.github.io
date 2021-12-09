@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 | Amatya</title>
+    <link>https://aaysharma.github.io/publication-type/4/</link>
+      <atom:link href="https://aaysharma.github.io/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
+    <description>4</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 05:05:00 +0000</lastBuildDate>
+    <image>
+      <url>https://aaysharma.github.io/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
+      <title>4</title>
+      <link>https://aaysharma.github.io/publication-type/4/</link>
+    </image>
+    
+    <item>
+      <title>The Art Gallery Problem: A Survey</title>
+      <link>https://aaysharma.github.io/publication/the-art-gallery-problem-a-survey/</link>
+      <pubDate>Fri, 01 Jan 2021 05:05:00 +0000</pubDate>
+      <guid>https://aaysharma.github.io/publication/the-art-gallery-problem-a-survey/</guid>
+      <description>&lt;!-- &lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQjNNrxAw0tKXHPS7qR_I6eQ9ZaCo_90IPkos09j96UaSK1WSyUZVK4ileqGZ47cLeBqaWC4oGAPYgl/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

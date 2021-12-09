@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Amatya</title>
+    <link>https://aaysharma.github.io/publication-type/3/</link>
+      <atom:link href="https://aaysharma.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Dec 2021 07:13:23 +0000</lastBuildDate>
+    <image>
+      <url>https://aaysharma.github.io/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
+      <title>3</title>
+      <link>https://aaysharma.github.io/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>Parameterized Complexity of Network Modifications for Binary Networked Public Good Games</title>
+      <link>https://aaysharma.github.io/publication/ndds/</link>
+      <pubDate>Wed, 08 Dec 2021 07:13:23 +0000</pubDate>
+      <guid>https://aaysharma.github.io/publication/ndds/</guid>
+      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRw7GrBXKcS8GUMCIypujzbxdN7AiSw40HaRGe0OWR27ayjQnTBV2MkDnLGePz1lE6iZfABA_eMN5jD/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Two Dimensional Guillotine Strip Packing</title>
+      <link>https://aaysharma.github.io/publication/strippack/</link>
+      <pubDate>Tue, 07 Dec 2021 21:50:17 +0000</pubDate>
+      <guid>https://aaysharma.github.io/publication/strippack/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

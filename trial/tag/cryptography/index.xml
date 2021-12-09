@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptography | Amatya</title>
+    <link>https://aaysharma.github.io/tag/cryptography/</link>
+      <atom:link href="https://aaysharma.github.io/tag/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cryptography</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jul 2021 08:18:13 +0000</lastBuildDate>
+    <image>
+      <url>https://aaysharma.github.io/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
+      <title>Cryptography</title>
+      <link>https://aaysharma.github.io/tag/cryptography/</link>
+    </image>
+    
+    <item>
+      <title>HTTP Authentication</title>
+      <link>https://aaysharma.github.io/project/http-authentication/</link>
+      <pubDate>Thu, 15 Jul 2021 08:18:13 +0000</pubDate>
+      <guid>https://aaysharma.github.io/project/http-authentication/</guid>
+      <description>&lt;!--StartFragment--&gt;
+&lt;p&gt;Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.&lt;/p&gt;
+&lt;!--EndFragment--&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
