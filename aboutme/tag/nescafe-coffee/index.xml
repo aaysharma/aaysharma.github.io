@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nescafe-Coffee | Aay Sam</title>
+    <link>https://aaysharma.github.io/aboutme/tag/nescafe-coffee/</link>
+      <atom:link href="https://aaysharma.github.io/aboutme/tag/nescafe-coffee/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nescafe-Coffee</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 03 Aug 2020 08:19:18 +0000</lastBuildDate>
+    <image>
+      <url>https://aaysharma.github.io/aboutme/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
+      <title>Nescafe-Coffee</title>
+      <link>https://aaysharma.github.io/aboutme/tag/nescafe-coffee/</link>
+    </image>
+    
+    <item>
+      <title>Sharmas Hamirpur</title>
+      <link>https://aaysharma.github.io/aboutme/coffee/hamirpur/</link>
+      <pubDate>Mon, 03 Aug 2020 08:19:18 +0000</pubDate>
+      <guid>https://aaysharma.github.io/aboutme/coffee/hamirpur/</guid>
+      <description>&lt;p&gt;Nescafe Classic Cappuccino by me. Nescafe is always a go-to and comfy coffee to opt for. Takes the least of time to prepare.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
