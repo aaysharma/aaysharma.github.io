@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Aay Sam</title>
-    <link>https://aaysharma.github.io/aboutme/categories/</link>
-      <atom:link href="https://aaysharma.github.io/aboutme/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://aaysharma.github.io/informal/categories/</link>
+      <atom:link href="https://aaysharma.github.io/informal/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://aaysharma.github.io/aboutme/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
+      <url>https://aaysharma.github.io/informal/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png</url>
       <title>Categories</title>
-      <link>https://aaysharma.github.io/aboutme/categories/</link>
+      <link>https://aaysharma.github.io/informal/categories/</link>
     </image>
     
   </channel>
