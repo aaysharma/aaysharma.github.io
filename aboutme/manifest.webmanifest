@@ -1,0 +1,18 @@
+{
+  "name": "Aay Sam",
+  "short_name": "Aay Sam",
+  "lang": "en-us",
+  "theme_color": "#795548",
+  "background_color": "#795548",
+  "icons": [{
+    "src": "/aboutme/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_192x192_fill_lanczos_center_3.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/aboutme/media/icon_hu6dfa82d39cf66fc2a0ca00c0f39b6341_2246_512x512_fill_lanczos_center_3.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/aboutme/?utm_source=web_app_manifest"
+}
