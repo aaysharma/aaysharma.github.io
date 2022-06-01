@@ -208,7 +208,7 @@ header {
 }
 
 .nav-collapse ul ul a {
-  background: #ca3716;
+  background: #edffed;
   padding-left: 2em;
 }
 
@@ -247,7 +247,7 @@ header {
 }
 
 .nav-toggle:before {
-  color: #fff; /* Edit this to change the icon color */
+  color: #000; /* Edit this to change the icon color */
   font: normal 28px/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
   text-transform: none;
   text-align: center;
