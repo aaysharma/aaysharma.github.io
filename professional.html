@@ -181,13 +181,33 @@
       padding: 40px 20px;
       margin-top: -30px;
     }
+body, html {
+  overflow-x: hidden;
+}
 
-  body,
-  p,
-  a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 15px; /* You can adjust this to the preferred font size */
-  }
+  html {
+  font-size: 15px; /* base */
+}
+
+body,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
 
   a {
   color: #1772d0;
@@ -281,6 +301,24 @@
   html {
     scroll-behavior: smooth;
   }
+
+
+  /* Social icons as pill buttons */
+a.fa, a.ai {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 6px 10px;
+  margin: 5px;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+a.fa:hover, a.ai:hover {
+  transform: scale(1.1);
+  background-color: #e6f2ff;
+}
+
+
+
 </style>
 
 
@@ -349,11 +387,11 @@
       <div style="text-align: left;">
         <p>
           I am a Ph.D. Candidate in <a href="https://theory.engin.umich.edu/">Theoretical Computer Science</a> at
-          <a href="https://umich.edu/">University of Michigan (Ann Arbor)</a>, fortunate to be co-advised by
+          <a href="https://umich.edu/">University of Michigan, Ann Arbor</a>, fortunate to be co-advised by
           <a href="https://bansal.engin.umich.edu/">Nikhil Bansal</a> and <a href="https://web.eecs.umich.edu/~euiwoong/">Euiwoong Lee</a>.
-          I obtained my Dual Degree (BTech+MTech) from <a href="http://cse.iitkgp.ac.in/">Computer Science and Engineering Department</a>,
+          I earned a Dual Degree (BTech+MTech) from the <a href="http://cse.iitkgp.ac.in/">Computer Science and Engineering Department</a>,
           <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology (IIT) Kharagpur</a>.
-          I'm interested in Theoretical CS, including Approximation, Online, Randomized, Parameterized Algorithms, and Game Theory.
+          My research intersts include Theoretical CS, including Approximation, Online, Randomized, Parameterized Algorithms, and Game Theory. Lately, I have been delving into Approximation algorithms and Constrained Satisfiability Problems.
         </p>
         <p>
           Over the past years, I have had great collaborators including Prof.
@@ -368,13 +406,80 @@
 
 
 
+<!-- News Section -->
+<section id="news" class="container">
+  <h1>News</h1>
+  <div style="max-height: 330px; overflow-y: auto; padding-left: 10px; border-left: 2px solid #ccc; margin-left: 10px;">
+    
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Aug 2024]</div>
+      <div style="padding-left: 10px;">Thrilled to present our paper on MinCSPs on Complete Instances at SODA'25. </div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Aug 2024]</div>
+      <div style="padding-left: 10px;">A Decomposition Approach to Weighted k-Server appearing at FSTTCS'24. </div>
+    </div>
+
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Aug 2024]</div>
+      <div style="padding-left: 10px;">Super excited to be a Teaching Assistant for the Intro to Algorithms Course (EECS 477)!</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Aug 2023]</div>
+      <div style="padding-left: 10px;">Will be organizing Theory Talks and Lunches at U-Mich. For more info, join the <a href="https://mcommunity.umich.edu/group/Theory%20CS%20Talks%202023-24">mailing list</a>.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Aug 2022]</div>
+      <div style="padding-left: 10px;">Joined as a PhD in CS at <a href="https://umich.edu/">University of Michigan</a>, Ann Arbor.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Mar 2022]</div>
+      <div style="padding-left: 10px;">Received PhD offers from U-Mich, Georgia Tech, U of Toronto, and EPFL.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Jul 2021]</div>
+      <div style="padding-left: 10px;">Full-time PPO from Oracle R&D, Bangalore.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[May 2021]</div>
+      <div style="padding-left: 10px;">Presenting Guillotine Separable Packings for 2D Knapsack at HALG'21.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Apr 2021]</div>
+      <div style="padding-left: 10px;">Interning at Oracle R&D from May to July 2021.</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 15px;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Feb 2021]</div>
+      <div style="padding-left: 10px;">SoCG'21 paper accepted—first SoCG from IIT Kharagpur in 26 years. <a href="https://doi.org/10.4230/LIPIcs.SoCG.2021.48">paper</a></div>
+    </div>
+
+    <div style="display: flex;">
+      <div style="min-width: 90px; font-style: italic; color: #888;">[Nov 2020]</div>
+      <div style="padding-left: 10px;">First publication! Liquid Democracy at CALDAM'21. <a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7">paper</a></div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <!-- Publications -->
     <section id="pubs">
       <h1>Publications</h1>
       <p>
-        I'm interested in Theoretical Computer Science, including Approximation, Online, Randomized, Parameterized Algorithms, Algorithmic Game Theory.
-        My prior research work revolves around the design and analysis of Approximation and Parameterized Algorithms for Computational Geometric and Game Theoretic Problems.
+        My research spans Approximation, Online, Randomized, Parameterized Algorithms, Algorithmic Game Theory.
+        My prior research focuses on the design and analysis of Approximation and Parameterized Algorithms for Computational Geometric and Game Theoretic Problems.
         (Note: For theory papers, author names are <strong>listed alphabetically</strong>.)
       </p>
 
@@ -410,7 +515,7 @@
             <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2024.6"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
           </p>
           <p >
-            Presented a decomposition approach to for online weighted k-server.
+            Presented a decomposition approach for online weighted k-server.
           </p>
         </div>
       </article>
@@ -505,11 +610,11 @@
 
     <!-- Other projects -->
 
-    <section id="others" style="margin-top: 0px;">
+    <section id="others" style="margin-top: 100px;">
       <a name="sec_otherprojects"></a>
       <h1>Other Projects</h1>
       <p>
-        Apart from published works, I have explored plenty of other projects, in Theory CS, Computer Architecture, Software Engineering (Full Stack Development), Machine Learning, Compilers etc.
+        In addition to published work, I've explored numerous projects, including Theory CS, Computer Architecture, Software Engineering (Full Stack Development), Machine Learning, Compilers etc.
       </p>
 
       <!-- Margin of Victory -->
@@ -609,7 +714,7 @@
 
 
     <!-- Talks -->
-    <section id="talks">
+    <section id="talks" style="margin-top: 80px;">
       <a name="sec_talks"></a>
       <h1>Talks By Me</h1>
       <p>
@@ -622,7 +727,7 @@
           <a href="https://youtu.be/JFnH7nRP6XQ" target="_blank"><img src="images/HALG_2GGK_Thumbnail.jpg" width="150" alt="2GGK HALG"></a>
         </div>
         <div style="flex: 1;">
-          <a href="https://youtu.be/JFnH7nRP6XQ"><h3>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</h3></a>
+          <a href="data/MONDAY_SHARMA.pdf"><h3>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</h3></a>
           <p><strong>Amatya Sharma</strong></p>
           <p><em>HALG'21 Contributed Talk, May 2021.</em> 
             <a href="data/MONDAY_SHARMA.pdf"><i class="fa fa-slideshare" title="HALG Presentation"></i></a> 
@@ -689,7 +794,7 @@
 
     <!-- experience -->
 
-    <section id="exp" class="container" style="margin-top: -45px;" >
+    <section id="exp" class="container" style="margin-top: 20px;" >
       <a name="sec_experience"></a>
       <h1>Experience 
         <img vertical-align="middle" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg/1200px-Indian_Institute_of_Technology_Delhi_Logo.svg.png" width="44">
@@ -779,7 +884,7 @@
 
     <!-- courses -->
 
-    <section id="awards" class="container" style="margin-top: -120px;">
+    <section id="awards" class="container" style="margin-top: -50px;">
       <a name="sec_awards"></a>
       <h1>Awards & Achievements</h1>
 
@@ -876,7 +981,7 @@
 
 
     <!-- courses -->
-    <section id="courses" style="margin-top: -70px;">
+    <section id="courses" style="margin-top: -20px;">
       <a name="sec_courses"></a>
       <h1>Courses Taken</h1>
       <p>
@@ -933,7 +1038,7 @@
 
 
     <!-- about me -->
-    <section id="aboutme" class="container">
+    <section id="aboutme" class="container" style="margin-top: 20px;">
       <a name="aboutme"></a>
       <h1>About Me</h1>
       
@@ -954,7 +1059,7 @@
 
     <!-- calendar -->
 
-    <section id="cal" class="container" style="margin-top:-140px;">
+    <section id="cal" class="container" style="margin-top:-80px;">
       <a name="sec_calendar"></a>
       <h1>Calendar & Contact</h1>
 
@@ -988,6 +1093,12 @@
 </div>
 
 </main>
+
+<!-- Back to Top Button -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+  style="position:fixed; bottom:20px; right:20px; border:none; background:#1772d0; color:white; border-radius:50%; padding:10px 14px; font-size: 16px; cursor:pointer; z-index:999;">
+  ↑
+</button>
 
 
 </body>

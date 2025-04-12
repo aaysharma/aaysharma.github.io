@@ -185,6 +185,74 @@
       .masonry { column-count: 1; }
     }
 
+    .dark-mode {
+  background-color: #1f1f1f !important;
+  color: #e6e6e6 !important;
+}
+
+.dark-mode a {
+  color: #ffa366 !important;
+  text-decoration: none;
+}
+
+.dark-mode a:hover {
+  color: #ffd4aa !important;
+  text-decoration: underline;
+}
+
+.dark-mode header,
+.dark-mode main,
+.dark-mode section {
+  background-color: #1f1f1f !important;
+}
+
+.dark-mode .coffee-entry,
+.dark-mode .coffee-card,
+.dark-mode .gallery__caption,
+.dark-mode .carousel-track,
+.dark-mode footer {
+  background-color: #2a2a2a !important;
+  color: #e6e6e6 !important;
+  border-color: #333 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #ffd9b3 !important;
+}
+
+.dark-mode .suggest-coffee {
+  background-color: #ffa366 !important;
+  color: #1f1f1f !important;
+  box-shadow: 0 2px 6px rgba(255, 163, 102, 0.4);
+}
+
+.dark-mode .suggest-coffee:hover {
+  background-color: #ffbb80 !important;
+}
+
+.dark-mode .profile-pic::after {
+  color: #ffa366;
+}
+
+
+.dark-mode .coffee-entry p,
+.dark-mode .coffee-entry h3,
+.dark-mode .coffee-card p,
+.dark-mode .coffee-card h3 {
+  color: #e6e6e6 !important;
+}
+
+.dark-mode .coffee-card a {
+  color: #ffa366 !important;
+}
+
+.dark-mode .coffee-card a:hover {
+  color: #ffd4aa !important;
+}
+
   </style>
 </head>
 <body>
@@ -508,7 +576,7 @@
 
 <section id="coffees">
   
-  <h2> ☕ Coffees I Have Had</h2>
+  <h2> <span title="I take my research with a shot of espresso.">☕</span> Coffees I Have Had</h2>
   <div style="margin-top: -20px; margin-bottom: 40px;">
     <button class="suggest-coffee" onclick="window.location.href='content/suggestmecoffee.html'">
       Suggest me a coffee ☕
@@ -912,6 +980,7 @@
 
 <p style="font-family: 'Brush Script MT', cursive; font-size: 22px; text-align: right;">– Amatya ☕</p>
 
+
 </main>
 
 
@@ -944,6 +1013,97 @@
     }
   }
 </script>
+
+
+
+<script>
+  // Optional: Custom alert message
+  const darkQuotes = [
+    "Night owl mode activated. Let’s brew some midnight thoughts...",
+    "Dark as my coffee. And my rough works.",
+    "Math puzzles hits different in the shadows 🌙",
+    "You have entered the nerdy cave.",
+    "Dark mode: Because the sun is overrated."
+  ];
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Optional: Show a random quote
+    const quote = darkQuotes[Math.floor(Math.random() * darkQuotes.length)];
+    alert(quote);
+  }
+
+  // Attach the click event to ☕ emoji
+  document.addEventListener("DOMContentLoaded", function () {
+    const emoji = document.querySelector("span[title*='espresso']");
+    if (emoji) emoji.style.cursor = "pointer";
+    if (emoji) emoji.addEventListener("click", toggleDarkMode);
+  });
+</script>
+
+
+<!-- <div id="coffee-clock" style="text-align: center; font-size: 18px; margin-top: 20px; color: #8a5c3b;">
+  ☕ Best time for coffee: <span id="coffee-time"></span>
+</div>
+
+<script>
+  function updateCoffeeTime() {
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12;
+    h = h ? h : 12;
+    m = m < 10 ? "0" + m : m;
+    document.getElementById("coffee-time").textContent = `${h}:${m} ${ampm}`;
+  }
+  updateCoffeeTime();
+  setInterval(updateCoffeeTime, 60000);
+</script> -->
+
+<script>
+  function activate90s() {
+    const css = document.createElement('style');
+    css.innerHTML = `
+      body {
+        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+        color: #ff00ff !important;
+        font-family: 'Comic Sans MS', cursive !important;
+        animation: blink-bg 1s infinite alternate;
+      }
+      @keyframes blink-bg {
+        0% { background-color: #000; }
+        100% { background-color: #ffcc00; }
+      }
+      h1, h2, h3 {
+        animation: wiggle 0.2s infinite alternate;
+        color: #00ffff !important;
+        text-shadow: 2px 2px #000;
+      }
+      @keyframes wiggle {
+        from { transform: rotate(-3deg); }
+        to { transform: rotate(3deg); }
+      }
+      a {
+        color: #ff00ff !important;
+        text-decoration: blink;
+      }
+      img {
+        border: 5px dashed #00ffff;
+        box-shadow: 0 0 20px #ff0;
+      }
+    `;
+    document.head.appendChild(css);
+    alert("🌀 Welcome to the 90s Web Experience!");
+  }
+
+  // Activate 90s mode if URL has ?party=likeits1999
+  if (window.location.href.includes("party=likeits1999")) {
+    activate90s();
+  }
+</script>
+
 
 
 </body>

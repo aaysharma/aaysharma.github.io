@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Amatya Sharma</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Amatya Sharma" name="author"/>
+<link href="images/umich.png" rel="icon"/>
+<!-- <link rel="stylesheet" href="stylesheet.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway:400,300,600|PT+Serif:400,400italic,700|PT+Sans:400|Monoton|Lora|Playfair+Display&amp;display=swap" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"/>
+<link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<style>
+
+  /* latin-ext */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+  /* Apply smooth scrolling behavior for the page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Style for the Vertical Navigation Bar */
+  #vertical-navbar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    height: auto;
+    width: 250px;
+    background-color: rgba(237, 254, 223, 0.7); /* Light Greenish with transparency */
+    padding-top: 20px;
+    z-index: 1000; /* Ensure navbar stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to give it depth */
+    backdrop-filter: blur(10px); /* Adds blur effect for better translucency */
+    transform: translateY(-50%); /* Center vertically */
+  }
+
+  #vertical-navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #vertical-navbar li {
+    width: 100%;
+  }
+
+  #vertical-navbar a {
+    text-decoration: none;
+    color: #3a6b3a; /* Dark green text */
+    display: block;
+    padding: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s;
+  }
+
+  #vertical-navbar a:hover {
+    background-color: #c1e1c1; /* Lighter greenish hover effect */
+    color: #2b4d2b; /* Darker green on hover */
+  }
+
+  #vertical-navbar a.active {
+    background-color: #f09228; /* Active link color */
+    color: white;
+  }
+
+  /* Content area */
+  main {
+    margin-left: 270px; /* Same width as the navbar */
+    padding: 20px;
+    margin-right: 270px;
+  }
+
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    #vertical-navbar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-top: 10px;
+      transform: none; /* Remove vertical centering for mobile view */
+      top: 0; /* Set top to 0 for mobile */
+    }
+
+    #vertical-navbar ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #vertical-navbar a {
+      padding: 10px 20px;
+    }
+
+    main {
+      margin-left: 0; /* Full width on smaller screens */
+      margin-right: 0;
+    }
+  }
+
+  /* Font-family: Lato */
+  body{
+/*    font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+    background-color: #fff;
+    line-height: 1.5em;
+    word-spacing: 0.11em;
+    letter-spacing: 0.04em;
+/*    font-size: 15px;*/
+  }
+
+  .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      margin-top: -30px;
+    }
+
+  body,
+  p,
+  a {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 15px; /* You can adjust this to the preferred font size */
+  }
+
+  a {
+  color: #1772d0;
+  text-decoration: none;
+  }
+
+  a:focus,
+  a:hover {
+    color: #f09228;
+    text-decoration: none;
+  }
+
+
+  /* Styling for .publication class (used in sections like Publications, Experience) */
+  .publication {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    transition: background-color 0.2s ease;
+  }
+
+  .publication:hover {
+    background-color: #fafafa;
+  }
+
+  .publication img {
+    width: 150px;
+    flex-shrink: 0;
+    align-self: center;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .publication div {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .publication p a {
+    font-size: inherit;
+    color: #0066cc;
+    margin: 0.25em 0;
+  }
+
+  .publication p {
+    margin: 0.25em 0;
+  }
+
+  .publication p a:hover {
+    font-size: inherit;
+    text-decoration: underline;
+    margin: 0.25em 0;
+  }
+
+  .publication h3 {
+    margin: 0 0 0.025em 0;
+  }
+
+  /* Experience Entry Layout */
+  .experience-entry {
+    margin-bottom: 5px;
+  }
+
+  .job-dates {
+    font-style: italic;
+    color: #555;
+  }
+
+  .job-title {
+/*      font-weight: bold;*/
+    }
+
+  .job-title a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .job-title a:hover {
+    text-decoration: underline;
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+@media print {
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white !important;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  #vertical-navbar,
+  iframe,
+  header,
+  footer,
+  .fa,
+  .ai,
+  nav {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 40px;
+  }
+
+  h1, h2, h3 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 30px;
+  }
+
+  .publication img {
+    display: none;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: gray;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+<!-- 
+<header>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#pubs">Publications</a></li>
+      <li><a href="#exp">Experience</a></li>
+      <li><a href="#awards">Awards & Achievements</a></li>
+      <li><a href="#courses">Courses Taken</a></li>
+      <li><a href="#cal">Calendar</a></li>
+      <li><a href="#aboutme">About Me</a></li>
+    </ul>
+  </nav>
+</header> -->
+<header>
+
+</header>
+<main>
+<div class="maincontainer" style="margin-top: 30px;">
+<section id="home" style="text-align: center;">
+<a href="images/whiteshirt_aaysharma.jpg">
+<img alt="Amatya Sharma" src="images/circle_cropped_whiteshirt_aaysharma.png" style="width:33%; max-width:250px;"/>
+</a>
+<p style="line-height: 1.7;">
+<span style="font-size: 2em; font-weight: bold;">Amatya Sharma</span><br/>
+<a href="https://cse.engin.umich.edu/">Department of Computer Science and Engineering</a><br/>
+<a href="https://umich.edu/">University of Michigan, Ann Arbor</a><br/>
+        amatya [at] umich.edu<br/>
+<a class="ai ai-cv ai-3x" href="data/Amatya_Sharma_CV_latest_pdf.pdf" style="font-size: 24px;"></a> |
+        <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/amatya-sharma/" style="font-size: 24px;"></a> |
+        <a class="ai ai-google-scholar-square ai-3x" href="https://scholar.google.com/citations?user=FN6Q_jEAAAAJ&amp;hl=en&amp;authuser=1" style="font-size: 24px;"></a> |
+        <a class="fa fa-twitter" href="https://twitter.com/Amatya_Sharma07" style="font-size: 24px;"></a> |
+        <a class="fa fa-github-square" href="https://github.com/aaysharma/" style="font-size: 24px;"></a>
+</p>
+<div style="text-align: left;">
+<p>
+          I am a Ph.D. Candidate in <a href="https://theory.engin.umich.edu/">Theoretical Computer Science</a> at
+          <a href="https://umich.edu/">University of Michigan (Ann Arbor)</a>, fortunate to be co-advised by
+          <a href="https://bansal.engin.umich.edu/">Nikhil Bansal</a> and <a href="https://web.eecs.umich.edu/~euiwoong/">Euiwoong Lee</a>.
+          I obtained my Dual Degree (BTech+MTech) from <a href="http://cse.iitkgp.ac.in/">Computer Science and Engineering Department</a>,
+          <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology (IIT) Kharagpur</a>.
+          I'm interested in Theoretical CS, including Approximation, Online, Randomized, Parameterized Algorithms, and Game Theory.
+        </p>
+<p>
+          Over the past years, I have had great collaborators including Prof.
+          Ashish Chiplunkar (IIT Delhi),
+          Arindam Khan (IISc Bangalore),
+          Andreas Wiese (UofChile),
+          and Palash Dey (IIT Kharagpur).
+        </p>
+</div>
+</section>
+<!-- Publications -->
+<section id="pubs">
+<h1>Publications</h1>
+<p>
+        I'm interested in Theoretical Computer Science, including Approximation, Online, Randomized, Parameterized Algorithms, Algorithmic Game Theory.
+        My prior research work revolves around the design and analysis of Approximation and Parameterized Algorithms for Computational Geometric and Game Theoretic Problems.
+        (Note: For theory papers, author names are <strong>listed alphabetically</strong>.)
+      </p>
+<article class="publication">
+<a href="images/completemin2sat.png" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="Complete Min-2SAT" src="images/completemin2sat.png" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="https://doi.org/10.1137/1.9781611978322.35">
+<h3>Min CSPs on Complete Instances</h3>
+</a>
+<p>Aditya Anand, Euiwoong Lee, <strong>Amatya Sharma</strong><br/>
+<em>In<strong> SODA 2025</strong></em>
+<a href="https://doi.org/10.1137/1.9781611978322.35" title="Official SODA version"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+<a href="https://arxiv.org/abs/2410.19066" title="arXiv preprint"><i class="ai ai-arxiv" title="arXiv"></i></a>
+<a href="data/MinCSPs.pdf" title="Presentation at SODA"><i class="fa fa-slideshare" title="Slides"></i></a>
+</p>
+<p>
+            Initiated the study of complete instances for Minimization Constraint Satisfiability Problems. Proved results for Min-2CSP and k-CSPs.
+          </p>
+</div>
+</article>
+<article class="publication">
+<a href="https://ars.els-cdn.com/content/image/1-s2.0-S0022000017300016-gr001.jpg" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="Weighted k-server" src="https://ars.els-cdn.com/content/image/1-s2.0-S0022000017300016-gr001.jpg" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2024.6"><h3>A Decomposition Approach to Weighted k-server problem</h3></a>
+<p>Nikhil Ayyadevara, Ashish Chiplunkar, <strong>Amatya Sharma</strong><br/>
+<em>In <strong>FSTTCS 2024.</strong></em>
+<a href="https://arxiv.org/abs/2410.06485"><i class="ai ai-arxiv" title="arXiv"></i></a>
+<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2024.6"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+</p>
+<p>
+            Presented a decomposition approach to for online weighted k-server.
+          </p>
+</div>
+</article>
+<article class="publication">
+<a href="images/2dggk.jpg" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="2D GGK" src="images/2dggk.jpg" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="https://arxiv.org/abs/2103.09735">
+<h3>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</h3>
+</a>
+<p>Arindam Khan, Arnab Maiti, <strong>Amatya Sharma</strong>, Andreas Wiese<br/>
+<em>In<strong>SoCG 2021</strong>, Contributed Talk <strong>HALG 2021.</strong></em>
+<a href="https://doi.org/10.4230/LIPIcs.SoCG.2021.48" title="Official SoCG version"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+<a href="https://arxiv.org/abs/2103.09735" title="arXiv preprint"><i class="ai ai-arxiv" title="arXiv"></i></a>
+<a href="data/SOCG-Final-PPT.pdf" title="Presentation at SoCG"><i class="fa fa-slideshare" title="Slides"></i></a>
+<a href="data/MONDAY_SHARMA.pdf" title="HALG talk slides"><i class="fa fa-slideshare" title="Slides"></i></a>
+<a href="data/MONDAY_SHARMA_POSTER.pdf" title="Research poster"><i class="fa fa-image" title="Poster"></i></a>
+</p>
+<p>
+            PPTAS (Pseudo-Polynomial Time Approximation Scheme) for the 2D Knapsack problem in a Guillotine Separable setting, improving the best approximation factor of 3.
+          </p>
+</div>
+</article>
+<article class="publication">
+<a href="images/2dsp.png" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="2D SP" src="images/2dsp.png" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="https://arxiv.org/abs/2202.05989">
+<h3>Two Dimensional Guillotine Strip Packing</h3>
+</a>
+<p>Arindam Khan, Aditya Lonkar, Arnab Maiti, <strong>Amatya Sharma</strong>, Andreas Wiese<br/>
+            In <strong>ICALP</strong> 2022.
+            <a href="https://arxiv.org/abs/2202.05989"><i class="ai ai-arxiv" title="arXiv"></i></a>
+</p>
+<p>
+            A (3/2 + ε)-approximation algorithm for 2D Strip Packing in Guillotine Separable setting, including a PPTAS.
+          </p>
+</div>
+</article>
+<article class="publication">
+<a href="images/liquiddemocracy.png" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="Liquid Democracy" src="images/ld_caldam.jpg" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7">
+<h3>On Parameterized Complexity of Liquid Democracy</h3>
+</a>
+<p>Palash Dey, Arnab Maiti, <strong>Amatya Sharma</strong><br/>
+<em>In <strong>CALDAM 2021.</strong></em>
+<a href="https://arxiv.org/abs/2011.14192"><i class="ai ai-arxiv" title="arXiv"></i></a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+<a href="https://youtu.be/JFnH7nRP6XQ"><i class="fa fa-video-camera" title="Video"></i></a>
+</p>
+<p>
+            Parameterized algorithms for Liquid Democracy — a voting system where voters may delegate their votes.
+          </p>
+</div>
+</article>
+<article class="publication">
+<a href="images/bnpg.jpg" style="flex-shrink: 0; display: flex; align-items: center;" target="_blank">
+<img alt="BNPG" height="20" src="images/bnpg.jpg" width="150"/>
+</a>
+<div style="flex: 1;">
+<a href="data/ndds.pdf">
+<h3>Network Design for Binary Networked Public Good Games</h3>
+</a>
+<p>Palash Dey, <strong>Amatya Sharma</strong></p>
+<p>
+<a href="data/ndds.pdf"><i class="fa fa-file-pdf-o" title="Manuscript"></i></a>
+<a href="data/btp2.pdf"><i class="fa fa-slideshare" title="Slides"></i></a>
+</p>
+<p>
+            Analysis of PSNE in game-theoretic models; established hardness and XP algorithms.
+          </p>
+</div>
+</article>
+</section>
+<!-- Other projects -->
+
+<!-- Talks -->
+
+<!-- experience -->
+<section class="container" id="exp" style="margin-top: -45px;">
+<a name="sec_experience"></a>
+<h1>Experience 
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg/1200px-Indian_Institute_of_Technology_Delhi_Logo.svg.png" vertical-align="middle" width="44"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Oracle_redlogo.jpg" vertical-align="middle" width="77"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/1/12/Uni-Bergen-emblem.png" vertical-align="middle" width="44"/>
+<img src="https://iisc.ac.in/wp-content/uploads/2020/08/IISc_Master_Seal_Black.jpg" vertical-align="middle" width="44"/>
+<img src="images/IIT-Kharagpur-01.jpg" vertical-align="middle" width="50"/>
+</h1>
+<p>
+        Below is a summary of my experience, including internships and teaching roles.
+      </p>
+<div class="container" style="margin-top: -30px;">
+<ul style="padding: 0; margin: 0;">
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">UMich, Ann Arbor</a>
+              | Teaching Assistant of Intro to Algo (EECS 477)</span>
+<span class="job-dates" style="float:right;">Aug. 2024 - Dec. 2024</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">CSE, IIT Kharagpur</a></span>
+              | Teaching Assistant of <a href="https://cse.iitkgp.ac.in/~palash/Courses/2022Algorithms1-Theory/algo1-2022.html">Algorithms-1</a>
+<span class="job-dates" style="float:right;">Jan. 2022 - Apr. 2022</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">CSE, IIT Kharagpur</a></span>
+              | Teaching Assistant of <a href="https://cse.iitkgp.ac.in/~palash/Courses/2021AlgorithmicGameTheory/agt2021.html">Algorithmic Game Theory</a>
+<span class="job-dates" style="float:right;">Aug. 2021 - Dec. 2021</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://www.cse.iitd.ac.in/~ashishc/">CSE, IIT Delhi</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">Apr. 2021 - Present</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://www.oracle.com/in/engineered-systems/exadata/cloud-at-customer/">ExaCC, Oracle R&amp;D</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2021 - Jul. 2021</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://www.uib.no/en/ii">Dept. of Informatics, UiB Norway</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2020 - Jun. 2020</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://www.csa.iisc.ac.in/">CSA</a>, <a href="https://iisc.ac.in/">IISc Bangalore</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">Dec. 2019</span>
+</li>
+</article>
+<article class="experience-entry">
+<li>
+<span class="job-title"><a href="https://www.csa.iisc.ac.in/">CSA</a>, <a href="https://iisc.ac.in/">IISc Bangalore</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2019 - Jul. 2019</span>
+</li>
+</article>
+</ul>
+</div>
+</section>
+<!-- courses -->
+
+<!-- courses -->
+
+<!-- about me -->
+
+<!-- calendar -->
+
+</div>
+</main>
+</body>
+</html>
