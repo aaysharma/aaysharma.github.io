@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amatya Sharma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Amatya Sharma">
+  <link rel="icon" href="images/umich.png">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway:400,300,600|PT+Serif:400,400italic,700|PT+Sans:400|Monoton|Lora|Playfair+Display&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      font-family: "Trebuchet MS", sans-serif;
+      background-color: #fff;
+      font-size: 20px;
+      line-height: 1.5em;
+      word-spacing: 0.11em;
+      letter-spacing: 0.04em;
+      margin: 0;
+      padding: 0;
+    }
+
+    .maincontainer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      margin-top: -30px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      margin-top: -30px;
+    }
+
+     .publication {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px; /* margin on the top of the object */
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+    .publication:hover {
+      background-color: #fafafa;
+    }
+    .publication img {
+      width: 150px;
+      flex-shrink: 0;
+      align-self: center;
+      cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+    .publication div {
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .publication p a {
+      font-size: inherit;
+      color: #0066cc;
+      margin: 0.25em 0;
+    }
+    .publication p {
+      margin: 0.25em 0;
+    }
+    .publication p a:hover {
+      font-size: inherit;
+      text-decoration: underline;
+      margin: 0.25em 0;
+    }
+
+    .publication h3 {
+      margin: 0 0 0.025em 0;
+    }
+    @media (max-width: 600px) {
+      .publication {
+        flex-direction: column;
+        align-items: center;
+      }
+      .publication img {
+        width: 60%;
+        max-width: 200px;
+        margin-bottom: 20px;
+        align-self: center;
+      }
+      .publication div {
+        justify-content: flex-start;
+      }
+    }
+
+
+    .experience-entry {
+      margin-bottom: 5px;
+    }
+
+    .job-title {
+/*      font-weight: bold;*/
+    }
+
+    .job-dates {
+      font-style: italic;
+      color: #555;
+    }
+
+    .job-title a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .job-title a:hover {
+      text-decoration: underline;
+    }
+
+/* Apply smooth scrolling behavior for the page */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Style for the Vertical Navigation Bar */
+#vertical-navbar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  height: auto;
+  width: 250px;
+  background-color: #edffed; /* Light Greenish with transparency */
+  padding-top: 20px;
+  z-index: 1000; /* Ensure navbar stays on top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to give it depth */
+  backdrop-filter: blur(10px); /* Adds blur effect for better translucency */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Style for the unordered list inside the navbar */
+#vertical-navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#vertical-navbar li {
+  width: 100%;
+}
+
+#vertical-navbar a {
+  text-decoration: none;
+  color: #3a6b3a; /* Dark green text */
+  display: block;
+  padding: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s;
+}
+
+#vertical-navbar a:hover {
+  background-color: #c1e1c1; /* Lighter greenish hover effect */
+  color: #2b4d2b; /* Darker green on hover */
+}
+
+#vertical-navbar a.active {
+  background-color: #f09228; /* Active link color */
+  color: white;
+}
+
+/* Content area */
+main {
+  margin-left: 250px; /* Same width as the navbar */
+  padding: 20px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  #vertical-navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 10px;
+    transform: none; /* Remove vertical centering for mobile view */
+    top: 0; /* Set top to 0 for mobile */
+  }
+
+  #vertical-navbar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #vertical-navbar a {
+    padding: 10px 20px;
+  }
+
+  main {
+    margin-left: 0; /* Full width on smaller screens */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+
+<!-- 
+<header>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#pubs">Publications</a></li>
+      <li><a href="#exp">Experience</a></li>
+      <li><a href="#awards">Awards & Achievements</a></li>
+      <li><a href="#courses">Courses Taken</a></li>
+      <li><a href="#cal">Calendar</a></li>
+      <li><a href="#aboutme">About Me</a></li>
+    </ul>
+  </nav>
+</header> -->
+
+<header>
+  <nav id="vertical-navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#pubs">Publications</a></li>
+      <li><a href="#exp">Experience</a></li>
+      <li><a href="#awards">Awards & Achievements</a></li>
+      <li><a href="#courses">Courses Taken</a></li>
+      <li><a href="#cal">Calendar</a></li>
+      <li><a href="#aboutme">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+<main>
+
+
+  <div class="maincontainer" style="margin-top: 30px;">
+    <section id="home" style="text-align: center;">
+
+      <a href="images/whiteshirt_aaysharma.jpg">
+        <img src="images/circle_cropped_whiteshirt_aaysharma.png" alt="Amatya Sharma" style="width:33%; max-width:250px;">
+      </a>
+      <p style="line-height: 1.7;">
+        <span style="font-size: 2em; font-weight: bold;">Amatya Sharma</span><br>
+        <a href="https://cse.engin.umich.edu/">Department of Computer Science and Engineering</a><br>
+        <a href="https://umich.edu/">University of Michigan, Ann Arbor</a><br>
+        amatya [at] umich.edu<br>
+        <a href="data/Amatya_Sharma_CV_latest_pdf.pdf" class="ai ai-cv ai-3x" style="font-size: 24px;"></a> |
+        <a href="https://www.linkedin.com/in/amatya-sharma/" class="fa fa-linkedin-square" style="font-size: 24px;"></a> |
+        <a href="https://scholar.google.com/citations?user=FN6Q_jEAAAAJ&hl=en&authuser=1" class="ai ai-google-scholar-square ai-3x" style="font-size: 24px;"></a> |
+        <a href="https://twitter.com/Amatya_Sharma07" class="fa fa-twitter" style="font-size: 24px;"></a> |
+        <a href="https://github.com/aaysharma/" class="fa fa-github-square" style="font-size: 24px;"></a>
+      </p>
+
+      <div style="text-align: left;">
+        <p>
+          I am a Ph.D. Candidate in <a href="https://theory.engin.umich.edu/">Theoretical Computer Science</a> at
+          <a href="https://umich.edu/">University of Michigan (Ann Arbor)</a>, fortunate to be co-advised by
+          <a href="https://bansal.engin.umich.edu/">Nikhil Bansal</a> and <a href="https://web.eecs.umich.edu/~euiwoong/">Euiwoong Lee</a>.
+          I obtained my Dual Degree (BTech+MTech) from <a href="http://cse.iitkgp.ac.in/">Computer Science and Engineering Department</a>,
+          <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology (IIT) Kharagpur</a>.
+          I'm interested in Theoretical CS, including Approximation, Online, Randomized, Parameterized Algorithms, and Game Theory.
+        </p>
+        <p>
+          Over the past years, I have had great collaborators including Prof.
+          Ashish Chiplunkar (IIT Delhi),
+          Arindam Khan (IISc Bangalore),
+          Andreas Wiese (UofChile),
+          and Palash Dey (IIT Kharagpur).
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Publications -->
+    <section id="pubs">
+      <h1>Publications</h1>
+      <p>
+        I'm interested in Theoretical Computer Science, including Approximation, Online, Randomized, Parameterized Algorithms, Algorithmic Game Theory.
+        My prior research work revolves around the design and analysis of Approximation and Parameterized Algorithms for Computational Geometric and Game Theoretic Problems.
+        (Note: For theory papers, author names are <strong>listed alphabetically</strong>.)
+      </p>
+
+      <article class="publication">
+        <a href="images/completemin2sat.png" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/completemin2sat.png" alt="Complete Min-2SAT" width="150">
+        </a>
+        <div style="flex: 1;">
+          <a href="https://doi.org/10.1137/1.9781611978322.35">
+            <h3>Min CSPs on Complete Instances</h3>
+          </a>
+          <p >Aditya Anand, Euiwoong Lee, <strong>Amatya Sharma</strong><br>
+            <em>In<strong> SODA 2025</strong></em>
+            <a href="https://doi.org/10.1137/1.9781611978322.35" title="Official SODA version"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+            <a href="https://arxiv.org/abs/2410.19066" title="arXiv preprint"><i class="ai ai-arxiv" title="arXiv"></i></a>
+            <a href="data/MinCSPs.pdf" title="Presentation at SODA"><i class="fa fa-slideshare" title="Slides"></i></a>
+          </p>
+          <p >
+            Initiated the study of complete instances for Minimization Constraint Satisfiability Problems. Proved results for Min-2CSP and k-CSPs.
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0022000017300016-gr001.jpg" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0022000017300016-gr001.jpg" alt="Weighted k-server" width="150">
+        </a>
+        <div style="flex: 1;">
+          <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2024.6"><h3>A Decomposition Approach to Weighted k-server problem</h3></a>
+          <p>Nikhil Ayyadevara, Ashish Chiplunkar, <strong>Amatya Sharma</strong><br>
+            <em>In <strong>FSTTCS 2024.</strong></em>
+            <a href="https://arxiv.org/abs/2410.06485"><i class="ai ai-arxiv" title="arXiv"></i></a>
+            <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2024.6"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+          </p>
+          <p >
+            Presented a decomposition approach to for online weighted k-server.
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a href="images/2dggk.jpg" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/2dggk.jpg" alt="2D GGK" width="150">
+        </a>
+        <div style="flex: 1;">
+          <a href="https://arxiv.org/abs/2103.09735">
+            <h3>On Guillotine Separable Packings for the 2D Geometric Knapsack Problem</h3>
+          </a>
+          <p >Arindam Khan, Arnab Maiti, <strong>Amatya Sharma</strong>, Andreas Wiese<br>
+            <em>In<strong>SoCG 2021</strong>, Contributed Talk <strong>HALG 2021.</strong></em>
+            <a href="https://doi.org/10.4230/LIPIcs.SoCG.2021.48" title="Official SoCG version"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+            <a href="https://arxiv.org/abs/2103.09735" title="arXiv preprint"><i class="ai ai-arxiv" title="arXiv"></i></a>
+            <a href="data/SOCG-Final-PPT.pdf" title="Presentation at SoCG"><i class="fa fa-slideshare" title="Slides"></i></a>
+            <a href="data/MONDAY_SHARMA.pdf" title="HALG talk slides"><i class="fa fa-slideshare" title="Slides"></i></a>
+            <a href="data/MONDAY_SHARMA_POSTER.pdf" title="Research poster"><i class="fa fa-image" title="Poster"></i></a>
+          </p>
+          <p >
+            PPTAS (Pseudo-Polynomial Time Approximation Scheme) for the 2D Knapsack problem in a Guillotine Separable setting, improving the best approximation factor of 3.
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a href="images/2dsp.png" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/2dsp.png" alt="2D SP" width="150">
+        </a>
+        <div style="flex: 1;">
+          <a href="https://arxiv.org/abs/2202.05989">
+            <h3>Two Dimensional Guillotine Strip Packing</h3>
+          </a>
+          <p >Arindam Khan, Aditya Lonkar, Arnab Maiti, <strong>Amatya Sharma</strong>, Andreas Wiese<br>
+            In <strong>ICALP</strong> 2022.
+            <a href="https://arxiv.org/abs/2202.05989"><i class="ai ai-arxiv" title="arXiv"></i></a>
+          </p>
+          <p >
+            A (3/2 + ε)-approximation algorithm for 2D Strip Packing in Guillotine Separable setting, including a PPTAS.
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a href="images/liquiddemocracy.png" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/ld_caldam.jpg" alt="Liquid Democracy" width="150">
+        </a>
+        <div style="flex: 1;">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7">
+            <h3>On Parameterized Complexity of Liquid Democracy</h3>
+          </a>
+          <p >Palash Dey, Arnab Maiti, <strong>Amatya Sharma</strong><br>
+            <em>In <strong>CALDAM 2021.</strong></em>
+            <a href="https://arxiv.org/abs/2011.14192"><i class="ai ai-arxiv" title="arXiv"></i></a>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7"><i class="fa fa-file-pdf-o" title="PDF"></i></a>
+            <a href="https://youtu.be/JFnH7nRP6XQ"><i class="fa fa-video-camera" title="Video"></i></a>
+          </p>
+          <p >
+            Parameterized algorithms for Liquid Democracy — a voting system where voters may delegate their votes.
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a href="images/bnpg.jpg" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/bnpg.jpg" alt="BNPG" width="150" height="20">
+        </a>
+        <div style="flex: 1;">
+          <a href="data/ndds.pdf">
+            <h3>Network Design for Binary Networked Public Good Games</h3>
+          </a>
+          <p >Palash Dey, <strong>Amatya Sharma</strong></p>
+          <p >
+            <a href="data/ndds.pdf"><i class="fa fa-file-pdf-o" title="Manuscript"></i></a>
+            <a href="data/btp2.pdf"><i class="fa fa-slideshare" title="Slides"></i></a>
+          </p>
+          <p >
+            Analysis of PSNE in game-theoretic models; established hardness and XP algorithms.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Other projects -->
+
+    <section id="others" style="margin-top: 0px;">
+      <a name="sec_otherprojects"></a>
+      <h1>Other Projects</h1>
+      <p>
+        Apart from published works, I have explored plenty of other projects, in Theory CS, Computer Architecture, Software Engineering (Full Stack Development), Machine Learning, Compilers etc.
+      </p>
+
+      <!-- Margin of Victory -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/mov.jpg" target="_blank"><img src="images/mov.jpg" width="150" alt="Margin of Victory"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://github.com/aaysharma/parameterized-complexity-margin-of-victory"><h3>Parameterized Complexity of Margin of Victory</h3></a>
+          <p><strong>Palash Dey</strong> and <strong>Amatya Sharma</strong>, (2021). <a href="https://github.com/aaysharma/parameterized-complexity-margin-of-victory"><i class="fa fa-github" title="GitHub"></i></a></p>
+          <p>Developed Parameterized Algorithms for the Game-Theoretic problem of computing Margin of Victory for tournament solutions.</p>
+        </div>
+      </article>
+
+      <!-- Image Augmentation and Recon Loss Duo -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/imageaugreconduo.jpg" target="_blank"><img src="images/imageaugreconduo.jpg" width="160" alt="Image Augmentation"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="data/imageaugreconduo.pdf"><h3>Image Augmentation and Auxiliary Loss Duo</h3></a>
+          <p><strong>Faraaz Mallick</strong>, Dewang Modi, <strong>Amatya Sharma</strong></p>
+          <p><em>Participating in <a href="https://paperswithcode.com/rc2021">ML Reproducibility Challenge 2021</a></em>. <a href="data/imageaugreconduo.pdf"><i class="fa fa-file-pdf-o" title="Paper"></i></a><a href="data/imageaugreconduo_ppt.pdf"><i class="fa fa-slideshare" title="Presentation"></i></a></p>
+          <p>Implemented and experimented with a new model based on image reconstruction and augmentation. Reproduced AAAI’21 paper on <a href="https://arxiv.org/abs/1910.01741">Improving Sample Efficiency in Model-Free Reinforcement Learning from Images</a>.</p>
+        </div>
+      </article>
+
+      <!-- HTTP Authentication -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/f/f7/Oracle_redlogo.jpg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Oracle_redlogo.jpg" width="160" alt="Oracle"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="data/httpauth.pdf"><h3>HTTP Authentication</h3></a>
+          <p><strong>Amatya Sharma</strong>, <a href="https://www.linkedin.com/in/shankar-venugopal-81323b3/">Shankar Venugopal</a>, and <a href="https://www.linkedin.com/in/mohana-kera/">Mohana Kera</a></p>
+          <p><em>Summer Intern Project, ExaCC Team, Oracle (RnD) Server Technology</em>. <a href="data/httpauth.pdf"><i class="fa fa-file-pdf-o" title="PDF"></i></a></p>
+          <p>Implemented Java Library for secure HTTP Authentication using Java Cryptography Architecture.</p>
+        </div>
+      </article>
+
+      <!-- Gaussian Process Kernels -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/aml.jpg" target="_blank"><img src="images/aml.jpg" width="160" alt="Gaussian Process Kernels"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="data/AML_Report_GaussianProcess.pdf"><h3>Gaussian Process Kernels</h3></a>
+          <p><strong>Prince Bharadwaj</strong>, <a href="https://www.linkedin.com/in/adarsh-goyal-950352175/">Adarsh Goyal</a>, <a href="https://www.researchgate.net/profile/Nwe-Kyaw">Nwe Ni Kyaw</a>, and <strong>Amatya Sharma</strong></p>
+          <p><em>Advanced Machine Learning Course Term Project.</em> <a href="data/AML_Report_GaussianProcess.pdf"><i class="fa fa-file-pdf-o" title="PDF"></i></a></p>
+          <p>A term project on Local and Global Approximation techniques for Gaussian Process Kernels, followed by experiments on numerous approximation prevailing techniques.</p>
+        </div>
+      </article>
+
+      <!-- Shoten -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/shoten.jpg" target="_blank"><img src="images/shoten.jpg" width="120" alt="Shoten"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://github.com/aaysharma/Shoten"><h3>Shoten: An e-BookStore</h3></a>
+          <p><strong>Udit Desai</strong> and <strong>Amatya Sharma</strong></p>
+          <p><em>Software Engineering Course Term Project, November 2020</em>. <a href="https://github.com/aaysharma/Shoten"><i class="fa fa-github" title="GitHub"></i></a></p>
+          <p>Full Stack development of an online bookstore employing HTML, CSS, JSP, and MySQL.</p>
+        </div>
+      </article>
+
+      <!-- TinyC Compiler -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/tinyC.svg" target="_blank"><img src="images/tinyC.svg" width="120" alt="TinyC Compiler"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://github.com/aaysharma/TinyC-Compiler"><h3>TinyC Compiler</h3></a>
+          <p><strong>Divyang Mittal</strong> and <strong>Amatya Sharma</strong></p>
+          <p><em>Compilers Course Project, November 2019. </em><a href="https://github.com/aaysharma/TinyC-Compiler"><i class="fa fa-github" title="GitHub"></i></a></p>
+          <p>Implemented a Compiler for TinyC, a subset of C with a reduced set of functionalities, using Yacc, Bison, FLEX, C, and C++.</p>
+        </div>
+      </article>
+
+      <!-- RISC Processor -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="images/risc.jpg" target="_blank"><img src="images/risc.jpg" width="150" alt="RISC Processor"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://github.com/aaysharma/RISC-Fuggit"><h3>RISC Processor</h3></a>
+          <p><strong>Nikhil Shah</strong> and <strong>Amatya Sharma</strong></p>
+          <p><em>Computer Architecture Course Project, November 2019. </em><a href="https://github.com/aaysharma/RISC-Fuggit"><i class="fa fa-github" title="GitHub"></i></a></p>
+          <p>Developed a Reduced Instruction Set Computer Processor and simulated it on FPGA Spartan 3 boards using Verilog.</p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+
+
+    <!-- Talks -->
+    <section id="talks">
+      <a name="sec_talks"></a>
+      <h1>Talks By Me</h1>
+      <p>
+        Here are some of the talks I have given at various conferences, workshops, and classes.
+      </p>
+
+      <!-- 2GGK HALG -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="https://youtu.be/JFnH7nRP6XQ" target="_blank"><img src="images/HALG_2GGK_Thumbnail.jpg" width="150" alt="2GGK HALG"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://youtu.be/JFnH7nRP6XQ"><h3>On Guillotine Separable Packings for the Two-dimensional Geometric Knapsack Problem</h3></a>
+          <p><strong>Amatya Sharma</strong></p>
+          <p><em>HALG'21 Contributed Talk, May 2021.</em> 
+            <a href="data/MONDAY_SHARMA.pdf"><i class="fa fa-slideshare" title="HALG Presentation"></i></a> 
+            <a href="data/MONDAY_SHARMA_POSTER.pdf"><i class="fa fa-image" title="Poster"></i></a>
+          </p>
+          <p>Presented our work coauthored with Arindam Khan, Arnab Maiti, and Andreas Wiese.</p>
+        </div>
+      </article>
+
+      <!-- Liquid Democracy -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="https://youtu.be/JFnH7nRP6XQ" target="_blank"><img src="images/ld_caldam.jpg" width="150" alt="Liquid Democracy"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://youtu.be/JFnH7nRP6XQ"><h3>On Parameterized Complexity of Liquid Democracy</h3></a>
+          <p><strong>Amatya Sharma</strong></p>
+          <p><em>CALDAM'21 Paper Presentation, Feb 2021.</em> 
+            <a href="https://youtu.be/JFnH7nRP6XQ"><i class="fa fa-video-camera" title="YouTube Link"></i></a> 
+            <a href="data/ld_caldam.pdf"><i class="fa fa-slideshare" title="pdf Slides"></i></a> 
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7"><i class="fa fa-book" title="Paper"></i></a>
+          </p>
+          <p>Presents our work coauthored with Palash Dey and Arnab Maiti.</p>
+        </div>
+      </article>
+
+      <!-- Bidimensionality -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="https://youtu.be/jgl-7Kc_ziI" target="_blank"><img src="images/bidem.jpg" width="150" alt="Bidimensionality"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://youtu.be/jgl-7Kc_ziI"><h3>Bidimensionality: Parameterized Algorithms</h3></a>
+          <p><strong>Amatya Sharma</strong></p>
+          <p><em>Parameterized Algorithms (CS60083) Course Presentation, November 2020.</em> 
+            <a href="https://youtu.be/jgl-7Kc_ziI"><i class="fa fa-video-camera" title="YouTube Link"></i></a> 
+            <a href="data/bidem.pdf"><i class="fa fa-slideshare" title="pdf Slides"></i></a>
+          </p>
+          <p>Talk on the concept of bidimensionality and bidimensional problems, a tool for developing parameterized algorithms for a vast set of problems employing the concept of tree-width.</p>
+        </div>
+      </article>
+
+      <!-- DL GAN ECCW -->
+      <article class="publication">
+        <div style="flex-shrink: 0;">
+          <a href="https://youtu.be/RCDfGywknZs" target="_blank"><img src="images/dl_gan.jpg" width="150" alt="DL GAN ECCW"></a>
+        </div>
+        <div style="flex: 1;">
+          <a href="https://youtu.be/RCDfGywknZs"><h3>Mitigating Dataset Imbalance via Joint Generation & Classification</h3></a>
+          <p><strong>Dewang Modi</strong> and <strong>Amatya Sharma</strong></p>
+          <p><em>Deep Learning (CS60010) Learning Paper Presentation, April 2021.</em> 
+            <a href="https://youtu.be/RCDfGywknZs"><i class="fa fa-video-camera" title="YouTube Video"></i></a> 
+            <a href="data/dl_gan.pdf"><i class="fa fa-slideshare" title="pdf Slides"></i></a>
+          </p>
+          <p>Semester Paper Presentation in Deep Learning Course (CS60010) at Indian Institute of Technology (IIT) Kharagpur on a EECVW'20 by <a href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ&hl=en">Aadarsh Sahoo</a> et al., on Mitigating Dataset Imbalance via Joint Generation and Classification.</p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+
+
+    <!-- experience -->
+
+    <section id="exp" class="container" style="margin-top: -45px;" >
+      <a name="sec_experience"></a>
+      <h1>Experience 
+        <img vertical-align="middle" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg/1200px-Indian_Institute_of_Technology_Delhi_Logo.svg.png" width="44">
+        <img vertical-align="middle" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Oracle_redlogo.jpg" width="77">
+        <img vertical-align="middle" src="https://upload.wikimedia.org/wikipedia/en/1/12/Uni-Bergen-emblem.png" width="44">
+        <img vertical-align="middle" src="https://iisc.ac.in/wp-content/uploads/2020/08/IISc_Master_Seal_Black.jpg" width="44">
+        <img vertical-align="middle" src="images/IIT-Kharagpur-01.jpg" width="50">
+      </h1>
+      
+      <p>
+        Below is a summary of my experience, including internships and teaching roles.
+      </p>
+
+      <div class="container" style="margin-top: -30px;">
+        <ul style="padding: 0; margin: 0;">
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">UMich, Ann Arbor</a>
+              | Teaching Assistant of Intro to Algo (EECS 477)</span>
+              <span class="job-dates" style="float:right;">Aug. 2024 - Dec. 2024</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">CSE, IIT Kharagpur</a></span>
+              | Teaching Assistant of <a href="https://cse.iitkgp.ac.in/~palash/Courses/2022Algorithms1-Theory/algo1-2022.html">Algorithms-1</a>
+              <span class="job-dates" style="float:right;">Jan. 2022 - Apr. 2022</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://cse.iitkgp.ac.in/~palash/">CSE, IIT Kharagpur</a></span>
+              | Teaching Assistant of <a href="https://cse.iitkgp.ac.in/~palash/Courses/2021AlgorithmicGameTheory/agt2021.html">Algorithmic Game Theory</a>
+              <span class="job-dates" style="float:right;">Aug. 2021 - Dec. 2021</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://www.cse.iitd.ac.in/~ashishc/">CSE, IIT Delhi</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">Apr. 2021 - Present</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://www.oracle.com/in/engineered-systems/exadata/cloud-at-customer/">ExaCC, Oracle R&D</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2021 - Jul. 2021</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://www.uib.no/en/ii">Dept. of Informatics, UiB Norway</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2020 - Jun. 2020</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://www.csa.iisc.ac.in/">CSA</a>, <a href="https://iisc.ac.in/" >IISc Bangalore</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">Dec. 2019</span>
+            </li>
+          </article>
+
+          <article class="experience-entry">
+            <li>
+              <span class="job-title"><a href="https://www.csa.iisc.ac.in/">CSA</a>, <a href="https://iisc.ac.in/" >IISc Bangalore</a></span>
+              | Summer Intern
+              <span class="job-dates" style="float:right;">May. 2019 - Jul. 2019</span>
+            </li>
+          </article>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- courses -->
+
+    <section id="awards" class="container" style="margin-top: -120px;">
+      <a name="sec_awards"></a>
+      <h1>Awards & Achievements</h1>
+
+      <p>
+        Below are some of the awards and achievements I have received throughout my academic career.
+      </p>
+
+      <div class="container" style="margin-top: -40px;">
+        <ul style="padding: 0; margin: 0; line-height: 1.2;">
+          <!-- University Rank -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">University Rank 8 at IIT Kharagpur</span>
+              <span style="float:right;">2022</span>
+            </li>
+          </article>
+
+          <!-- Department Rank -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">Department Rank 5 in the Computer Science Department (IIT Kharagpur)</span>
+              <span style="float:right;">2022</span>
+            </li>
+          </article>
+
+          <!-- GATE Scholarship -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                Awarded <a href="https://www.aicte-india.org/sites/default/files/GUIDELINES%20FOR%20PG%20scholarship.pdf" target="_blank">GATE Scholarship</a> for Teaching Assistantship at CSE, Kharagpur
+              </span>
+              <span style="float:right;">2021</span>
+            </li>
+          </article>
+
+          <!-- Department Change -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                <a href="https://wiki.metakgp.org/w/Department_change" target="_blank">Department Change</a> (Top 10 Rank in IIT Kharagpur First Year)
+              </span>
+              <span style="float:right;">2017</span>
+            </li>
+          </article>
+
+          <!-- IIT-JEE Advanced Rank -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                <a href="https://jeeadv.ac.in/" target="_blank">IIT-JEE Advanced 2017</a> (All India Rank 1464)
+              </span>
+              <span style="float:right;">2017</span>
+            </li>
+          </article>
+
+          <!-- SJVN Merit Scholar -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                <a href="http://scholarship.himcon.org/" target="_blank">SJVN</a> Merit Scholar for Top Performance in <a href="https://www.cbse.gov.in/" target="_blank">CBSE 12th Exam</a>
+              </span>
+              <span style="float:right;">2017</span>
+            </li>
+          </article>
+
+          <!-- NTSE Scholar -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                <a href="https://ncert.nic.in/national-talent-examination.php" target="_blank">National Talent Search Examination (NTSE)</a> Scholar
+              </span>
+              <span style="float:right;">2015</span>
+            </li>
+          </article>
+
+          <!-- RIMC Exam -->
+          <article class="experience-entry">
+            <li>
+              <span class="job-title">
+                Rashtriya Indian Military College (<a href="http://www.rimc.gov.in/" target="_blank">RIMC</a>) Exam 2017 (Top 60 Rank)
+              </span>
+              <span style="float:right;">2013</span>
+            </li>
+          </article>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- courses -->
+    <section id="courses" style="margin-top: -70px;">
+      <a name="sec_courses"></a>
+      <h1>Courses Taken</h1>
+      <p>
+        Most of the curriculum courses I have taken are in close vicinity to Theoretical Computer Science. I have also taken elective classes in the field of AI including Reinforcement Learning and Natural Language Processing. 
+      </p>
+
+      <!-- Algorithms And Theoretical Computer Science Courses -->
+      <article class="publication">
+        <a href="images/algo.gif" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/algo.gif" alt="Algorithms" width="150">
+        </a>
+        <div style="flex: 1;">
+          <h3>Algorithms & Maths</h3>
+          <p>
+            Approximation and Online Algorithms (EECS 598-0101, <a href="http://cse.iitkgp.ac.in/~spp/aoa2020.html">CS60023</a>), Parameterized Algorithms (<a href="https://cse.iitkgp.ac.in/~palash/Courses/2020ParameterizedAlgo/paramAlgo.html">CS60083</a>), Algorithmic Game Theory (<a href="http://cse.iitkgp.ac.in/~palash/Courses/2019AlgorithmicGameTheory/agt2019.html">CS60025</a>), Randomized Algorithms (<a href="https://cse.iitkgp.ac.in/~palash/Courses/2020RandomizedAlgoDesign/RAD2020.html">CS60029</a>), Advanced Graph Theory (<a href="https://cse.iitkgp.ac.in/~palash/Courses/2019AdvancedGraphTheory/graphTheory2019.html">CS60047</a>), Computational Geometry (<a href="http://cse.iitkgp.ac.in/~spp/cg2018.html">CS60064</a>), Theory Of Computation (<a href="http://cse.iitkgp.ac.in/~skolay/TOC2020.html">CS41001</a>), Computational Complexity (CS60043), Lattices in Cryptography (EECS 598), Selected Topics in Algorithms (CS60086), Cryptography & Network Security (CS60065), and Linear Algebra (MA20105).
+          </p>
+        </div>
+      </article>
+
+      <!-- Machine Learning -->
+      <article class="publication">
+        <a href="images/deeplearning.webp" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/deeplearning.webp" alt="Deep Learning" width="150">
+        </a>
+        <div style="flex: 1;">
+          <h3>Artificial Intelligence & Machine Learning</h3>
+          <p>
+            Reinforcement Learning (<a href="http://cse.iitkgp.ac.in/~adas/courses/rl_aut2021/rl_aut2021.php">CS60077</a>), Statistical Foundations of AI & ML (AI61004), Deep Learning (<a href="http://cse.iitkgp.ac.in/~adas/courses/dl_spr2021/dl_spr2021.php">CS60010</a>), Natural Language Processing (CS60075) and Advanced Machine Learning (<a href="https://cse.iitkgp.ac.in/~pabitra/course/aml.html">CS60073</a>).
+          </p>
+        </div>
+      </article>
+
+      <!-- Other courses -->
+      <article class="publication">
+        <a href="images/tool.webp" target="_blank" style="flex-shrink: 0; display: flex; align-items: center;">
+          <img src="images/tool.webp" alt="Tools" width="150">
+        </a>
+        <div style="flex: 1;">
+          <h3>Other Courses and Software Tools/Skills</h3>
+          <p>
+            Discrete Mathematics, Algorithms, Operating Systems, Computer Networks, Software Engineering.
+          </p>
+          <p>
+            Java Cryptography Architecture, GIT, BitBucket, JUnit, MySQL, LaTex, Matlab, SolidWorks, HTML, CSS, PHP, JSP, Java, Python, C++, C, BISON, Yacc, FLEX.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+
+
+
+    <!-- about me -->
+    <section id="aboutme" class="container">
+      <a name="aboutme"></a>
+      <h1>About Me</h1>
+      
+      <div class="container">
+        <article class="publication" style="margin-top:-30px;">
+          <div style="flex: 1;">
+            <p>
+              I am a coffee aficionado straight from the Himalayas. To know more about the coffees I have had, scenic places I've been to, or my music taste, check out <a href="./aboutme.html">this</a> webpage.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- calendar -->
+
+    <section id="cal" class="container" style="margin-top:-140px;">
+      <a name="sec_calendar"></a>
+      <h1>Calendar & Contact</h1>
+
+      <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+        <!-- Calendar on the left -->
+        <div style="flex: 1;">
+          <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FDetroit&bgcolor=%23ffffff&showTitle=0&showPrint=0&mode=AGENDA&src=c2NvbG9wZW5kcmE2NTU1NUBnbWFpbC5jb20&src=YW1hdHlhbnRzZUBnbWFpbC5jb20&src=YW1hdHlhQHVtaWNoLmVkdQ&src=Y18yYjYzYTM3ODdlNDA2MmZjNWFjNmFkNzViYTc1NTliOTc1MWJmNmU3MGMwODY1N2NjMTZkYmY0NzE4ODFhZmM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23616161&color=%23B39DDB&color=%23D50000" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Contact on the right -->
+        <div style="flex: 1; text-align: right;">
+          <h2>Contact</h2>
+          <p>
+            Amatya Sharma<br>
+            2741 Bob and Betty Beyester Building<br>
+            Ann Arbor, MI (US)<br>
+            48109<br>
+            Email: amatya[at]umich.edu<br><br>
+          </p>
+          <p style="font-size: 11px;">
+            Last update: 03/2025. Website adapted from <a href="https://jonbarron.info/" style="font-size: 11px">Jon Barron</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+</div>
+
+</main>
+
+
+</body>
+</html>
