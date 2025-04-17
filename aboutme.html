@@ -756,74 +756,13 @@ coffee1.jpg: qamaria iced matcha latte
 
 
 
-
-
-
-
 <section id="captures">
   <h2> 📸 Nature Captures</h2>
   <p>I live in Himachal, but my camera roams wide. Here are some views I’ve clicked from India to the US.</p>
 
   <div class="carousel-container">
     <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-    <div class="carousel-track">
-      <img src="images/hills/hill1.jpg" alt="Hill 1" />
-      <img src="images/hills/hill2.jpg" alt="Hill 2" />
-      <img src="images/hills/hill3.jpg" alt="Hill 3" />
-      <img src="images/hills/hill4.jpg" alt="Hill 4" />
-      <img src="images/hills/hill5.jpg" alt="Hill 5" />
-      <img src="images/hills/hill6.jpg" alt="Hill 6" />
-      <img src="images/hills/hill7.jpg" alt="Hill 7" />
-      <img src="images/hills/hill8.jpg" alt="Hill 8" />
-      <img src="images/hills/hill9.jpg" alt="Hill 9" />
-      <img src="images/hills/hill10.jpg" alt="Hill 10" />
-      <img src="images/hills/hill11.jpg" alt="Hill 11" />
-      <img src="images/hills/hill12.jpg" alt="Hill 12" />
-      <img src="images/hills/hill13.jpg" alt="Hill 13" />
-      <img src="images/hills/hill14.jpg" alt="Hill 14" />
-      <img src="images/hills/hill15.jpg" alt="Hill 15" />
-      <img src="images/hills/hill16.jpg" alt="Hill 16" />
-      <img src="images/hills/hill17.jpg" alt="Hill 17" />
-      <img src="images/hills/hill18.jpg" alt="Hill 18" />
-      <img src="images/hills/hill19.jpg" alt="Hill 19" />
-      <img src="images/hills/hill20.jpg" alt="Hill 20" />
-      <img src="images/hills/hill21.jpg" alt="Hill 21" />
-      <img src="images/hills/hill22.jpg" alt="Hill 22" />
-      <img src="images/hills/hill23.jpg" alt="Hill 23" />
-      <img src="images/hills/hill24.jpg" alt="Hill 24" />
-      <img src="images/hills/hill25.jpg" alt="Hill 25" />
-      <img src="images/hills/hill26.jpg" alt="Hill 26" />
-      <img src="images/hills/hill27.jpg" alt="Hill 27" />
-      <img src="images/hills/hill30.jpg" alt="Hill 30" />
-      <img src="images/hills/hill31.jpg" alt="Hill 31" />
-      <img src="images/hills/hill32.jpg" alt="Hill 32" />
-      <img src="images/hills/hill33.jpg" alt="Hill 33" />
-      <img src="images/hills/hill34.jpg" alt="Hill 34" />
-      <img src="images/hills/hill35.jpg" alt="Hill 35" />
-      <img src="images/hills/hill36.jpg" alt="Hill 36" />
-      <img src="images/hills/hill37.jpg" alt="Hill 37" />
-      <img src="images/hills/hill38.jpg" alt="Hill 38" />
-      <img src="images/hills/hill39.jpg" alt="Hill 39" />
-      <img src="images/hills/hill40.jpg" alt="Hill 40" />
-      <img src="images/hills/hill41.jpg" alt="Hill 41" />
-      <img src="images/hills/hill42.jpg" alt="Hill 42" />
-      <img src="images/hills/hill43.jpg" alt="Hill 43" />
-      <img src="images/hills/hill44.jpg" alt="Hill 44" />
-      <img src="images/hills/hill45.jpg" alt="Hill 45" />
-      <img src="images/hills/hill46.jpg" alt="Hill 46" />
-      <img src="images/hills/hill47.jpg" alt="Hill 47" />
-      <img src="images/hills/hill48.jpg" alt="Hill 48" />
-      <img src="images/hills/hill49.jpg" alt="Hill 49" />
-      <img src="images/hills/hill50.jpg" alt="Hill 50" />
-      <img src="images/hills/hill51.jpg" alt="Hill 51" />
-      <img src="images/hills/hill52.jpg" alt="Hill 52" />
-      <img src="images/hills/hill53.jpg" alt="Hill 53" />
-      <img src="images/hills/hill54.jpg" alt="Hill 54" />
-      <img src="images/hills/hill55.jpg" alt="Hill 55" />
-      <img src="images/hills/hill56.jpg" alt="Hill 56" />
-      <img src="images/hills/hill57.jpg" alt="Hill 57" />
-      <img src="images/hills/hill58.jpg" alt="Hill 58" />
-    </div>
+    <div class="carousel-track"></div>
     <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
   </div>
 
@@ -833,7 +772,7 @@ coffee1.jpg: qamaria iced matcha latte
 </section>
 
 <style>
-.carousel-container {
+  .carousel-container {
   position: relative;
   overflow: hidden;
   max-width: 800px;
@@ -841,17 +780,21 @@ coffee1.jpg: qamaria iced matcha latte
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 .carousel-track {
   display: flex;
   transition: transform 0.4s ease-in-out;
 }
+
 .carousel-track img {
   min-width: 100%;
   max-height: 500px;
   object-fit: cover;
   cursor: zoom-in;
   border-radius: 12px;
+  display: block;
 }
+
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -864,6 +807,7 @@ coffee1.jpg: qamaria iced matcha latte
   z-index: 10;
   border-radius: 4px;
 }
+
 .prev { left: 10px; }
 .next { right: 10px; }
 
@@ -877,6 +821,7 @@ coffee1.jpg: qamaria iced matcha latte
   align-items: center;
   z-index: 9999;
 }
+
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
@@ -884,59 +829,60 @@ coffee1.jpg: qamaria iced matcha latte
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   animation: fadeIn 0.3s ease-in-out;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+
 </style>
 
-
-
 <script>
-  let index = 0;
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageFilenames = [
+      "hill1.jpg", "hill2.jpg", "hill3.jpg", "hill4.jpg", "hill5.jpg", "hill6.jpg", "hill7.jpg",
+      "hill8.jpg", "hill9.jpg", "hill10.jpg", "hill11.jpg", "hill12.jpg", "hill13.jpg", "hill14.jpg",
+      "hill15.jpg", "hill16.jpg", "hill17.jpg", "hill18.jpg", "hill19.jpg", "hill20.jpg", "hill21.jpg",
+      "hill22.jpg", "hill23.jpg", "hill24.jpg", "hill25.jpg", "hill26.jpg", "hill27.jpg", "hill30.jpg",
+      "hill31.jpg", "hill32.jpg", "hill33.jpg", "hill34.jpg", "hill35.jpg", "hill36.jpg", "hill37.jpg",
+      "hill38.jpg", "hill39.jpg", "hill40.jpg", "hill41.jpg", "hill42.jpg", "hill43.jpg", "hill44.jpg",
+      "hill45.jpg", "hill46.jpg", "hill47.jpg"
+    ];
 
-  const imageFilenames = [
-    "hill1.jpg", "hill2.jpg", "hill3.jpg", "hill4.jpg", "hill5.jpg", "hill6.jpg", "hill7.jpg",
-    "hill8.jpg", "hill9.jpg", "hill10.jpg", "hill11.jpg", "hill12.jpg", "hill13.jpg", "hill14.jpg",
-    "hill15.jpg", "hill16.jpg", "hill17.jpg", "hill18.jpg", "hill19.jpg", "hill20.jpg", "hill21.jpg",
-    "hill22.jpg", "hill23.jpg", "hill24.jpg", "hill25.jpg", "hill26.jpg", "hill27.jpg", "hill30.jpg",
-    "hill31.jpg", "hill32.jpg", "hill33.jpg", "hill34.jpg", "hill35.jpg", "hill36.jpg", "hill37.jpg",
-    "hill38.jpg", "hill39.jpg", "hill40.jpg", "hill41.jpg", "hill42.jpg", "hill43.jpg", "hill44.jpg",
-    "hill45.jpg", "hill46.jpg", "hill47.jpg"
-  ];
+    const track = document.querySelector(".carousel-track");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  // Shuffle the array
-  imageFilenames.sort(() => Math.random() - 0.5);
+    // Shuffle image list
+    imageFilenames.sort(() => Math.random() - 0.5);
 
-  // Inject randomized images into carousel
-  const track = document.querySelector(".carousel-track");
-  imageFilenames.forEach(name => {
-    const img = document.createElement("img");
-    img.src = "images/hills/" + name;
-    img.alt = name.replace(".jpg", "").replace(/_/g, " ");
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+    // Add images to carousel
+    imageFilenames.forEach(name => {
+      const img = document.createElement("img");
+      img.src = "images/hills/" + name;
+      img.alt = name.replace(".jpg", "").replace(/_/g, " ");
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+      track.appendChild(img);
     });
-    track.appendChild(img);
-  });
 
-  function moveSlide(step) {
-    const slides = track.querySelectorAll("img");
-    index = (index + step + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
+    // Lightbox close
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
 
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
+    // Carousel movement
+    let index = 0;
+    function moveSlide(step) {
+      const slides = track.querySelectorAll("img");
+      index = (index + step + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    window.moveSlide = moveSlide; // expose globally
   });
 </script>
-
-
-
 
 
 
