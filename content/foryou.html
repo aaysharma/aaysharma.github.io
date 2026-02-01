@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valentine?</title>
+  <style>
+    :root {
+      --bg1: #1a1d3a;
+      --bg2: #3a1630;
+
+      --card: rgba(255, 255, 255, 0.10);
+      --card2: rgba(255, 255, 255, 0.14);
+      --text: rgba(255, 255, 255, 0.94);
+      --muted: rgba(255, 255, 255, 0.78);
+
+      --yes: #33d17a;
+      --yes2:#26a269;
+      --no: #ff6b6b;
+      --no2:#fa5252;
+
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      overflow: hidden;
+
+      background:
+        radial-gradient(1000px 760px at 22% 18%, rgba(255, 105, 180, 0.28), transparent 58%),
+        radial-gradient(900px 700px at 78% 28%, rgba(51, 209, 122, 0.22), transparent 60%),
+        radial-gradient(700px 520px at 50% 85%, rgba(255, 255, 255, 0.10), transparent 60%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+    }
+
+    /* Background layers */
+    .layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    #photosLayer { z-index: 0; }
+    #heartsLayer { z-index: 0; }
+
+    /* Floating photos */
+    .floater {
+      position: fixed;
+      left: 0;
+      top: 0;
+      opacity: 0.60;
+      border-radius: 18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      outline: 6px solid rgba(255,255,255,0.09);
+      outline-offset: -6px;
+      filter: saturate(1.08);
+      transform-origin: center;
+      will-change: transform;
+      user-select: none;
+    }
+
+    /* Floating hearts (small) */
+    .heart {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 14px;
+      height: 14px;
+      transform-origin: center;
+      will-change: transform;
+      opacity: 0.42;
+      filter: blur(0.15px);
+    }
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: rgba(255, 105, 180, 0.55);
+      border-radius: 50%;
+    }
+    .heart::before { left: 0; top: 0; }
+    .heart::after  { left: 7px; top: 0; }
+    .heart > i {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 3.5px;
+      top: 6px;
+      background: rgba(255, 105, 180, 0.55);
+      transform: rotate(45deg);
+      border-radius: 3px;
+    }
+
+    /* Foreground card */
+    .wrap {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+    }
+
+    .card {
+      width: min(720px, 96vw);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px 26px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3.2vw, 40px);
+      letter-spacing: 0.2px;
+    }
+    p {
+      margin: 0 auto 22px;
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: clamp(14px, 1.9vw, 18px);
+      line-height: 1.45;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      width: min(520px, 100%);
+      margin: 0 auto;
+      position: relative;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      color: #071014;
+      box-shadow: 0 12px 28px rgba(0,0,0,.22);
+      transition: transform .12s ease, filter .12s ease;
+      user-select: none;
+      touch-action: manipulation;
+    }
+    button:active { transform: translateY(1px) scale(0.99); }
+
+    #yesBtn {
+      background: linear-gradient(180deg, var(--yes), var(--yes2));
+    }
+    #yesBtn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+    #noBtn {
+      background: linear-gradient(180deg, var(--no), var(--no2));
+      color: #1a0b0b;
+      position: relative;
+      will-change: transform;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(0,0,0,0.50);
+      padding: 22px;
+      z-index: 3;
+    }
+    .modal.open { display: grid; }
+    .modal-card {
+      width: min(560px, 94vw);
+      border-radius: 22px;
+      padding: 24px;
+      background: linear-gradient(180deg, var(--card2), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: var(--shadow);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    .modal-card h2 { margin: 0 0 12px; font-size: 26px; }
+
+    @media (max-width: 520px) {
+      .actions { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="layer" id="photosLayer" aria-hidden="true"></div>
+  <div class="layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="card" id="card">
+      <h1>Hi my Hershey ❤️</h1>
+      <p>
+        I have a very important question.<br/>
+        Will you be my Valentine?
+      </p>
+
+      <div class="actions" id="arena">
+        <button id="yesBtn">Yes 💘</button>
+        <button id="noBtn" aria-label="No (try to click)">No 🙃</button>
+      </div>
+
+      <div class="footer-note">Tip: try to click “No”.</div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <h2>Open your door. 🚪💖</h2>
+      <button id="closeBtn" style="background: rgba(255,255,255,0.85);">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================
+    // BOUNCING BACKGROUND PHOTOS (NO REPEATS)
+    // Images live at: ../images/us/us1.jpg ... us10.jpg
+    // =========================================================
+    const IMAGE_BASE = "../images/us/";
+    const IMAGE_COUNT = 10;
+
+    // Use each image at most once on screen
+    const FLOATER_COUNT = Math.min(8, IMAGE_COUNT); // can't exceed 10 unique files
+
+    // Bigger pics
+    const MIN_SIZE = 130;
+    const MAX_SIZE = 230;
+
+    // Motion
+    const MIN_SPEED = 16;  // px/sec
+    const MAX_SPEED = 48;
+
+    // Rotation
+    const MIN_ROT_SPEED = 8;   // deg/sec
+    const MAX_ROT_SPEED = 28;
+
+    const photosLayer = document.getElementById("photosLayer");
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+    function randi(a, b) { return Math.floor(rand(a, b + 1)); }
+
+    // pick unique indices without repeats
+    function uniqueIndices(k, n) {
+      const arr = Array.from({length: n}, (_, i) => i + 1);
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr.slice(0, k);
+    }
+
+    const sprites = [];
+    let vw = innerWidth;
+    let vh = innerHeight;
+    let lastT = performance.now();
+
+    function initPhotoSprites() {
+      photosLayer.innerHTML = "";
+      sprites.length = 0;
+
+      const picks = uniqueIndices(FLOATER_COUNT, IMAGE_COUNT);
+
+      for (let i = 0; i < picks.length; i++) {
+        const idx = picks[i];
+        const img = document.createElement("img");
+        img.className = "floater";
+        img.src = `${IMAGE_BASE}us${idx}.jpg`;
+        img.alt = "";
+
+        const size = rand(MIN_SIZE, MAX_SIZE);
+        img.style.width = `${size}px`;
+        img.style.height = "auto";
+        img.style.opacity = `${rand(0.42, 0.72)}`;
+
+        // Initial position fully on screen
+        const x = rand(0, Math.max(0, vw - size));
+        const y = rand(0, Math.max(0, vh - size));
+
+        // Velocity
+        const speed = rand(MIN_SPEED, MAX_SPEED);
+        const ang = rand(0, Math.PI * 2);
+        const vx = Math.cos(ang) * speed;
+        const vy = Math.sin(ang) * speed;
+
+        // Rotation
+        const rot = rand(0, 360);
+        const rotSpeed = rand(MIN_ROT_SPEED, MAX_ROT_SPEED) * (Math.random() < 0.5 ? -1 : 1);
+
+        photosLayer.appendChild(img);
+
+        sprites.push({ el: img, x, y, vx, vy, rot, rotSpeed, size });
+      }
+    }
+
+    // =========================================================
+    // HEARTS (ALSO BOUNCING, NO SPAWN/DESPAWN AFTER LOAD)
+    // =========================================================
+    const HEART_COUNT = 14;
+
+    const MIN_HSIZE = 10;
+    const MAX_HSIZE = 18;
+
+    const MIN_HSPEED = 10;
+    const MAX_HSPEED = 34;
+
+    const MIN_HROT = 10;
+    const MAX_HROT = 60;
+
+    const heartsLayer = document.getElementById("heartsLayer");
+    const hearts = [];
+
+    function initHearts() {
+      heartsLayer.innerHTML = "";
+      hearts.length = 0;
+
+      for (let i = 0; i < HEART_COUNT; i++) {
+        const h = document.createElement("div");
+        h.className = "heart";
+        const core = document.createElement("i");
+        h.appendChild(core);
+
+        const size = rand(MIN_HSIZE, MAX_HSIZE);
+        h.style.width = `${size}px`;
+        h.style.height = `${size}px`;
+
+        // Randomize heart tint a bit
+        const pink = 185 + Math.floor(Math.random() * 70);
+        const alpha = rand(0.35, 0.55).toFixed(2);
+        // update pseudo parts by setting a CSS variable-ish via inline filter:
+        // simplest: set background on parts through inline style on core & use opacity on wrapper
+        h.style.opacity = `${rand(0.25, 0.55)}`;
+        h.style.filter = `drop-shadow(0 8px 18px rgba(0,0,0,0.25))`;
+
+        // set colors
+        h.style.setProperty("--heart", `rgba(${pink}, 105, 180, ${alpha})`);
+        // apply to elements directly (since pseudo-elements can't read style vars reliably everywhere)
+        // We'll just overwrite their background via a style tag injection-like approach:
+        // Instead, set wrapper data-color and use JS to apply to children:
+        core.style.background = `rgba(${pink}, 105, 180, ${alpha})`;
+        // pseudo parts are ::before/::after; we can't set them directly here.
+        // So we cheat: make heart with 3 divs, not pseudo elements:
+        // But we already have pseudo in CSS. We'll adjust CSS below via inline style tag? Too much.
+        // Easiest: create 3 child divs instead of pseudo.
+        // We'll do that now:
+        h.innerHTML = "";
+        const c1 = document.createElement("div");
+        const c2 = document.createElement("div");
+        const tip = document.createElement("div");
+        c1.style.position = c2.style.position = tip.style.position = "absolute";
+        c1.style.borderRadius = c2.style.borderRadius = "50%";
+        c1.style.background = c2.style.background = tip.style.background = `rgba(${pink}, 105, 180, ${alpha})`;
+        c1.style.width = c2.style.width = `${size}px`;
+        c1.style.height = c2.style.height = `${size}px`;
+        c1.style.left = "0px"; c1.style.top = "0px";
+        c2.style.left = `${size * 0.5}px`; c2.style.top = "0px";
+        tip.style.width = tip.style.height = `${size * 1.25}px`;
+        tip.style.left = `${size * 0.22}px`;
+        tip.style.top = `${size * 0.45}px`;
+        tip.style.borderRadius = "3px";
+        tip.style.transform = "rotate(45deg)";
+        h.appendChild(c1); h.appendChild(c2); h.appendChild(tip);
+
+        // Initial position
+        const x = rand(0, Math.max(0, vw - size * 2));
+        const y = rand(0, Math.max(0, vh - size * 2));
+
+        // Velocity
+        const speed = rand(MIN_HSPEED, MAX_HSPEED);
+        const ang = rand(0, Math.PI * 2);
+        const vx = Math.cos(ang) * speed;
+        const vy = Math.sin(ang) * speed;
+
+        const rot = rand(0, 360);
+        const rotSpeed = rand(MIN_HROT, MAX_HROT) * (Math.random() < 0.5 ? -1 : 1);
+
+        heartsLayer.appendChild(h);
+        hearts.push({ el: h, x, y, vx, vy, rot, rotSpeed, size: size * 1.8 });
+      }
+    }
+
+    // =========================================================
+    // ANIMATION LOOP (PHOTOS + HEARTS) WITH BOUNCE
+    // =========================================================
+    function step(t) {
+      const dt = Math.min(0.05, (t - lastT) / 1000);
+      lastT = t;
+
+      // Photos
+      for (const s of sprites) {
+        s.x += s.vx * dt;
+        s.y += s.vy * dt;
+        s.rot += s.rotSpeed * dt;
+
+        const maxX = Math.max(0, vw - s.size);
+        const maxY = Math.max(0, vh - s.size);
+
+        if (s.x <= 0) { s.x = 0; s.vx = Math.abs(s.vx); }
+        if (s.x >= maxX) { s.x = maxX; s.vx = -Math.abs(s.vx); }
+        if (s.y <= 0) { s.y = 0; s.vy = Math.abs(s.vy); }
+        if (s.y >= maxY) { s.y = maxY; s.vy = -Math.abs(s.vy); }
+
+        s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.rot}deg)`;
+      }
+
+      // Hearts
+      for (const h of hearts) {
+        h.x += h.vx * dt;
+        h.y += h.vy * dt;
+        h.rot += h.rotSpeed * dt;
+
+        const maxX = Math.max(0, vw - h.size);
+        const maxY = Math.max(0, vh - h.size);
+
+        if (h.x <= 0) { h.x = 0; h.vx = Math.abs(h.vx); }
+        if (h.x >= maxX) { h.x = maxX; h.vx = -Math.abs(h.vx); }
+        if (h.y <= 0) { h.y = 0; h.vy = Math.abs(h.vy); }
+        if (h.y >= maxY) { h.y = maxY; h.vy = -Math.abs(h.vy); }
+
+        h.el.style.transform = `translate(${h.x}px, ${h.y}px) rotate(${h.rot}deg)`;
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    window.addEventListener("resize", () => {
+      vw = innerWidth;
+      vh = innerHeight;
+
+      // keep everything on screen after resize
+      for (const s of sprites) {
+        const rect = s.el.getBoundingClientRect();
+        s.size = rect.width || s.size;
+
+        const maxX = Math.max(0, vw - s.size);
+        const maxY = Math.max(0, vh - s.size);
+        s.x = Math.min(Math.max(0, s.x), maxX);
+        s.y = Math.min(Math.max(0, s.y), maxY);
+      }
+      for (const h of hearts) {
+        const maxX = Math.max(0, vw - h.size);
+        const maxY = Math.max(0, vh - h.size);
+        h.x = Math.min(Math.max(0, h.x), maxX);
+        h.y = Math.min(Math.max(0, h.y), maxY);
+      }
+    });
+
+    initPhotoSprites();
+    initHearts();
+    requestAnimationFrame(step);
+
+    // =========================================================
+    // Yes modal + confetti
+    // =========================================================
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn  = document.getElementById('noBtn');
+    const arena  = document.getElementById('arena');
+    const modal  = document.getElementById('modal');
+    const closeBtn = document.getElementById('closeBtn');
+
+    yesBtn.addEventListener('click', () => {
+      modal.classList.add('open');
+      confettiBurst();
+    });
+    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+
+    // =========================================================
+    // Make "No" dodge
+    // =========================================================
+    let noX = 0, noY = 0;
+    let attempts = 0;
+
+    function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+    function moveNoButtonAway(pointerX, pointerY) {
+      const aRect = arena.getBoundingClientRect();
+      const bRect = noBtn.getBoundingClientRect();
+
+      const bx = bRect.left + bRect.width/2;
+      const by = bRect.top  + bRect.height/2;
+
+      const dx = bx - pointerX;
+      const dy = by - pointerY;
+      const len = Math.hypot(dx, dy) || 1;
+
+      const step = 70 + Math.min(140, attempts * 7);
+
+      let tx = noX + (dx/len) * step + (Math.random()*30 - 15);
+      let ty = noY + (dy/len) * step + (Math.random()*24 - 12);
+
+      const padding = 8;
+      const maxX = (aRect.width  - bRect.width )/2 - padding;
+      const maxY = (aRect.height - bRect.height)/2 - padding;
+
+      tx = clamp(tx, -maxX, maxX);
+      ty = clamp(ty, -maxY, maxY);
+
+      noX = tx; noY = ty;
+      noBtn.style.transform = `translate(${noX}px, ${noY}px)`;
+    }
+
+    noBtn.addEventListener('mouseenter', (e) => {
+      attempts++;
+      moveNoButtonAway(e.clientX, e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      const r = noBtn.getBoundingClientRect();
+      const near = (
+        e.clientX >= r.left - 40 &&
+        e.clientX <= r.right + 40 &&
+        e.clientY >= r.top - 40 &&
+        e.clientY <= r.bottom + 40
+      );
+      if (near) {
+        attempts++;
+        moveNoButtonAway(e.clientX, e.clientY);
+      }
+    });
+
+    noBtn.addEventListener('touchstart', (e) => {
+      attempts++;
+      const t = e.touches[0];
+      moveNoButtonAway(t.clientX, t.clientY);
+      e.preventDefault();
+    }, { passive: false });
+
+    noBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      attempts += 3;
+      moveNoButtonAway(Math.random() * innerWidth, Math.random() * innerHeight);
+    });
+
+    // =========================================================
+    // Tiny confetti (no libs)
+    // =========================================================
+    function confettiBurst() {
+      const n = 110;
+      for (let i = 0; i < n; i++) {
+        const s = document.createElement('div');
+        s.style.position = 'fixed';
+        s.style.left = (innerWidth/2 + (Math.random()*80 - 40)) + 'px';
+        s.style.top  = (innerHeight/2 + (Math.random()*30 - 15)) + 'px';
+        s.style.width = (6 + Math.random()*6) + 'px';
+        s.style.height = (6 + Math.random()*10) + 'px';
+        s.style.borderRadius = '2px';
+        s.style.background = `hsl(${Math.random()*360}, 90%, 65%)`;
+        s.style.opacity = '0.9';
+        s.style.transform = `rotate(${Math.random()*180}deg)`;
+        s.style.zIndex = 9999;
+        document.body.appendChild(s);
+
+        const vx = (Math.random()*2 - 1) * (6 + Math.random()*10);
+        const vy = (Math.random()*-1) * (10 + Math.random()*14) - 4;
+        const g  = 0.55 + Math.random()*0.35;
+
+        let x = parseFloat(s.style.left);
+        let y = parseFloat(s.style.top);
+        let t = 0;
+
+        const tick = () => {
+          t++;
+          x += vx;
+          y += vy + g*t;
+          s.style.left = x + 'px';
+          s.style.top  = y + 'px';
+          s.style.opacity = (1 - t/80).toFixed(2);
+          if (t < 80) requestAnimationFrame(tick);
+          else s.remove();
+        };
+        requestAnimationFrame(tick);
+      }
+    }
+  </script>
+</body>
+</html>
