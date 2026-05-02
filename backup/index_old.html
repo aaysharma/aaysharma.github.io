@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amatya Sharma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #eef6fb;
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, p, img, a {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    h1 { animation-delay: 0.3s; }
+    p { animation-delay: 0.5s; }
+    img { animation-delay: 0.1s; }
+    a:nth-of-type(1) { animation-delay: 0.7s; }
+    a:nth-of-type(2) { animation-delay: 0.9s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.2em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0.5em 0 1.2em 0;
+    }
+
+    a {
+      display: block;
+      margin: 12px auto;
+      padding: 16px 28px;
+      font-size: 1.1em;
+      width: 80%;
+      max-width: 300px;
+      color: white;
+      background-color: #1772d0;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    a:hover {
+      background-color: #105aa3;
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    img {
+      width: 40vw;
+      max-width: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Intro banner animation */
+    #intro-banner {
+      position: absolute;
+      top: 30px;
+      font-size: 2.2em;
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeInDrop 2s ease-out forwards;
+    }
+
+    @keyframes fadeInDrop {
+      0% { opacity: 0; transform: translateY(-20px); }
+      30% { opacity: 1; transform: translateY(0); }
+      80% { opacity: 1; transform: translateY(5px); }
+      100% { opacity: 0; transform: translateY(10px); }
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+
+      a {
+        font-size: 1.05em;
+        padding: 14px 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="intro-banner">☕ Welcome to my world.</div>
+
+  <img src="images/circle_cropped_whiteshirt_aaysharma.png" alt="Amatya Sharma">
+  <h1>Amatya Sharma</h1>
+  <p>Hi, welcome to my webpage!</p>
+  <a href="professional.html">📘 Professional</a>
+  <a href="aboutme.html">🎈 Fun & Personal</a>
+
+</body>
+</html>

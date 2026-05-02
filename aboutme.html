@@ -2,1072 +2,2513 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Amatya | Personal</title>
   <meta name="author" content="Amatya Sharma" />
   <link rel="icon" href="images/coffee.png" />
 
-  <!-- Fonts and Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" />
+  <!-- Fonts and icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-
-  <!-- carousel -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-
   <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      background-color: #f5f0e1;
-      color: #3a2f2f;
-      background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent),
-                        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent);
-      background-size: cover;
-      background-repeat: no-repeat;
+    /* =========================================================
+       Site variables
+       Change the page colors, widths, and font here.
+       ========================================================= */
+    :root {
+      --site-font: "Quicksand", Verdana, Helvetica, sans-serif;
+
+      --page-bg: #fff8ec;
+      --body-text: #302822;
+      --muted-text: #6f5f52;
+      --heading-text: #5c4033;
+      --link-color: #8a5c3b;
+      --link-hover: #b46f3c;
+
+      --nav-bg: rgba(243, 222, 199, 0.78);
+      --nav-bg-mobile: rgba(243, 222, 199, 0.88);
+      --nav-hover-bg: rgba(255, 250, 243, 0.55);
+      --nav-border: rgba(150, 112, 86, 0.24);
+      --section-border: #dfcbb3;
+
+      --card-bg: rgba(255, 250, 243, 0.58);
+      --card-bg-strong: rgba(255, 250, 243, 0.88);
+      --card-shadow: 0 3px 8px rgba(77, 45, 25, 0.08);
+      --card-shadow-strong: 0 6px 16px rgba(77, 45, 25, 0.16);
+
+      --button-bg: #8a5c3b;
+      --button-text: #fff7ec;
+      --button-hover: #b46f3c;
+
+      /*
+        Wallpaper controls:
+        - bg-personal-wallpaper uses personalbg.png from the same folder as this HTML file.
+        - bg-none removes the wallpaper.
+        Tune --wallpaper-overlay-alpha below if the image is too strong/too faint.
+
+        Default behavior is for a portrait wallpaper that scrolls with the page:
+        --wallpaper-size: 100% auto;
+        --wallpaper-repeat: repeat-y;
+        --wallpaper-attachment: scroll;
+
+        If you prefer squeezing the image into the viewport, use:
+        --wallpaper-size: 100% 100%;
+
+        If you prefer filling the screen with possible crop, use:
+        --wallpaper-size: cover;
+        --wallpaper-attachment: fixed;
+      */
+      --wallpaper-image: none;
+      --wallpaper-overlay-alpha: 0;
+      --wallpaper-repeat: repeat-y;
+      --wallpaper-position: center top;
+      --wallpaper-size: 100% auto;
+      --wallpaper-attachment: scroll;
+
+      /* Coffee easter egg wallpaper. */
+      --coffee-wallpaper-image: url("images/coffeebg.png");
+
+      --nav-width: 220px;
+      /*
+        Main content sizing:
+        - --main-width controls relative width on desktop.
+        - --main-max-width leaves some empty space on very wide monitors.
+        - phone/tablet rules below switch to nearly full width.
+      */
+      --main-width: 76vw;
+      --main-max-width: 1450px;
+      --main-padding: 40px;
+      --content-side-margin: 42px;
     }
-    header {
+
+
+    /* =========================================================
+       Theme and wallpaper presets.
+       Choose these in the <!--
+  Style options:
+  - theme-warm-coffee
+  - theme-himalayan-sage
+  - theme-postcard
+
+  Background options:
+  - bg-personal-wallpaper   uses personalbg.png in the same folder
+  - bg-none
+
+  Examples:
+  <body class="theme-warm-coffee bg-personal-wallpaper">
+  <body class="theme-himalayan-sage bg-personal-wallpaper">
+  <body class="theme-postcard bg-none">
+
+<body class="theme-warm-coffee bg-personal-wallpaper"> class:
+       - theme-warm-coffee
+       - theme-himalayan-sage
+       - theme-postcard
+       - bg-personal-wallpaper
+       - bg-none
+       ========================================================= */
+
+    body.theme-warm-coffee {
+      --page-bg: #fff8ec;
+      --body-text: #302822;
+      --muted-text: #6f5f52;
+      --heading-text: #5c4033;
+      --link-color: #8a5c3b;
+      --link-hover: #b46f3c;
+      --nav-bg: rgba(243, 222, 199, 0.78);
+      --nav-bg-mobile: rgba(243, 222, 199, 0.88);
+      --nav-hover-bg: rgba(255, 250, 243, 0.55);
+      --nav-border: rgba(150, 112, 86, 0.24);
+      --section-border: #dfcbb3;
+      --card-bg: rgba(255, 250, 243, 0.58);
+      --card-bg-strong: rgba(255, 250, 243, 0.88);
+      --button-bg: #8a5c3b;
+      --button-hover: #b46f3c;
+    }
+
+    body.theme-himalayan-sage {
+      --page-bg: #f4f7f1;
+      --body-text: #26352d;
+      --muted-text: #617266;
+      --heading-text: #31553d;
+      --link-color: #2f6f52;
+      --link-hover: #b46f3c;
+      --nav-bg: rgba(221, 237, 220, 0.78);
+      --nav-bg-mobile: rgba(221, 237, 220, 0.90);
+      --nav-hover-bg: rgba(250, 255, 250, 0.60);
+      --nav-border: rgba(82, 126, 92, 0.24);
+      --section-border: #c7dbc8;
+      --card-bg: rgba(250, 255, 250, 0.62);
+      --card-bg-strong: rgba(250, 255, 250, 0.90);
+      --button-bg: #2f6f52;
+      --button-hover: #3f8f68;
+    }
+
+    body.theme-postcard {
+      --page-bg: #faf4e8;
+      --body-text: #303034;
+      --muted-text: #67606a;
+      --heading-text: #44506a;
+      --link-color: #5d6d9b;
+      --link-hover: #b36a3f;
+      --nav-bg: rgba(232, 226, 211, 0.80);
+      --nav-bg-mobile: rgba(232, 226, 211, 0.92);
+      --nav-hover-bg: rgba(255, 252, 246, 0.62);
+      --nav-border: rgba(110, 110, 96, 0.24);
+      --section-border: #d9d1bd;
+      --card-bg: rgba(255, 252, 246, 0.62);
+      --card-bg-strong: rgba(255, 252, 246, 0.90);
+      --button-bg: #5d6d9b;
+      --button-hover: #7a89b6;
+    }
+
+    body.bg-personal-wallpaper {
+      --wallpaper-image: url("images/coffees/personalbg.png");
+      --wallpaper-overlay-alpha: 0.76;
+      --wallpaper-repeat: repeat-y;
+      --wallpaper-position: center top;
+      --wallpaper-size: 100% auto;
+      --wallpaper-attachment: scroll;
+    }
+
+    body.bg-none {
+      --wallpaper-image: none;
+      --wallpaper-overlay-alpha: 0;
+    }
+
+    /* =========================================================
+       Base page styles
+       ========================================================= */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--site-font);
+      background-color: var(--page-bg);
+      color: var(--body-text);
+      line-height: 1.55;
+      background-image:
+        linear-gradient(
+          rgba(255, 248, 236, var(--wallpaper-overlay-alpha)),
+          rgba(255, 248, 236, var(--wallpaper-overlay-alpha))
+        ),
+        var(--wallpaper-image),
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08), transparent 24%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08), transparent 24%);
+      background-size:
+        cover,
+        var(--wallpaper-size),
+        cover,
+        cover;
+      background-repeat:
+        no-repeat,
+        var(--wallpaper-repeat),
+        no-repeat,
+        no-repeat;
+      background-position:
+        center top,
+        var(--wallpaper-position),
+        center,
+        center;
+      background-attachment:
+        fixed,
+        var(--wallpaper-attachment),
+        scroll,
+        scroll;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--heading-text);
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* =========================================================
+       Navigation
+       ========================================================= */
+    .site-nav {
       position: fixed;
       top: 50%;
       left: 0;
+      z-index: 1000;
+      width: var(--nav-width);
+      padding: 18px 0;
       transform: translateY(-50%);
-      width: 220px;
-      background-color: #d3b29b;
-      padding-top: 40px;
+      background-color: var(--nav-bg);
+      border-right: 1px solid var(--nav-border);
+      box-shadow: 2px 0 8px rgba(77, 45, 25, 0.08);
+      backdrop-filter: blur(10px);
       display: flex;
       flex-direction: column;
+      align-items: stretch;
+    }
+
+    .site-nav a {
+      display: flex;
       align-items: center;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
-      border-right: 1px solid #c0a98f;
-    }
-    header a {
-      color: #3a2f2f;
+      gap: 10px;
+      margin: 1px 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--body-text);
+      font-size: 1.01rem;
       text-decoration: none;
-      margin: 10px 0;
-      display: block;
-      font-size: 18px;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
     }
-    header a:hover {
-      color: #8a5c3b;
-      transform: translateX(4px);
+
+    .site-nav a:hover,
+    .site-nav a.active {
+      color: var(--link-hover);
+      background-color: var(--nav-hover-bg);
+      text-decoration: none;
     }
+
+    .site-nav a:hover {
+      transform: translateX(3px);
+    }
+
+    .site-nav a.active {
+      font-weight: 700;
+    }
+
+    .site-nav .nav-external {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(150, 112, 86, 0.30);
+    }
+
+    .site-nav .nav-emoji {
+      width: 1.35em;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+
+    .site-nav .nav-label {
+      white-space: nowrap;
+    }
+
+    .nav-theme-button {
+      display: none;
+      margin: 14px 10px 0;
+      padding: 8px 12px;
+      border: 1px dashed rgba(150, 112, 86, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 250, 243, 0.42);
+      color: var(--link-color);
+      font-family: var(--site-font);
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-theme-button:hover {
+      background: var(--nav-hover-bg);
+      color: var(--link-hover);
+      transform: translateX(3px);
+    }
+
+
+    .site-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .site-nav::-webkit-scrollbar-thumb {
+      background: rgba(138, 92, 59, 0.35);
+      border-radius: 999px;
+    }
+
+
+
+    /* =========================================================
+       Main layout and sections
+       ========================================================= */
+    /*
+      Center the content in the area to the right of the fixed navbar.
+      The width is relative to the screen, but capped so very wide monitors
+      still keep some empty margin.
+    */
     main {
-      margin-left: 240px;
-      padding: 40px;
-      max-width: 1000px;
+      /*
+        Available width = screen width minus the fixed sidebar and desired side gaps.
+        The actual content width is relative, but capped and never allowed to overlap the sidebar.
+      */
+      --available-content-width: calc(100vw - var(--nav-width) - (2 * var(--content-side-margin)));
+      --actual-content-width: min(var(--main-width), var(--main-max-width), var(--available-content-width));
+
+      width: var(--actual-content-width);
+      margin-left: calc(
+        var(--nav-width)
+        + var(--content-side-margin)
+        + ((var(--available-content-width) - var(--actual-content-width)) / 2)
+      );
+      margin-right: auto;
+      padding: var(--main-padding);
+      box-sizing: border-box;
     }
-    .profile-pic {
-      width: 180px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    /*
+      Let the content fill the available area to the right of the fixed navbar.
+      The navbar stays left, while the page stretches naturally on wide screens.
+      To cap the width again, change --main-max-width in :root from none to e.g. 1200px.
+    */
+    main > section,
+    main > .signature,
+    main > footer {
+      max-width: var(--main-max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed var(--section-border);
+      scroll-margin-top: 70px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px 0;
+      border-top: 1px solid #e0d3bf;
+      color: var(--link-color);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    /* =========================================================
+       Ambient music controller.
+       Small fixed controller; not a blocking full-page popup.
+       ========================================================= */
+    .music-control {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      width: min(250px, calc(100vw - 36px));
+      padding: 10px 11px;
+      border: 1px solid rgba(150, 112, 86, 0.22);
+      border-radius: 999px;
+      background: var(--card-bg-strong);
+      box-shadow: 0 3px 10px rgba(77, 45, 25, 0.12);
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .music-control strong {
+      display: inline;
+      color: var(--heading-text);
+      font-size: 0.92rem;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .music-control span {
+      display: none;
+    }
+
+    .music-actions {
+      display: flex;
+      gap: 5px;
+      flex-wrap: nowrap;
+    }
+
+    .music-actions button,
+    .suggest-coffee {
+      border: none;
+      border-radius: 999px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 7px 11px;
+      font-family: var(--site-font);
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .music-actions button.secondary {
+      background: transparent;
+      color: var(--link-color);
+      box-shadow: none;
+      border: 1px solid rgba(150, 112, 86, 0.25);
+    }
+
+    .music-actions button {
+      padding: 5px 8px;
+      font-size: 0.82rem;
+    }
+
+    .music-actions button:hover,
+    .suggest-coffee:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .music-actions button.secondary:hover {
+      color: var(--button-text);
+    }
+
+    /* =========================================================
+       About/profile section
+       Note: pseudo-elements do not reliably render on <img>, so the
+       coffee emoji sits on a wrapper instead.
+       ========================================================= */
+    .about-header {
+      text-align: center;
+    }
+
+    .profile-pic-wrap {
       position: relative;
+      display: inline-block;
+      overflow: visible;
+      --sage-orbit-radius: 118px;
     }
-    .profile-pic::after {
+
+    .coffee-orbit {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .orbit-coffee {
+      position: absolute;
+      left: -14px;
+      top: -14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 248, 236, 0.88);
+      border: 1px solid rgba(255, 138, 0, 0.46);
+      box-shadow: 0 0 10px rgba(255, 138, 0, 0.30);
+      font-size: 17px;
+      transform: rotate(var(--angle)) translate(var(--sage-orbit-radius)) rotate(calc(-1 * var(--angle)));
+      animation: coffeePulse 2.4s ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+
+    @keyframes coffeePulse {
+      0%, 100% { filter: drop-shadow(0 0 0 rgba(255, 138, 0, 0)); }
+      50% { filter: drop-shadow(0 0 8px rgba(255, 138, 0, 0.72)); }
+    }
+
+    @keyframes coffeeSageOrbit {
+      to { transform: rotate(360deg); }
+    }
+
+    .profile-pic-wrap::after {
       content: "☕";
       position: absolute;
-      top: -15px;
-      right: -15px;
+      top: -14px;
+      right: -14px;
       font-size: 32px;
       animation: steam 2s infinite ease-in-out;
     }
+
+    .profile-pic {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+      display: block;
+    }
+
+    .about-text {
+      margin-top: 40px;
+      font-size: 1.06rem;
+      text-align: justify;
+    }
+
     @keyframes steam {
-      0% { transform: translateY(0) scale(1); opacity: 0.7; }
-      50% { transform: translateY(-5px) scale(1.1); opacity: 1; }
-      100% { transform: translateY(0) scale(1); opacity: 0.7; }
+      0% { transform: translateY(0) scale(1); opacity: 0.70; }
+      50% { transform: translateY(-5px) scale(1.10); opacity: 1; }
+      100% { transform: translateY(0) scale(1); opacity: 0.70; }
     }
-    h1, h2, h3 {
-      font-family: 'Quicksand', sans-serif;
-      color: #5c4033;
-      letter-spacing: 0.5px;
+
+    .now-brewing {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px 24px;
+      padding: 14px 0;
+      border-top: 1px dashed var(--section-border);
+      border-bottom: 1px dashed var(--section-border);
     }
-    a {
-      color: #8a5c3b;
-      transition: color 0.3s ease;
+
+    .now-brewing-item {
+      line-height: 1.4;
     }
-    a:hover {
-      color: #a76d4e;
-      text-decoration: underline;
+
+    .now-brewing-label {
+      display: block;
+      color: var(--muted-text);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 2px;
     }
-    section {
-      margin-bottom: 60px;
-      padding-bottom: 10px;
-      border-bottom: 1px dashed #cdb8a0;
+
+    /* =========================================================
+       Coffee carousel
+       Randomized on each page load.
+       ========================================================= */
+    .coffee-actions {
+      margin-top: -8px;
+      margin-bottom: 28px;
     }
-    .coffee-entry {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-    .coffee-entry img {
-      width: 200px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    .music-section iframe {
-      margin: 10px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .masonry {
-      column-count: 3;
-      column-gap: 20px;
-    }
-    .masonry img {
+
+    .coffee-carousel {
+      position: relative;
       width: 100%;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
+      max-width: none;
+      margin: 32px 0 0 0;
+      overflow: hidden;
+    }
+
+    .coffee-track {
+      display: flex;
+      transition: transform 0.45s ease-in-out;
+      will-change: transform;
+    }
+
+    .coffee-slide {
+      display: flex;
+      flex: 0 0 100%;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .coffee-card {
+      flex: 1;
+      max-width: 48%;
+      padding: 14px 14px 10px;
+      border-radius: 10px;
+      background: var(--card-bg);
+      box-shadow: 0 2px 7px rgba(77, 45, 25, 0.08);
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .coffee-card img {
+      width: 100%;
+      height: 260px;
+      border-radius: 9px;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    .coffee-card h3 {
+      margin: 8px 0 3px;
+      font-size: 1.18rem;
+    }
+
+    .coffee-card p {
+      font-size: 0.96rem;
+      line-height: 1.38;
+    }
+
+    .coffee-meta {
+      color: var(--muted-text);
+      font-size: 0.9rem;
+      margin: 2px 0 6px;
+    }
+
+    .coffee-carousel-btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      transform: translateY(-50%);
+      border: none;
+      border-radius: 50%;
+      background-color: var(--nav-bg);
+      font-size: 24px;
+      padding: 10px 14px;
       cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
-    .masonry img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+    .coffee-carousel-btn:hover {
+      background-color: var(--button-hover);
+      color: white;
     }
+
+    .coffee-carousel-btn.prev {
+      left: 10px;
+    }
+
+    .coffee-carousel-btn.next {
+      right: 10px;
+    }
+
+    /* =========================================================
+       Nature filmstrip and expanded viewer.
+       Randomized on each page load.
+       ========================================================= */
+    .filmstrip {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 16px 2px 18px;
+      margin-top: 24px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+
+    .nature-photo {
+      position: relative;
+      flex: 0 0 320px;
+      margin: 0;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      cursor: zoom-in;
+      background: var(--card-bg);
+    }
+
+    .nature-photo img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform 0.22s ease;
+    }
+
+    .nature-photo:hover img {
+      transform: scale(1.035);
+    }
+
+    .nature-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 28px 12px 10px;
+      color: white;
+      font-size: 0.92rem;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0));
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .nature-photo:hover .nature-caption {
+      opacity: 1;
+    }
+
+    /* Expanded lightbox with internal filmstrip. */
     .lightbox {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
+      inset: 0;
       z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.88);
+      padding: 28px;
+      box-sizing: border-box;
     }
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 8px;
+
+    .lightbox-stage {
+      width: min(1100px, 92vw);
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
-    footer {
-      font-size: 12px;
-      text-align: right;
-      padding: 10px 40px;
-      color: #8a5c3b;
-      border-top: 1px solid #e0d3bf;
-      margin-top: 40px;
+
+    .lightbox-stage > img {
+      max-width: 100%;
+      max-height: calc(92vh - 150px);
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.50);
+      animation: fadeIn 0.25s ease-in-out;
+      background: #111;
     }
-    .suggest-coffee {
-      display: inline-block;
-      background-color: #8a5c3b;
+
+    .lightbox-caption {
       color: #f5f0e1;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: all 0.2s ease-in-out;
+      font-size: 0.98rem;
+      text-align: center;
+      min-height: 1.3em;
     }
-    .suggest-coffee:hover {
-      background-color: #a76d4e;
-      transform: scale(1.05);
+
+    .lightbox-filmstrip {
+      width: 100%;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 8px 2px 2px;
+      scrollbar-width: thin;
+      scroll-snap-type: x proximity;
+    }
+
+    .lightbox-thumb {
+      flex: 0 0 78px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.58;
+      border: 2px solid transparent;
+      scroll-snap-align: center;
+      transition: opacity 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .lightbox-thumb:hover,
+    .lightbox-thumb.active {
+      opacity: 1;
+      border-color: #f5f0e1;
+      transform: translateY(-1px);
+    }
+
+    .lightbox-nav,
+    .lightbox-close {
+      position: fixed;
+      z-index: 10000;
+      border: none;
+      background: rgba(255, 255, 255, 0.16);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .lightbox-nav {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 54px;
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+
+    .lightbox-nav:hover,
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .lightbox-prev {
+      left: 22px;
+    }
+
+    .lightbox-next {
+      right: 22px;
+    }
+
+    .lightbox-close {
+      top: 18px;
+      right: 22px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* =========================================================
+       Music and postcards/dates
+       ========================================================= */
+    .music-playlists {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .playlist-card {
+      min-width: 0;
+    }
+
+    .playlist-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+      color: var(--heading-text);
+    }
+
+    .playlist-card iframe {
+      width: 100%;
+      height: 176px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(77, 45, 25, 0.13);
+    }
+
+    .postcards-dates {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .postcard-block {
+      text-align: left;
+    }
+
+    .postcard-address {
+      margin-top: 12px;
+      line-height: 1.55;
+    }
+
+    .naruto-prompt {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--section-border);
+      color: var(--muted-text);
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .naruto-prompt-icon {
+      width: .5in;
+      height: .5in;
+      max-width: 144px;
+      max-height: 144px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      filter: drop-shadow(0 4px 8px rgba(77, 45, 25, 0.16));
+      cursor: pointer;
+      transition: transform 0.22s ease, filter 0.22s ease;
+    }
+
+    .naruto-prompt-icon:hover {
+      transform: rotate(-3deg) scale(1.05);
+      filter: drop-shadow(0 6px 12px rgba(255, 138, 0, 0.24));
+    }
+
+    .naruto-prompt-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .naruto-prompt button {
+      border: none;
+      background: transparent;
+      color: var(--link-color);
+      font-family: var(--site-font);
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+    }
+
+    .naruto-prompt button:hover {
+      color: var(--link-hover);
+    }
+
+    body.naruto-mode .naruto-prompt {
+      color: #ffd7a8;
+      border-top-color: rgba(255, 138, 0, 0.40);
+    }
+
+    body.naruto-mode .naruto-prompt-icon {
+      filter: drop-shadow(0 0 12px rgba(255, 138, 0, 0.46));
+    }
+
+    body.naruto-mode .naruto-prompt button {
+      color: #ffd166;
+    }
+
+    .calendar-details {
+      padding-top: 2px;
+    }
+
+    .calendar-frame {
+      max-width: 100%;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(77, 45, 25, 0.10);
+      background: white;
+    }
+
+    .signature {
+      font-family: "Brush Script MT", cursive;
+      font-size: 22px;
+      text-align: right;
+    }
+
+    /* =========================================================
+       Coffee mode.
+       Toggled by clicking the coffee cup in the Coffees heading.
+       Uses images/coffees/coffeebg.png as a scrollable wallpaper.
+       ========================================================= */
+    body.coffee-mode {
+      --page-bg: #1f130b;
+      --body-text: #fff4e6;
+      --muted-text: #e1c3a5;
+      --heading-text: #ffd9a8;
+      --link-color: #d99a5f;
+      --link-hover: #ffe0b2;
+
+      --nav-bg: rgba(48, 30, 17, 0.86);
+      --nav-bg-mobile: rgba(48, 30, 17, 0.94);
+      --nav-hover-bg: rgba(255, 216, 168, 0.15);
+      --nav-border: rgba(217, 154, 95, 0.38);
+      --section-border: rgba(217, 154, 95, 0.35);
+
+      --card-bg: rgba(42, 25, 13, 0.70);
+      --card-bg-strong: rgba(42, 25, 13, 0.92);
+      --button-bg: #d99a5f;
+      --button-text: #1f130b;
+      --button-hover: #ffe0b2;
+
+      background-color: #1f130b;
+      background-image:
+        linear-gradient(rgba(31, 19, 11, 0.66), rgba(31, 19, 11, 0.66)),
+        var(--coffee-wallpaper-image),
+        radial-gradient(circle at 18% 24%, rgba(217, 154, 95, 0.24), transparent 28%),
+        radial-gradient(circle at 80% 76%, rgba(255, 224, 178, 0.18), transparent 30%);
+      background-size:
+        cover,
+        100% auto,
+        cover,
+        cover;
+      background-repeat:
+        no-repeat,
+        repeat-y,
+        no-repeat,
+        no-repeat;
+      background-position:
+        center top,
+        center top,
+        center,
+        center;
+      background-attachment:
+        scroll,
+        scroll,
+        scroll,
+        scroll;
+    }
+
+    body.coffee-mode section {
+      border-bottom-color: rgba(217, 154, 95, 0.38);
+    }
+
+    body.coffee-mode .site-nav {
+      box-shadow: 2px 0 16px rgba(217, 154, 95, 0.14);
+    }
+
+    body.coffee-mode .profile-pic {
+      box-shadow:
+        0 0 0 3px rgba(217, 154, 95, 0.46),
+        0 8px 28px rgba(217, 154, 95, 0.22);
+    }
+
+    body.coffee-mode .profile-pic-wrap::after {
+      content: "☕";
+      filter: drop-shadow(0 0 8px rgba(255, 224, 178, 0.75));
+      animation: caffeinatedSteam 1.2s infinite ease-in-out;
+    }
+
+    body.coffee-mode .coffee-card,
+    body.coffee-mode .nature-photo,
+    body.coffee-mode .music-control,
+    body.coffee-mode .calendar-frame {
+      box-shadow: 0 5px 18px rgba(217, 154, 95, 0.18);
+    }
+
+    body.coffee-mode .coffee-card {
+      border: 1px solid rgba(217, 154, 95, 0.24);
+    }
+
+    body.coffee-mode .coffee-carousel-btn {
+      background-color: rgba(217, 154, 95, 0.82);
+      color: #1f130b;
+    }
+
+    body.coffee-mode .now-brewing {
+      border-top-color: rgba(217, 154, 95, 0.42);
+      border-bottom-color: rgba(217, 154, 95, 0.42);
+    }
+
+    body.coffee-mode h1::after,
+    body.coffee-mode h2::after {
+      content: "  caffeine mode";
+      color: #d99a5f;
+      font-size: 0.62em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      opacity: 0.86;
+    }
+
+    body.coffee-mode .about-header::before {
+      content: "fully caffeinated";
+      display: inline-block;
+      margin: 0 auto 14px;
+      padding: 6px 14px;
+      border: 1px solid rgba(217, 154, 95, 0.48);
+      border-radius: 999px;
+      color: #ffe0b2;
+      background: rgba(31, 19, 11, 0.62);
+      box-shadow: 0 0 18px rgba(217, 154, 95, 0.18);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+    }
+
+    .coffee-bubbles {
+      display: none;
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    body.coffee-mode .coffee-bubbles {
+      display: block;
+    }
+
+    .coffee-bubbles span {
+      position: absolute;
+      bottom: -70px;
+      left: var(--x);
+      font-size: var(--s);
+      opacity: 0.50;
+      animation: coffeeFloat var(--dur) linear infinite;
+      animation-delay: var(--delay);
+      filter: drop-shadow(0 0 8px rgba(255, 224, 178, 0.35));
+    }
+
+    @keyframes coffeeFloat {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      12% {
+        opacity: 0.50;
+      }
+      100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes caffeinatedSteam {
+      0% { transform: translateY(0) rotate(-4deg) scale(1); opacity: 0.70; }
+      50% { transform: translateY(-8px) rotate(5deg) scale(1.20); opacity: 1; }
+      100% { transform: translateY(0) rotate(-4deg) scale(1); opacity: 0.70; }
+    }
+
+    /* =========================================================
+       Naruto mode.
+       Toggled by the plain-text Naruto button in the navbar.
+       No external images; just a deliberately louder orange/black theme.
+       ========================================================= */
+    body.naruto-mode {
+      --page-bg: #111827;
+      --body-text: #fff7ed;
+      --muted-text: #ffd7a8;
+      --heading-text: #ffb84d;
+      --link-color: #ff8a00;
+      --link-hover: #ffd166;
+
+      --nav-bg: rgba(17, 24, 39, 0.86);
+      --nav-bg-mobile: rgba(17, 24, 39, 0.94);
+      --nav-hover-bg: rgba(255, 138, 0, 0.18);
+      --nav-border: rgba(255, 138, 0, 0.36);
+      --section-border: rgba(255, 138, 0, 0.36);
+
+      --card-bg: rgba(17, 24, 39, 0.66);
+      --card-bg-strong: rgba(17, 24, 39, 0.90);
+      --button-bg: #ff8a00;
+      --button-text: #111827;
+      --button-hover: #ffd166;
+
+      background-color: #111827;
+      background-image:
+        linear-gradient(rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.72)),
+        var(--naruto-wallpaper-image),
+        radial-gradient(circle at 18% 22%, rgba(255, 138, 0, 0.22), transparent 26%),
+        radial-gradient(circle at 78% 72%, rgba(255, 209, 102, 0.18), transparent 30%);
+      background-size:
+        cover,
+        100% auto,
+        cover,
+        cover;
+      background-repeat:
+        no-repeat,
+        repeat-y,
+        no-repeat,
+        no-repeat;
+      background-position:
+        center top,
+        center top,
+        center,
+        center;
+      background-attachment:
+        scroll,
+        scroll,
+        scroll,
+        scroll;
+    }
+
+    body.naruto-mode section {
+      border-bottom-color: rgba(255, 138, 0, 0.38);
+    }
+
+    body.naruto-mode .site-nav {
+      box-shadow: 2px 0 14px rgba(255, 138, 0, 0.14);
+    }
+
+    body.naruto-mode .site-nav a,
+    body.naruto-mode .nav-theme-button {
+      color: #fff7ed;
+    }
+
+    body.naruto-mode .site-nav a:hover,
+    body.naruto-mode .site-nav a.active,
+    body.naruto-mode .nav-theme-button:hover,
+    body.naruto-mode .nav-theme-button.active {
+      color: #ffd166;
+      background-color: rgba(255, 138, 0, 0.20);
+    }
+
+    body.naruto-mode .profile-pic {
+      box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.55), 0 8px 24px rgba(255, 138, 0, 0.28);
+    }
+
+    body.naruto-mode .profile-pic-wrap::after {
+      content: "";
+      display: none;
+    }
+
+    body.naruto-mode .coffee-orbit {
+      display: block;
+      animation: coffeeSageOrbit 14s linear infinite;
+    }
+
+    body.naruto-mode .orbit-coffee {
+      color: #111827;
+      background: rgba(255, 209, 102, 0.92);
+      border-color: rgba(255, 138, 0, 0.72);
+    }
+
+    body.naruto-mode .coffee-card,
+    body.naruto-mode .nature-photo,
+    body.naruto-mode .music-control {
+      box-shadow: 0 4px 14px rgba(255, 138, 0, 0.18);
+    }
+
+    body.naruto-mode .now-brewing {
+      border-top-color: rgba(255, 138, 0, 0.38);
+      border-bottom-color: rgba(255, 138, 0, 0.38);
+    }
+
+    body.naruto-mode .nav-theme-button {
+      display: block;
+      border-color: rgba(255, 138, 0, 0.52);
+      background-color: rgba(255, 138, 0, 0.16);
+      color: #ffd166;
+    }
+
+    body.naruto-mode .music-control {
+      border-color: rgba(255, 138, 0, 0.35);
+    }
+
+    body.naruto-mode .coffee-carousel-btn {
+      background-color: rgba(255, 138, 0, 0.74);
+      color: #111827;
+    }
+
+    body.naruto-mode .postcard-block {
+      position: relative;
+    }
+
+    body.naruto-mode .postcard-block::after {
+      content: "忍";
+      position: absolute;
+      right: 4px;
+      bottom: -4px;
+      color: rgba(255, 138, 0, 0.28);
+      font-size: 4rem;
+      font-weight: 700;
+      pointer-events: none;
+    }
+
+    .naruto-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255, 138, 0, 0.24), transparent 28%),
+        rgba(17, 24, 39, 0.86);
+      box-sizing: border-box;
+    }
+
+    .naruto-modal.open {
+      display: flex;
+    }
+
+    .naruto-modal-card {
+      position: relative;
+      width: min(560px, 94vw);
+      padding: 28px;
+      border: 1px solid rgba(255, 138, 0, 0.46);
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(17, 24, 39, 0.96), rgba(45, 24, 9, 0.95)),
+        radial-gradient(circle at top right, rgba(255, 138, 0, 0.18), transparent 34%);
+      color: #fff7ed;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.42), 0 0 32px rgba(255, 138, 0, 0.18);
+      text-align: center;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .naruto-modal-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          rgba(255, 138, 0, 0.075) 0 10px,
+          transparent 10px 22px
+        );
+      transform: rotate(8deg);
+      pointer-events: none;
+    }
+
+    .naruto-modal-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .naruto-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff7ed;
+      font-size: 1.55rem;
+      line-height: 1;
       cursor: pointer;
     }
-    @media (max-width: 768px) {
-      header {
-        position: static;
+
+    .naruto-modal-symbol {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 14px;
+      border: 5px solid #ff8a00;
+      border-right-color: transparent;
+      border-radius: 50%;
+      box-shadow: 0 0 22px rgba(255, 138, 0, 0.34);
+      transform: rotate(-24deg);
+    }
+
+    .naruto-modal-card h2 {
+      color: #ffd166;
+      margin-bottom: 10px;
+    }
+
+    .naruto-modal-card p {
+      color: #fff7ed;
+      font-size: 1.02rem;
+    }
+
+    .naruto-modal-small {
+      color: #ffd7a8 !important;
+      font-size: 0.95rem !important;
+    }
+
+    .naruto-modal-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .naruto-modal-actions button {
+      border: none;
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: #ff8a00;
+      color: #111827;
+      font-family: var(--site-font);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.18s ease, background-color 0.18s ease;
+    }
+
+    .naruto-modal-actions button.secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff7ed;
+      border: 1px solid rgba(255, 209, 102, 0.30);
+    }
+
+    .naruto-modal-actions button:hover {
+      transform: translateY(-1px);
+      background: #ffd166;
+    }
+
+    .naruto-modal-actions button.loading {
+      cursor: wait;
+      opacity: 0.82;
+      pointer-events: none;
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .naruto-modal-actions button.loading::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      margin-top: -6px;
+      border: 2px solid rgba(17, 24, 39, 0.35);
+      border-top-color: #111827;
+      border-radius: 50%;
+      animation: narutoSpin 0.65s linear infinite;
+    }
+
+    @keyframes narutoSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    .naruto-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      z-index: 10002;
+      transform: translateX(-50%) translateY(18px);
+      opacity: 0;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(17, 24, 39, 0.92);
+      color: #ffd166;
+      border: 1px solid rgba(255, 138, 0, 0.42);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      pointer-events: none;
+      font-weight: 700;
+    }
+
+    .naruto-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    body.naruto-mode h1::after,
+    body.naruto-mode h2::after {
+      content: "  coffee sage mode";
+      color: #ff8a00;
+      font-size: 0.62em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      opacity: 0.85;
+    }
+
+    body.naruto-mode .about-header::before {
+      content: "coffee sage mode";
+      display: inline-block;
+      margin: 0 auto 14px;
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 138, 0, 0.48);
+      border-radius: 999px;
+      color: #ffd166;
+      background: rgba(17, 24, 39, 0.62);
+      box-shadow: 0 0 18px rgba(255, 138, 0, 0.18);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+    }
+
+    /* =========================================================
+       Dark mode
+       ========================================================= */
+    body.dark-mode {
+      background-color: #1f1f1f !important;
+      background-image: none !important;
+      color: #e6e6e6 !important;
+    }
+
+    body.dark-mode a {
+      color: #ffa366 !important;
+      text-decoration: none;
+    }
+
+    body.dark-mode a:hover {
+      color: #ffd4aa !important;
+      text-decoration: underline;
+    }
+
+    body.dark-mode .site-nav,
+    body.dark-mode main,
+    body.dark-mode section {
+      background-color: #1f1f1f !important;
+    }
+
+    body.dark-mode .site-nav a:hover,
+    body.dark-mode .site-nav a.active {
+      background-color: rgba(255, 163, 102, 0.14);
+    }
+
+    body.dark-mode .coffee-card,
+    body.dark-mode .captures-carousel,
+    body.dark-mode .playlist-card iframe,
+    body.dark-mode .calendar-frame,
+    body.dark-mode footer {
+      background-color: #2a2a2a !important;
+      color: #e6e6e6 !important;
+      border-color: #333 !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.40);
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode .coffee-card p {
+      color: #ffd9b3 !important;
+    }
+
+    body.dark-mode .suggest-coffee,
+    body.dark-mode .music-actions button {
+      background-color: #ffa366 !important;
+      color: #1f1f1f !important;
+      box-shadow: 0 2px 6px rgba(255, 163, 102, 0.40);
+    }
+
+    body.dark-mode .suggest-coffee:hover,
+    body.dark-mode .music-actions button:hover {
+      background-color: #ffbb80 !important;
+    }
+
+    body.dark-mode .profile-pic-wrap::after {
+      color: #ffa366;
+    }
+
+    /* =========================================================
+       Responsive behavior
+       ========================================================= */
+    @media (max-width: 1180px) {
+      body.bg-personal-wallpaper {
+        --wallpaper-attachment: scroll;
+        --wallpaper-size: 100% auto;
+      }
+
+      body.naruto-mode,
+      body.coffee-mode {
+        background-size:
+          cover,
+          100% auto,
+          cover,
+          cover;
+        background-attachment:
+          scroll,
+          scroll,
+          scroll,
+          scroll;
+      }
+
+
+      .site-nav {
+        position: sticky;
+        top: 0;
+        left: 0;
         width: 100%;
+        transform: none;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 6px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        border-right: none;
+        border-bottom: 1px solid var(--nav-border);
+        background-color: var(--nav-bg-mobile);
+      }
+
+      .site-nav a {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 0.96rem;
+        background-color: rgba(255, 250, 243, 0.26);
+      }
+
+      .site-nav a:hover {
         transform: none;
       }
-      main { margin-left: 0; }
-      .masonry { column-count: 1; }
+
+      .site-nav .nav-external {
+        margin-top: 0;
+        margin-left: 8px;
+        padding-top: 8px;
+        border-top: none;
+        border-left: 1px dashed rgba(150, 112, 86, 0.32);
+      }
+
+      .nav-theme-button {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 8px 12px;
+        transform: none;
+      }
+
+      .nav-theme-button:hover {
+        transform: none;
+      }
+
+      main {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 28px 20px;
+      }
+
+      main > section,
+      main > .signature,
+      main > footer {
+        max-width: none;
+      }
+
+      .coffee-slide {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .coffee-card {
+        max-width: 100%;
+      }
+
+      .coffee-card img {
+        height: 230px;
+      }
+
+      .profile-pic-wrap {
+        --sage-orbit-radius: 98px;
+      }
+
+      .orbit-coffee {
+        width: 24px;
+        height: 24px;
+        left: -12px;
+        top: -12px;
+        font-size: 15px;
+      }
+
+      .music-control {
+        width: auto;
+        max-width: calc(100vw - 28px);
+      }
+
+      .nature-photo {
+        flex-basis: 260px;
+      }
+
+      .music-playlists {
+        grid-template-columns: 1fr;
+      }
+
+      .postcards-dates {
+        grid-template-columns: 1fr;
+      }
+
+      .naruto-prompt {
+        align-items: flex-start;
+      }
+
+      .naruto-prompt-icon {
+        width: 96px;
+        height: 96px;
+      }
+
+      .nature-photo {
+        flex-basis: 235px;
+      }
+
+      .lightbox {
+        padding: 18px 12px;
+      }
+
+      .lightbox-stage {
+        width: 100%;
+      }
+
+      .lightbox-stage > img {
+        max-height: calc(92vh - 140px);
+      }
+
+      .lightbox-nav {
+        width: 36px;
+        height: 46px;
+        font-size: 1.55rem;
+      }
+
+      .lightbox-prev {
+        left: 8px;
+      }
+
+      .lightbox-next {
+        right: 8px;
+      }
+
+      .lightbox-close {
+        top: 10px;
+        right: 10px;
+      }
+
+      .lightbox-thumb {
+        flex-basis: 64px;
+        height: 48px;
+      }
+
+      .naruto-modal-card {
+        padding: 24px 18px;
+      }
+
+      .naruto-modal-symbol {
+        width: 58px;
+        height: 58px;
+      }
+
+      .music-control {
+        right: 14px;
+        bottom: 14px;
+        width: auto;
+        max-width: calc(100vw - 28px);
+      }
     }
-
-    .dark-mode {
-  background-color: #1f1f1f !important;
-  color: #e6e6e6 !important;
-}
-
-.dark-mode a {
-  color: #ffa366 !important;
-  text-decoration: none;
-}
-
-.dark-mode a:hover {
-  color: #ffd4aa !important;
-  text-decoration: underline;
-}
-
-.dark-mode header,
-.dark-mode main,
-.dark-mode section {
-  background-color: #1f1f1f !important;
-}
-
-.dark-mode .coffee-entry,
-.dark-mode .coffee-card,
-.dark-mode .gallery__caption,
-.dark-mode .carousel-track,
-.dark-mode footer {
-  background-color: #2a2a2a !important;
-  color: #e6e6e6 !important;
-  border-color: #333 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3 {
-  color: #ffd9b3 !important;
-}
-
-.dark-mode .suggest-coffee {
-  background-color: #ffa366 !important;
-  color: #1f1f1f !important;
-  box-shadow: 0 2px 6px rgba(255, 163, 102, 0.4);
-}
-
-.dark-mode .suggest-coffee:hover {
-  background-color: #ffbb80 !important;
-}
-
-.dark-mode .profile-pic::after {
-  color: #ffa366;
-}
-
-
-.dark-mode .coffee-entry p,
-.dark-mode .coffee-entry h3,
-.dark-mode .coffee-card p,
-.dark-mode .coffee-card h3 {
-  color: #e6e6e6 !important;
-}
-
-.dark-mode .coffee-card a {
-  color: #ffa366 !important;
-}
-
-.dark-mode .coffee-card a:hover {
-  color: #ffd4aa !important;
-}
-
   </style>
 </head>
-<body>
 
+<!--
+  Current displays:
+  - Coffee: randomized carousel
+  - Nature: randomized horizontal filmstrip with expanded filmstrip viewer
+-->
 
-<div id="welcome-popup" style="
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 9999; flex-direction: column; color: white;
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-">
-  <h2 style="font-size: 2.5em; color:white;">☕Hi, Welcome to my page!</h2>
-  <p style="margin: 10px 0 20px;">Would you like some ambient background music?</p>
-  <button onclick="startAmbient(true)" style="margin: 5px; padding: 10px 20px;">🎵 Yes, play it!</button>
-  <button onclick="startAmbient(false)" style="margin: 5px; padding: 10px 20px;">🙅‍♂️ No thanks</button>
-</div>
+<body class="theme-warm-coffee bg-personal-wallpaper">
+  <!-- Optional ambient music controller. -->
+  <div id="music-control" class="music-control">
+    <strong>☕ Ambient music</strong>
+    <span>Soft background music while you browse.</span>
+    <div class="music-actions">
+      <button type="button" onclick="playAmbient()">Play</button>
+      <button type="button" onclick="pauseAmbient()">Pause</button>
+      <button type="button" class="secondary" onclick="hideAmbient()">Hide</button>
+    </div>
+  </div>
 
-<audio id="ambient-audio" loop preload="auto" src="data/songs/onelovelyday.mp3"></audio>
+  <audio id="ambient-audio" loop preload="auto" src="data/songs/onelovelyday.mp3"></audio>
 
-
-
-  <header>
-    <a href="#about"> 👋 About </a>
-    <a href="#coffees"> ☕ Coffees </a>
-    <a href="#captures"> 📸 Captures </a>
-    <a href="#music"> 🎶 Music </a>
-    <a href="index.html"> 📬 Professional </a>
-  </header>
-  <main>
-    <section id="about">
-      <div style="text-align: center;">
-        <img src="images/circle_cropped_aaysharma.jpg" alt="Amatya Sharma" class="profile-pic"  title="Captured by my loving girlfriend Hershey"/>
-        <h1>Amatya Sharma</h1>
-        <p>CSE, <a href="https://umich.edu/">UMich, Ann Arbor</a><br>Email: amatya [at] umich.edu</p>
-      </div>
-      <p style="margin-top: 40px; font-size: 17px; text-align: justify;">
-        Heyya! I'm Amatya (uh-mat(h)-yuh), a Himalayan coffee buff pursuing a theory CS PhD one coffee at a time. This is a digital dump of my random thoughts on coffee, nature, and music. For serious stuff, head to my <a href="index.html">professional site</a>, but stay for the puns!
+  <!-- Naruto popup. Hidden by default; opened by the “What’s Naruto?” button. -->
+  <div id="naruto-modal" class="naruto-modal" aria-hidden="true">
+    <div class="naruto-modal-card" role="dialog" aria-modal="true" aria-labelledby="naruto-modal-title">
+      <button type="button" class="naruto-modal-close" onclick="closeNarutoModal()" aria-label="Close Naruto popup">×</button>
+      <div class="naruto-modal-symbol" aria-hidden="true"></div>
+      <h2 id="naruto-modal-title">So… what’s Naruto?</h2>
+      <p id="naruto-modal-text">
+        A chaotic little story about stubborn hope, friendship, hard work, and refusing to quit even when the world keeps score badly.
       </p>
+      <p class="naruto-modal-small">
+        This site has a hidden shinobi mode. It is not subtle.
+      </p>
+      <div class="naruto-modal-actions">
+        <button type="button" onclick="enterNarutoModeFromModal(this)">Enter Naruto mode</button>
+        <button type="button" class="secondary" onclick="cycleNarutoWisdom()">One more line</button>
+        <button type="button" class="secondary" onclick="closeNarutoModal()">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-nav" aria-label="Personal page navigation">
+    <a href="#about" data-section="about"><span class="nav-emoji">👋</span><span class="nav-label">About</span></a>
+    <a href="#coffees" data-section="coffees"><span class="nav-emoji">☕</span><span class="nav-label">Coffees</span></a>
+    <a href="#captures" data-section="captures"><span class="nav-emoji">📸</span><span class="nav-label">Captures</span></a>
+    <a href="#music" data-section="music"><span class="nav-emoji">🎶</span><span class="nav-label">Music</span></a>
+    <a href="professional.html" class="nav-external"><span class="nav-emoji">🎓</span><span class="nav-label">Professional</span></a>
+    <button type="button" class="nav-theme-button" onclick="setNarutoMode(false)">Leave Naruto</button>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="about-header">
+        <span class="profile-pic-wrap">
+          <img
+            id="profile-pic-random"
+            src="images/me/me-modified.png"
+            alt="Amatya Sharma"
+            class="profile-pic"
+            title="Captured by my loving girlfriend Hershey"
+          />
+          <span class="coffee-orbit" aria-hidden="true">
+            <span class="orbit-coffee" style="--angle: 0deg; --delay: 0s;">☕</span>
+            <span class="orbit-coffee" style="--angle: 60deg; --delay: 0.2s;">☕</span>
+            <span class="orbit-coffee" style="--angle: 120deg; --delay: 0.4s;">☕</span>
+            <span class="orbit-coffee" style="--angle: 180deg; --delay: 0.6s;">☕</span>
+            <span class="orbit-coffee" style="--angle: 240deg; --delay: 0.8s;">☕</span>
+            <span class="orbit-coffee" style="--angle: 300deg; --delay: 1s;">☕</span>
+          </span>
+        </span>
+        <h1>Amatya Sharma</h1>
+        <p>
+          CSE, <a href="https://umich.edu/">UMich, Ann Arbor</a><br />
+          Email: amatya [at] umich.edu
+        </p>
+      </div>
+
+      <p class="about-text">
+        Heyya! I'm Amatya (uh-mat(h)-yuh), a Himalayan coffee buff doing a theory CS PhD one coffee at a time. This page is a small scrapbook of coffee, mountains, music, and assorted chaos. For serious stuff, head to my <a href="index.html">professional site</a>.
+      </p>
+
+      <div class="now-brewing" aria-label="Now brewing">
+        <div class="now-brewing-item">
+          <span class="now-brewing-label">Now brewing</span>
+          Blue Tokai cold brew / whatever survives the week
+        </div>
+        <div class="now-brewing-item">
+          <span class="now-brewing-label">Currently listening</span>
+          Soft indie, Bollywood nostalgia, and coffeehouse background noise
+        </div>
+        <div class="now-brewing-item">
+          <span class="now-brewing-label">Recent favorite view</span>
+          Mountains, lakes, or Ann Arbor pretending to be dramatic
+        </div>
+      </div>
     </section>
 
-
-
-
-
-
-<style>
-  /* Coffee grid layout */
-.coffee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.coffee-entry {
-  display: flex;
-  flex-direction: column;
-  background: #fffaf3;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.coffee-entry:hover {
-  transform: translateY(-5px);
-}
-
-.coffee-entry img {
-  border-radius: 8px;
-  margin-bottom: 10px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.coffee-entry h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 20px;
-  color: #5c4033;
-}
-
-.coffee-entry p {
-  font-size: 15px;
-  color: #3a2f2f;
-  line-height: 1.4;
-}
-
-</style>
-
-
-<!-- old coffee static page-->
-<!--
-<section id="coffees">
-  <div style="margin-top: -20px; margin-bottom: 40px;">
-    <button class="suggest-coffee" onclick="window.location.href='content/suggestmecoffee.html'">
-      Suggest me a coffee ☕
-    </button>
-  </div>
-  <h2>Coffees I Have Had</h2>
-<div class="coffee-grid">
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa9.jpg" alt="Misfit Society Coffee Club" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/yttgAbkjgRjk87xt9">Misfit Society Coffee Club</a></h3>
-      <p>This place is as quirky as its name suggests. Perfect for trying experimental coffees or teas, and the decor is straight out of a comic book. Don't miss the Groot Latte!</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa6.jpg" alt="Shinola" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/9QngF4iGrsVSuHcz5">Shinola</a></h3>
-      <p>A cozy cave to work in, minimal disturbance, warm ambience, and great coffees. The classic cappuccino and the lychee jasmine tea were both pretty solid choices.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa4.jpg" alt="Vertex Coffee Roasters" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/dssM5Gsm61LZMdBy8">Vertex Coffee Roasters</a></h3>
-      <p>Open seating coffee house, with delicious citrusy coffees. Try the Lemon Sugar Latte.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa15.jpg" alt="Comet Coffee" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/LcgoufSwoTBQzprw7">Comet Coffee</a></h3>
-      <p>Cozy, small place, with amazing coffee. Great variety of beans and roasts to select from. A true coffee place!</p>
-    </div>
-  </div>
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa10.jpg" alt="The Songbird Cafe" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/C5og4YA2SxFG9HHt5">The Songbird Cafe</a></h3>
-      <p>Typical cafe environment, but the coffee is awesome! Must-try is the Taro Vanilla Steamer. Also sampled their ginger turmeric latte—bold and flavorful.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa11.jpg" alt="Cahoots" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/cQWgNTonKmsdNkqj9">Cahoots</a></h3>
-      <p>Tiny, bright café with funky drinks like the Nimbus Latte. Hard to find a seat, but worth it.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa8.jpg" alt="The Common Cup" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/sT65HkWaQSUCSY8HA">The Common Cup</a></h3>
-      <p>Church café with soul. Had a Café Au Lait while watching a wedding. No kidding.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa5.jpg" alt="Socotra Coffee House" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/qtocei1JMdgyqJou5">Socotra Coffee House</a></h3>
-      <p>Yemeni flavors, amazing Adeni chai. A tea-first café with a sweet punch.</p>
-    </div>
-  </div>
-
-  <div class="coffee-entry">
-    <img src="images/coffees/coffee_aa12.jpg" alt="Argus Farm Stop – Packard" />
-    <div>
-      <h3><a href="https://maps.app.goo.gl/BioqYGq5vxVJLovU6">Argus Farm Stop – Packard</a></h3>
-      <p>Great for cappuccino or lychee jasmine tea. Ideal for chill weekday study sessions.</p>
-    </div>
-  </div>
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_delhi0.jpg" alt="The Immigrant Cafe" />
-  <div>
-    <h3><a href="https://maps.app.goo.gl/ee5keA49u9DM4ji3A">The Immigrant Cafe</a></h3>
-    <p>A calming vibe with cool music and quirky decorations. One of the best places for drinks, coffees, teas on a tiring hot Delhi day. Had a café frappuccino — if you have a sweet tooth, you’ll love it.</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_delhi1.jpg" alt="Himachal Sadan" />
-  <div>
-    <h3><a href="https://maps.app.goo.gl/BexJckrxM4KJvjCM6">Himachal Sadan</a></h3>
-    <p>Never expected coffee from this Himachal government rest house in Delhi to have a mind-blowing cappuccino.</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_ccdiitkgp7.jpg" alt="Cafe Coffee Day, Kharagpur" />
-  <div>
-    <h3><a href="https://maps.app.goo.gl/GDWbzFGEqoiTXopF9">Cafe Coffee Day, Kharagpur</a></h3>
-    <p>One of the few places in Kharagpur for coffee (as of 2022). Favorites: Aztec, Cappuccino Mischief, Recharge, and Unwind. Avoid the Cappuccino AWSM!</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_kol.jpg" alt="Black Brick Cafe, Kolkata" />
-  <div>
-    <h3><a href="https://maps.app.goo.gl/YS3PPYnaiFK6rQLR6">Black Brick Cafe, Kolkata</a></h3>
-    <p>Nice food, artsy interiors, cozy seating. Tried the coffee-chocolate shake — if you have a sweet tooth, go for it!</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_bangalore1.jpg" alt="MTR, Bangalore" />
-  <div>
-    <h3><a href="https://maps.app.goo.gl/MHK5ESRBi2MW92dVA">MTR, Bangalore</a></h3>
-    <p>One of the best cafes to try South Indian breakfasts. Dosas as well as the filter coffee are amazing!!!</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_hamirpur2.jpg" alt="Sharmas, Hamirpur" />
-  <div>
-    <h3>Sharmas, Hamirpur</h3>
-    <p>Another one of my own preparations: Marvahulla Cappuccino using KCRoasters Marvahulla beans.</p>
-  </div>
-</div>
-
-<div class="coffee-entry">
-  <img src="images/coffees/coffee_hamirpur1.jpg" alt="Sharmas, Hamirpur" />
-  <div>
-    <h3>Sharmas, Hamirpur</h3>
-    <p>Another homemade delight — Iced latte using Blue Tokai cold brew blend in 30% milk.</p>
-  </div>
-</div>
-
-</div>
-
-</section>
--->
-
-
-
-
-
-
-
-<style>
-  .coffee-carousel {
-    position: relative;
-    max-width: 1200px;
-    margin: 40px auto;
-    overflow: hidden;
-  }
-
-  .coffee-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-  }
-
-  .coffee-slide {
-    display: flex;
-    gap: 30px;
-    flex: 0 0 100%;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .coffee-card {
-    flex: 1;
-    max-width: 48%;
-    text-align: center;
-    background: #fffaf3;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  .coffee-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 16px;
-  }
-
-  .coffee-card h3 {
-    margin: 10px 0 5px;
-    font-size: 20px;
-    color: #5c4033;
-  }
-
-  .coffee-card p {
-    font-size: 15px;
-    color: #3a2f2f;
-  }
-
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #d3b29b;
-    border: none;
-    font-size: 24px;
-    padding: 10px 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    z-index: 10;
-  }
-
-  .carousel-btn:hover {
-    background-color: #a76d4e;
-    color: white;
-  }
-
-  .carousel-btn:first-of-type {
-    left: 10px;
-  }
-
-  .carousel-btn:last-of-type {
-    right: 10px;
-  }
-</style>
-
-
-
-<!--
-notes 
-16: sanaa latte pistachio
-coffee1.jpg: qamaria iced matcha latte
--->
-<section id="coffees">
-  
-  <h2> <span title="I take my research with a shot of espresso.">☕</span> Coffees I Have Had</h2>
-  <div style="margin-top: -20px; margin-bottom: 40px;">
-    <button class="suggest-coffee" onclick="window.location.href='content/suggestmecoffee.html'">
-      Suggest me a coffee ☕
-    </button>
-  </div>
-    <div class="coffee-carousel">
-      <button class="carousel-btn" onclick="prevSlide()">❮</button>
-      <div id="coffee-track" class="coffee-track"></div>
-      <button class="carousel-btn" onclick="nextSlide()">❯</button>
-    </div>
-</section>
-
-<script>
-  const coffees = [
-  {
-    img: "images/coffees/coffee_london0.jpg",
-    name: "EL&M",
-    link: "https://maps.app.goo.gl/KEXJ9jHW4Ne8GDw96",
-    desc: "Quick airport coffee and brunch at Heathrow Terminal 3. The El&M Aggato (espresso with ice cream and nuts) was a treat."
-  },
-  {
-    img: "images/coffees/coffee_delhi2.jpg",
-    name: "Diggin",
-    link: "https://maps.app.goo.gl/8WM29Mj4CaA4gtXw9",
-    desc: "Artsy, light, fun atmosphere. Good pizzas, nice cafe latte. Reliable and pleasant."
-  },
-  {
-    img: "images/coffees/coffee_ccdiitkgp1.jpg",
-    name: "Cafe Coffee Day, Kharagpur",
-    link: "https://maps.app.goo.gl/GDWbzFGEqoiTXopF9",
-    desc: "Top picks: Aztec, Cappuccino Mischief, Recharge, Unwind. Avoid Cappuccino AWSM!"
-  },
-  {
-    img: "images/coffees/coffee_delhi1.jpg",
-    name: "Himachal Sadan",
-    link: "https://maps.app.goo.gl/BexJckrxM4KJvjCM6",
-    desc: "Mind-blowing cappuccino from the Himachal government rest house in Delhi."
-  },
-  {
-    img: "images/coffees/coffee_aa9.jpg",
-    name: "Misfit Society Coffee Club",
-    link: "https://maps.app.goo.gl/yttgAbkjgRjk87xt9",
-    desc: "Experimental drinks, comic-book vibes. Don’t miss the Groot Latte!"
-  },
-  {
-    img: "images/coffees/coffee_aa6.jpg",
-    name: "Shinola",
-    link: "https://maps.app.goo.gl/9QngF4iGrsVSuHcz5",
-    desc: "Cozy cave to work in, great cappuccino and jasmine tea. Safe, comfy, affordable."
-  },
-  {
-    img: "images/coffees/coffee_aa4.jpg",
-    name: "Vertex Coffee Roasters",
-    link: "https://maps.app.goo.gl/dssM5Gsm61LZMdBy8",
-    desc: "Open seating, citrusy coffees. Try the Lemon Sugar Latte."
-  },
-  {
-    img: "images/coffees/coffee_aa15.jpg",
-    name: "Comet Coffee",
-    link: "https://maps.app.goo.gl/LcgoufSwoTBQzprw7",
-    desc: "Small space, big coffee. Great variety of beans and roasts."
-  },
-  {
-    img: "images/coffees/coffee_aa10.jpg",
-    name: "The Songbird Cafe",
-    link: "https://maps.app.goo.gl/C5og4YA2SxFG9HHt5",
-    desc: "Taro Vanilla Steamer is a must. Ginger turmeric latte is bold and unique."
-  },
-  {
-    img: "images/coffees/coffee_aa11.jpg",
-    name: "Cahoots",
-    link: "https://maps.app.goo.gl/cQWgNTonKmsdNkqj9",
-    desc: "Tiny, bright café with funky drinks like the Nimbus Latte."
-  },
-  {
-    img: "images/coffees/coffee_aa8.jpg",
-    name: "The Common Cup",
-    link: "https://maps.app.goo.gl/sT65HkWaQSUCSY8HA",
-    desc: "Church café with soul. Café Au Lait while wedding couples walk by."
-  },
-  {
-    img: "images/coffees/coffee_aa5.jpg",
-    name: "Socotra Coffee House",
-    link: "https://maps.app.goo.gl/qtocei1JMdgyqJou5",
-    desc: "Yemeni vibes. Amazing Adeni chai. More of a tea-first café."
-  },
-  {
-    img: "images/coffees/coffee_aa12.jpg",
-    name: "Argus Farm Stop – Packard",
-    link: "https://maps.app.goo.gl/BioqYGq5vxVJLovU6",
-    desc: "Cappuccino or lychee jasmine tea. Chill, budget-friendly, reliable."
-  },
-  {
-    img: "images/coffees/coffee_delhi0.jpg",
-    name: "The Immigrant Cafe",
-    link: "https://maps.app.goo.gl/ee5keA49u9DM4ji3A",
-    desc: "Cool music, quirky decor. Frappuccino for the sweet-toothed."
-  },
-  {
-    img: "images/coffees/coffee_kol.jpg",
-    name: "Black Brick Cafe, Kolkata",
-    link: "https://maps.app.goo.gl/YS3PPYnaiFK6rQLR6",
-    desc: "Nice food, artsy interiors. Coffee-chocolate shake was sweet and rich."
-  },
-  {
-    img: "images/coffees/coffee_bangalore1.jpg",
-    name: "MTR, Bangalore",
-    link: "https://maps.app.goo.gl/MHK5ESRBi2MW92dVA",
-    desc: "Try their South Indian breakfast and iconic filter coffee."
-  },
-  {
-    img: "images/coffees/coffee_hamirpur2.jpg",
-    name: "Sharmas, Hamirpur",
-    link: "#",
-    desc: "Homemade Marvahulla Cappuccino using KCRoasters beans."
-  },
-  {
-    img: "images/coffees/coffee_hamirpur1.jpg",
-    name: "Sharmas, Hamirpur",
-    link: "#",
-    desc: "Homemade iced latte using Blue Tokai cold brew and milk."
-  }
-];
-
-  const slidesPerView = 2;
-  let currentSlide = 0;
-
-  const track = document.getElementById("coffee-track");
-
-  // Build all slides upfront
-  for (let i = 0; i < coffees.length; i += slidesPerView) {
-    const slide = document.createElement("div");
-    slide.className = "coffee-slide";
-    for (let j = 0; j < slidesPerView; j++) {
-      const c = coffees[i + j];
-      if (!c) break;
-      const card = document.createElement("div");
-      card.className = "coffee-card";
-      card.innerHTML = `
-        <img src="${c.img}" alt="${c.name}" />
-        <h3><a href="${c.link}" target="_blank">${c.name}</a></h3>
-        <p>${c.desc}</p>
-      `;
-      slide.appendChild(card);
-    }
-    track.appendChild(slide);
-  }
-
-  function updateSlide() {
-    const offset = currentSlide * -100;
-    track.style.transform = `translateX(${offset}%)`;
-  }
-
-  function nextSlide() {
-    const total = Math.ceil(coffees.length / slidesPerView);
-    currentSlide = (currentSlide + 1) % total;
-    updateSlide();
-  }
-
-  function prevSlide() {
-    const total = Math.ceil(coffees.length / slidesPerView);
-    currentSlide = (currentSlide - 1 + total) % total;
-    updateSlide();
-  }
-
-  document.addEventListener("DOMContentLoaded", updateSlide);
-</script>
-
-
-
-
-
-
-<section id="captures">
-  <h2> 📸 Nature Captures</h2>
-  <p>I live in Himachal, but my camera roams wide. Here are some views I’ve clicked from India to the US.</p>
-
-  <div class="carousel-container">
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-    <div class="carousel-track"></div>
-    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
-  </div>
-
-  <div class="lightbox" id="lightbox">
-    <img id="lightbox-img" src="" alt="Zoomed view" />
-  </div>
-</section>
-
-<style>
-  .carousel-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 800px;
-  margin: 30px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-}
-
-.carousel-track img {
-  min-width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  cursor: zoom-in;
-  border-radius: 12px;
-  display: block;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ffffffcc;
-  border: none;
-  font-size: 2rem;
-  padding: 5px 12px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 4px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const imageFilenames = [
-      "hill1.jpg", "hill2.jpg", "hill3.jpg", "hill4.jpg", "hill5.jpg", "hill6.jpg", "hill7.jpg",
-      "hill8.jpg", "hill9.jpg", "hill10.jpg", "hill11.jpg", "hill12.jpg", "hill13.jpg", "hill14.jpg",
-      "hill15.jpg", "hill16.jpg", "hill17.jpg", "hill18.jpg", "hill19.jpg", "hill20.jpg", "hill21.jpg",
-      "hill22.jpg", "hill23.jpg", "hill24.jpg", "hill25.jpg", "hill26.jpg", "hill27.jpg", "hill30.jpg",
-      "hill31.jpg", "hill32.jpg", "hill33.jpg", "hill34.jpg", "hill35.jpg", "hill36.jpg", "hill37.jpg",
-      "hill38.jpg", "hill39.jpg", "hill40.jpg", "hill41.jpg", "hill42.jpg", "hill43.jpg", "hill44.jpg",
-      "hill45.jpg", "hill46.jpg", "hill47.jpg"
+    <!-- Coffees -->
+    <section id="coffees">
+      <h2><span id="espresso-toggle" title="Click for coffee mode.">☕</span> Coffees I Have Had</h2>
+
+      <div class="coffee-actions">
+        <button class="suggest-coffee" type="button" onclick="window.location.href='content/suggestmecoffee.html'">
+          Suggest me a coffee ☕
+        </button>
+      </div>
+
+      <div class="coffee-carousel" aria-label="Coffee carousel">
+        <button class="coffee-carousel-btn prev" type="button" onclick="prevCoffeeSlide()" aria-label="Previous coffee">❮</button>
+        <div id="coffee-track" class="coffee-track"></div>
+        <button class="coffee-carousel-btn next" type="button" onclick="nextCoffeeSlide()" aria-label="Next coffee">❯</button>
+      </div>
+    </section>
+
+    <!-- Nature captures -->
+    <section id="captures">
+      <h2>📸 Nature Captures</h2>
+      <p>I live in Himachal, but my camera roams wide. Here are some views I’ve clicked from India to the US.</p>
+
+      <div id="nature-filmstrip" class="filmstrip"></div>
+
+      <div class="lightbox" id="lightbox" aria-label="Expanded nature photo viewer">
+        <button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Close viewer">×</button>
+        <button class="lightbox-nav lightbox-prev" type="button" onclick="stepLightbox(-1)" aria-label="Previous photo">❮</button>
+
+        <div class="lightbox-stage">
+          <img id="lightbox-img" src="" alt="Zoomed view" />
+          <div id="lightbox-caption" class="lightbox-caption"></div>
+          <div id="lightbox-filmstrip" class="lightbox-filmstrip" aria-label="Photo thumbnails"></div>
+        </div>
+
+        <button class="lightbox-nav lightbox-next" type="button" onclick="stepLightbox(1)" aria-label="Next photo">❯</button>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music" class="music-section">
+      <h2>🎶 My Music</h2>
+      <p>Some playlists that usually match the page: work, coffee, nostalgia, and occasional chaos.</p>
+
+      <div class="music-playlists">
+        <div class="playlist-card">
+          <h3>Late-night work</h3>
+          <iframe src="https://open.spotify.com/embed/playlist/4KwtOuhkePvXxn2xVLtqlX?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="playlist-card">
+          <h3>Hindi nostalgia</h3>
+          <iframe src="https://open.spotify.com/embed/playlist/79T0jY3PIZzNNBm7IjOogx?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="playlist-card">
+          <h3>Coffeehouse background</h3>
+          <iframe src="https://open.spotify.com/embed/playlist/4xzNDj5QuI1NWKm6VSR0uG" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="playlist-card">
+          <h3>Assorted chaos</h3>
+          <iframe src="https://open.spotify.com/embed/playlist/3wuDOPNeGQtrw3I4MjJCf8?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Postcards and dates -->
+    <section id="postcards" class="postcards-section">
+      <h2>📫 Postcards & Dates</h2>
+
+      <div class="postcards-dates">
+        <div class="postcard-block">
+          <h3>Love snail mail? Send me a postcard.</h3>
+          <p>
+            I genuinely like postcards. Mountains, cities, chaotic handwriting — all accepted.
+          </p>
+          <p class="postcard-address">
+            Amatya Sharma<br />
+            2741 Bob and Betty Beyster Building<br />
+            Ann Arbor, MI (US)<br />
+            48109<br />
+            Email: amatya[at]umich.edu
+          </p>
+
+          <div class="naruto-prompt">
+            <img src="images/narutoicon.png" alt="Naruto icon" class="naruto-prompt-icon" onclick="openNarutoModal()" />
+            <div class="naruto-prompt-text">
+              Have you watched Naruto? <button type="button" onclick="openNarutoModal()">What’s Naruto?</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-details">
+          <h3>Dates are important</h3>
+          <iframe
+            class="calendar-frame"
+            src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FDetroit&bgcolor=%23ffffff&showTitle=0&showPrint=0&mode=AGENDA&src=c2NvbG9wZW5kcmE2NTU1NUBnbWFpbC5jb20&src=YW1hdHlhbnRzZUBnbWFpbC5jb20&src=YW1hdHlhQHVtaWNoLmVkdQ&src=Y18yYjYzYTM3ODdlNDA2MmZjNWFjNmFkNzViYTc1NTliOTc1MWJmNmU3MGMwODY1N2NjMTZkYmY0NzE4ODFhZmM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23616161&color=%23B39DDB&color=%23D50000"
+            width="400"
+            height="300"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <p class="signature">– Amatya ☕</p>
+
+    <footer>
+      Last update: 04/2025. Website adapted from <a href="https://jonbarron.info/">Jon Barron</a>.
+    </footer>
+  </main>
+
+  <script>
+    /* =========================================================
+       Random profile picture
+       Uses:
+       - images/me/me-modified.png
+       - images/me/me1-modified.png
+       - images/me/me2-modified.png
+       - images/me/me3-modified.png
+       - images/me/me4-modified.png
+       ========================================================= */
+    const profilePictures = [
+      "images/me/me-modified.png",
+      "images/me/me1-modified.png",
+      "images/me/me2-modified.png",
+      "images/me/me3-modified.jpg",
+      "images/me/me4-modified.png"
     ];
 
-    const track = document.querySelector(".carousel-track");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
+    function randomizeProfilePicture() {
+      const profilePic = document.getElementById("profile-pic-random");
+      if (!profilePic) return;
 
-    // Shuffle image list
-    imageFilenames.sort(() => Math.random() - 0.5);
-
-    // Add images to carousel
-    imageFilenames.forEach(name => {
-      const img = document.createElement("img");
-      img.src = "images/hills/" + name;
-      img.alt = name.replace(".jpg", "").replace(/_/g, " ");
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-      track.appendChild(img);
-    });
-
-    // Lightbox close
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-    });
-
-    // Carousel movement
-    let index = 0;
-    function moveSlide(step) {
-      const slides = track.querySelectorAll("img");
-      index = (index + step + slides.length) % slides.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
+      const randomIndex = Math.floor(Math.random() * profilePictures.length);
+      profilePic.src = profilePictures[randomIndex];
     }
-    window.moveSlide = moveSlide; // expose globally
-  });
-</script>
 
+    /* =========================================================
+       Random Naruto wallpaper
+       Uses:
+       - images/naruto.png
+       - images/naruto1.png
+       - images/naruto2.png
+       ========================================================= */
+    const narutoWallpapers = [
+      'url("images/naruto.png")',
+      'url("images/naruto1.png")',
+      'url("images/naruto2.png")',
+      'url("images/naruto3.png")',
+      'url("images/naruto4.png")',
+      'url("images/naruto5.png")',
+      'url("images/naruto6.png")'
+    ];
 
+    function randomizeNarutoWallpaper() {
+      const randomIndex = Math.floor(Math.random() * narutoWallpapers.length);
+      document.documentElement.style.setProperty("--naruto-wallpaper-image", narutoWallpapers[randomIndex]);
+    }
 
-<section id="music" class="music-section">
-  <h2>🎶  My Music</h2>
-  <p>Here are some playlists that vibe with my thoughts.</p>
-  <div class="music-playlists">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4KwtOuhkePvXxn2xVLtqlX?utm_source=generator"
-      width="40%" height="200" frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
+    /* =========================================================
+       Ambient audio controls
+       ========================================================= */
+    function playAmbient() {
+      const audio = document.getElementById("ambient-audio");
+      if (!audio) return;
 
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/79T0jY3PIZzNNBm7IjOogx?utm_source=generator"
-      width="40%" height="200" frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
-
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4xzNDj5QuI1NWKm6VSR0uG"
-      width="40%" height="200" frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
-
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3wuDOPNeGQtrw3I4MjJCf8?utm_source=generator"
-      width="40%" height="200" frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
-  </div>
-</section>
-
-
-<section id="cal" class="container" style="margin-top: 60px;">
-  <a name="sec_calendar"></a>
-  <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
-    
-    <!-- Calendar on the left -->
-    <div style="flex: 1;">
-      <h2>Dates are important</h2>
-      <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FDetroit&bgcolor=%23ffffff&showTitle=0&showPrint=0&mode=AGENDA&src=c2NvbG9wZW5kcmE2NTU1NUBnbWFpbC5jb20&src=YW1hdHlhbnRzZUBnbWFpbC5jb20&src=YW1hdHlhQHVtaWNoLmVkdQ&src=Y18yYjYzYTM3ODdlNDA2MmZjNWFjNmFkNzViYTc1NTliOTc1MWJmNmU3MGMwODY1N2NjMTZkYmY0NzE4ODFhZmM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23616161&color=%23B39DDB&color=%23D50000" 
-        style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-    </div>
-
-    <!-- Contact on the right -->
-    <div style="flex: 1; text-align: right;">
-      <h2>📫 Love snail mail? Send me a postcard!</h2>
-      <p>
-        Amatya Sharma<br>
-        2741 Bob and Betty Beyster Building<br>
-        Ann Arbor, MI (US)<br>
-        48109<br>
-        Email: amatya[at]umich.edu<br><br>
-      </p>
-      <p style="font-size: 11px;">
-        Last update: 04/2025. Website adapted from <a href="https://jonbarron.info/" style="font-size: 11px">Jon Barron</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<p style="font-family: 'Brush Script MT', cursive; font-size: 22px; text-align: right;">– Amatya ☕</p>
-
-
-</main>
-
-
-
-
-<!-- scroll-triggered fade-in animations for sections
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll("section").forEach(section => {
-    observer.observe(section);
-  });
-</script> -->
-
-<script>
-  function startAmbient(playMusic) {
-    document.getElementById("welcome-popup").style.display = "none";
-    const audio = document.getElementById("ambient-audio");
-    if (playMusic) {
-      audio.volume = 0.5;
-      audio.play().catch(err => {
-        alert("Browser blocked autoplay — tap anywhere to play music.");
+      audio.volume = 0.45;
+      audio.play().catch(() => {
+        alert("Browser blocked autoplay — tap Play again after interacting with the page.");
       });
     }
-  }
-</script>
 
+    function pauseAmbient() {
+      const audio = document.getElementById("ambient-audio");
+      if (!audio) return;
 
+      audio.pause();
+    }
 
-<script>
-  // Optional: Custom alert message
-  const darkQuotes = [
-    "Night owl mode activated. Let’s brew some midnight thoughts...",
-    "Dark as my coffee. And my rough works.",
-    "Math puzzles hits different in the shadows 🌙",
-    "You have entered the nerdy cave.",
-    "Dark mode: Because the sun is overrated."
-  ];
+    function hideAmbient() {
+      const control = document.getElementById("music-control");
+      if (control) control.style.display = "none";
+    }
 
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+    /* =========================================================
+       Coffee carousel
+       ========================================================= */
+const coffees = [
+      { img: "images/coffees/coffee_london0.jpg", name: "EL&M", city: "London", tried: "EL&M Affogato", verdict: "airport treat", featured: false, link: "https://maps.app.goo.gl/KEXJ9jHW4Ne8GDw96", desc: "Quick airport coffee and brunch at Heathrow Terminal 3. The EL&M Affogato was a treat." },
+      { img: "images/coffees/coffee_delhi2.jpg", name: "Diggin", city: "Delhi", tried: "Cafe latte", verdict: "reliable and pleasant", featured: false, link: "https://maps.app.goo.gl/8WM29Mj4CaA4gtXw9", desc: "Artsy, light, fun atmosphere. Good pizzas, nice cafe latte. Reliable and pleasant." },
+      { img: "images/coffees/coffee_ccdiitkgp1.jpg", name: "Cafe Coffee Day, Kharagpur", city: "Kharagpur/Kolkata", tried: "Aztec, Cappuccino Mischief, Recharge, Unwind", verdict: "campus-era classic", featured: true, link: "https://maps.app.goo.gl/GDWbzFGEqoiTXopF9", desc: "Top picks: Aztec, Cappuccino Mischief, Recharge, Unwind. Avoid Cappuccino AWSM!" },
+      { img: "images/coffees/coffee_delhi1.jpg", name: "Himachal Sadan", city: "Delhi", tried: "Cappuccino", verdict: "unexpectedly excellent", featured: true, link: "https://maps.app.goo.gl/BexJckrxM4KJvjCM6", desc: "Mind-blowing cappuccino from the Himachal government rest house in Delhi." },
+      { img: "images/coffees/coffee_aa9.jpg", name: "Misfit Society Coffee Club", city: "Ann Arbor", tried: "Groot Latte", verdict: "experimental and fun", featured: true, link: "https://maps.app.goo.gl/yttgAbkjgRjk87xt9", desc: "Experimental drinks, comic-book vibes. Don’t miss the Groot Latte!" },
+      { img: "images/coffees/coffee_aa6.jpg", name: "Shinola", city: "Ann Arbor", tried: "Cappuccino, lychee jasmine tea", verdict: "safe and comfy", featured: false, link: "https://maps.app.goo.gl/9QngF4iGrsVSuHcz5", desc: "Cozy cave to work in, great cappuccino and jasmine tea. Safe, comfy, affordable." },
+      { img: "images/coffees/coffee_aa4.jpg", name: "Vertex Coffee Roasters", city: "Ann Arbor", tried: "Lemon Sugar Latte", verdict: "citrusy and memorable", featured: true, link: "https://maps.app.goo.gl/dssM5Gsm61LZMdBy8", desc: "Open seating, citrusy coffees. Try the Lemon Sugar Latte." },
+      { img: "images/coffees/coffee_aa15.jpg", name: "Comet Coffee", city: "Ann Arbor", tried: "Rotating beans/roasts", verdict: "small space, serious coffee", featured: false, link: "https://maps.app.goo.gl/LcgoufSwoTBQzprw7", desc: "Small space, big coffee. Great variety of beans and roasts." },
+      { img: "images/coffees/coffee_aa10.jpg", name: "The Songbird Cafe", city: "Ann Arbor", tried: "Taro Vanilla Steamer, ginger turmeric latte", verdict: "fun flavors", featured: false, link: "https://maps.app.goo.gl/C5og4YA2SxFG9HHt5", desc: "Taro Vanilla Steamer is a must. Ginger turmeric latte is bold and unique." },
+      { img: "images/coffees/coffee_aa11.jpg", name: "Cahoots", city: "Ann Arbor", tried: "Nimbus Latte", verdict: "tiny but funky", featured: false, link: "https://maps.app.goo.gl/cQWgNTonKmsdNkqj9", desc: "Tiny, bright café with funky drinks like the Nimbus Latte." },
+      { img: "images/coffees/coffee_aa8.jpg", name: "The Common Cup", city: "Ann Arbor", tried: "Cafe Au Lait", verdict: "church cafe with soul", featured: false, link: "https://maps.app.goo.gl/sT65HkWaQSUCSY8HA", desc: "Church café with soul. Café Au Lait while wedding couples walk by." },
+      { img: "images/coffees/coffee_aa5.jpg", name: "Socotra Coffee House", city: "Ann Arbor", tried: "Adeni chai", verdict: "tea-first Yemeni vibes", featured: false, link: "https://maps.app.goo.gl/qtocei1JMdgyqJou5", desc: "Yemeni vibes. Amazing Adeni chai. More of a tea-first café." },
+      { img: "images/coffees/coffee_aa12.jpg", name: "Argus Farm Stop – Packard", city: "Ann Arbor", tried: "Cappuccino, lychee jasmine tea", verdict: "chill and reliable", featured: false, link: "https://maps.app.goo.gl/BioqYGq5vxVJLovU6", desc: "Cappuccino or lychee jasmine tea. Chill, budget-friendly, reliable." },
+      { img: "images/coffees/coffee_delhi0.jpg", name: "The Immigrant Cafe", city: "Delhi", tried: "Cafe frappuccino", verdict: "sweet-tooth friendly", featured: false, link: "https://maps.app.goo.gl/ee5keA49u9DM4ji3A", desc: "Cool music, quirky decor. Frappuccino for the sweet-toothed." },
+      { img: "images/coffees/coffee_kol.jpg", name: "Black Brick Cafe, Kolkata", city: "Kharagpur/Kolkata", tried: "Coffee-chocolate shake", verdict: "sweet and rich", featured: false, link: "https://maps.app.goo.gl/YS3PPYnaiFK6rQLR6", desc: "Nice food, artsy interiors. Coffee-chocolate shake was sweet and rich." },
+      { img: "images/coffees/coffee_bangalore1.jpg", name: "MTR, Bangalore", city: "Bangalore", tried: "Filter coffee", verdict: "iconic with breakfast", featured: true, link: "https://maps.app.goo.gl/MHK5ESRBi2MW92dVA", desc: "Try their South Indian breakfast and iconic filter coffee." },
+      { img: "images/coffees/coffee_hamirpur2.jpg", name: "Sharmas, Hamirpur", city: "Himachal", tried: "Homemade Marvahulla Cappuccino", verdict: "home brew", featured: false, link: "#", desc: "Homemade Marvahulla Cappuccino using KCRoasters beans." },
+      { img: "images/coffees/coffee_hamirpur1.jpg", name: "Sharmas, Hamirpur", city: "Himachal", tried: "Homemade iced latte", verdict: "cold brew comfort", featured: false, link: "#", desc: "Homemade iced latte using Blue Tokai cold brew and milk." }
+    ];
 
-    // Optional: Show a random quote
-    const quote = darkQuotes[Math.floor(Math.random() * darkQuotes.length)];
-    alert(quote);
-  }
+    const coffeeSlidesPerView = 2;
+    let currentCoffeeSlide = 0;
 
-  // Attach the click event to ☕ emoji
-  document.addEventListener("DOMContentLoaded", function () {
-    const emoji = document.querySelector("span[title*='espresso']");
-    if (emoji) emoji.style.cursor = "pointer";
-    if (emoji) emoji.addEventListener("click", toggleDarkMode);
-  });
-</script>
+    function shuffleArray(items) {
+      return [...items].sort(() => Math.random() - 0.5);
+    }
 
+    function makeCoffeeCard(coffee) {
+      return `
+        <article class="coffee-card">
+          <img src="${coffee.img}" alt="${coffee.name}" />
+          <h3><a href="${coffee.link}" target="_blank" rel="noopener">${coffee.name}</a></h3>
+          ${coffee.city ? `<p class="coffee-meta">${coffee.city}${coffee.tried ? " · " + coffee.tried : ""}</p>` : ""}
+          <p>${coffee.desc}</p>
+        </article>
+      `;
+    }
 
-<!-- <div id="coffee-clock" style="text-align: center; font-size: 18px; margin-top: 20px; color: #8a5c3b;">
-  ☕ Best time for coffee: <span id="coffee-time"></span>
-</div>
+    function buildCoffeeCarousel() {
+      const track = document.getElementById("coffee-track");
+      if (!track) return;
 
-<script>
-  function updateCoffeeTime() {
-    const now = new Date();
-    let h = now.getHours();
-    let m = now.getMinutes();
-    const ampm = h >= 12 ? "PM" : "AM";
-    h = h % 12;
-    h = h ? h : 12;
-    m = m < 10 ? "0" + m : m;
-    document.getElementById("coffee-time").textContent = `${h}:${m} ${ampm}`;
-  }
-  updateCoffeeTime();
-  setInterval(updateCoffeeTime, 60000);
-</script> -->
+      const randomizedCoffees = shuffleArray(coffees);
+      currentCoffeeSlide = 0;
+      track.innerHTML = "";
 
-<script>
-  function activate90s() {
-    const css = document.createElement('style');
-    css.innerHTML = `
-      body {
-        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-        color: #ff00ff !important;
-        font-family: 'Comic Sans MS', cursive !important;
-        animation: blink-bg 1s infinite alternate;
+      for (let i = 0; i < randomizedCoffees.length; i += coffeeSlidesPerView) {
+        const slide = document.createElement("div");
+        slide.className = "coffee-slide";
+
+        for (let j = 0; j < coffeeSlidesPerView; j++) {
+          const coffee = randomizedCoffees[i + j];
+          if (!coffee) break;
+
+          slide.insertAdjacentHTML("beforeend", makeCoffeeCard(coffee));
+        }
+
+        track.appendChild(slide);
       }
-      @keyframes blink-bg {
-        0% { background-color: #000; }
-        100% { background-color: #ffcc00; }
-      }
-      h1, h2, h3 {
-        animation: wiggle 0.2s infinite alternate;
-        color: #00ffff !important;
-        text-shadow: 2px 2px #000;
-      }
-      @keyframes wiggle {
-        from { transform: rotate(-3deg); }
-        to { transform: rotate(3deg); }
-      }
-      a {
-        color: #ff00ff !important;
-        text-decoration: blink;
-      }
-      img {
-        border: 5px dashed #00ffff;
-        box-shadow: 0 0 20px #ff0;
-      }
-    `;
-    document.head.appendChild(css);
-    alert("🌀 Welcome to the 90s Web Experience!");
-  }
 
-  // Activate 90s mode if URL has ?party=likeits1999
-  if (window.location.href.includes("party=likeits1999")) {
-    activate90s();
-  }
-</script>
+      updateCoffeeSlide();
+    }
 
+    function updateCoffeeSlide() {
+      const track = document.getElementById("coffee-track");
+      if (!track) return;
 
+      track.style.transform = `translateX(${-100 * currentCoffeeSlide}%)`;
+    }
 
+    function nextCoffeeSlide() {
+      const total = Math.ceil(coffees.length / coffeeSlidesPerView);
+      currentCoffeeSlide = (currentCoffeeSlide + 1) % total;
+      updateCoffeeSlide();
+    }
+
+    function prevCoffeeSlide() {
+      const total = Math.ceil(coffees.length / coffeeSlidesPerView);
+      currentCoffeeSlide = (currentCoffeeSlide - 1 + total) % total;
+      updateCoffeeSlide();
+    }
+
+    /* =========================================================
+       Nature filmstrip and expanded viewer
+       ========================================================= */
+const captureImages = [
+      { file: "hill1.jpg", caption: "Dudhsagar Falls, Goa", album: "Trips" },
+      { file: "hill2.jpg", caption: "Chenni Kothi, Jibhi", album: "Himachal" },
+      { file: "hill3.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill4.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill5.jpg", caption: "Bilaspur", album: "Himachal" },
+      { file: "hill6.jpg", caption: "Serolsar Lake, Jibhi", album: "Himachal" },
+      { file: "hill7.jpg", caption: "Miramar Beach, Goa", album: "Trips" },
+      { file: "hill8.jpg", caption: "Serolsar Trek, Jibhi", album: "Himachal" },
+      { file: "hill9.jpg", caption: "Shimla", album: "Himachal" },
+      { file: "hill10.jpg", caption: "Pali, Shimla", album: "Himachal" },
+      { file: "hill11.jpg", caption: "Rohru", album: "Himachal" },
+      { file: "hill12.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill13.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill14.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill15.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill16.jpg", caption: "Pathra, Medinipur", album: "India" },
+      { file: "hill17.jpg", caption: "Parashar Lake, Mandi", album: "Himachal" },
+      { file: "hill18.jpg", caption: "Jalori Pass", album: "Himachal" },
+      { file: "hill19.jpg", caption: "Serolsar", album: "Himachal" },
+      { file: "hill20.jpg", caption: "Beas river, Aut", album: "Himachal" },
+      { file: "hill21.jpg", caption: "Serolsar Lake, Jibhi", album: "Himachal" },
+      { file: "hill22.jpg", caption: "Serolsar", album: "Himachal" },
+      { file: "hill23.jpg", caption: "Sam, Thar Desert", album: "Trips" },
+      { file: "hill24.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill25.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill26.jpg", caption: "Shimla", album: "Himachal" },
+      { file: "hill27.jpg", caption: "Hamirpur", album: "Himachal" },
+      { file: "hill30.jpg", caption: "Ann Arbor", album: "Michigan/US" },
+      { file: "hill32.jpg", caption: "Kenosha, WI", album: "Michigan/US" },
+      { file: "hill33.jpg", caption: "New York", album: "Michigan/US" },
+      { file: "hill34.jpg", caption: "Ann Arbor, MI", album: "Michigan/US" },
+      { file: "hill35.jpg", caption: "Dexter, MI", album: "Michigan/US" },
+      { file: "hill36.jpg", caption: "Ann Arbor, MI", album: "Michigan/US" },
+      { file: "hill37.jpg", caption: "Niagara Falls, NY", album: "Michigan/US" },
+      { file: "hill38.jpg", caption: "Niagara Falls, NY", album: "Michigan/US" },
+      { file: "hill39.jpg", caption: "Pictured Rocks, MI", album: "Michigan/US" },
+      { file: "hill40.jpg", caption: "Marquette, MI", album: "Michigan/US" },
+      { file: "hill41.jpg", caption: "Munising, MI", album: "Michigan/US" },
+      { file: "hill42.jpg", caption: "Munising, MI", album: "Michigan/US" },
+      { file: "hill43.jpg", caption: "Tahquamenon Falls, MI", album: "Michigan/US" },
+      { file: "hill44.jpg", caption: "Mandi, HP", album: "Himachal" },
+      { file: "hill45.jpg", caption: "Bilaspur, HP", album: "Himachal" },
+      { file: "hill46.jpg", caption: "K2 Peak", album: "Trips" },
+      { file: "hill47.jpg", caption: "Ann Arbor, MI", album: "Michigan/US" },
+      { file: "hill59.jpg", caption: "Nature capture 59", album: "More captures" },
+      { file: "hill60.jpg", caption: "Nature capture 60", album: "More captures" },
+      { file: "hill61.jpg", caption: "Nature capture 61", album: "More captures" },
+      { file: "hill62.jpg", caption: "Nature capture 62", album: "More captures" },
+      { file: "hill63.jpg", caption: "Nature capture 63", album: "More captures" },
+      { file: "hill64.jpg", caption: "Nature capture 64", album: "More captures" },
+      { file: "hill65.jpg", caption: "Nature capture 65", album: "More captures" },
+      { file: "hill66.jpg", caption: "Nature capture 66", album: "More captures" },
+      { file: "hill67.jpg", caption: "Nature capture 67", album: "More captures" },
+      { file: "hill68.jpg", caption: "Nature capture 68", album: "More captures" },
+      { file: "hill69.jpg", caption: "Nature capture 69", album: "More captures" },
+      { file: "hill70.jpg", caption: "Nature capture 70", album: "More captures" },
+      { file: "hill71.jpg", caption: "Nature capture 71", album: "More captures" },
+      { file: "hill72.jpg", caption: "Nature capture 72", album: "More captures" },
+      { file: "hill73.jpg", caption: "Nature capture 73", album: "More captures" },
+      { file: "hill74.jpg", caption: "Nature capture 74", album: "More captures" },
+      { file: "hill75.jpg", caption: "Nature capture 75", album: "More captures" },
+      { file: "hill76.jpg", caption: "Nature capture 76", album: "More captures" },
+      { file: "hill77.jpg", caption: "Nature capture 77", album: "More captures" },
+      { file: "hill78.jpg", caption: "Nature capture 78", album: "More captures" },
+      { file: "hill79.jpg", caption: "Nature capture 79", album: "More captures" },
+      { file: "hill80.jpg", caption: "Nature capture 80", album: "More captures" },
+      { file: "hill81.jpg", caption: "Nature capture 81", album: "More captures" },
+      { file: "hill82.jpg", caption: "Nature capture 82", album: "More captures" },
+      { file: "hill83.jpg", caption: "Nature capture 83", album: "More captures" },
+      { file: "hill84.jpg", caption: "Nature capture 84", album: "More captures" },
+      { file: "hill85.jpg", caption: "Nature capture 85", album: "More captures" }
+    ];
+
+    let currentLightboxIndex = 0;
+    let activeCaptureImages = [];
+
+    function shuffledCaptureImages() {
+      return shuffleArray(captureImages);
+    }
+
+    function imagePath(photo) {
+      return "images/hills/" + photo.file;
+    }
+
+    function makeNatureFigure(photo, index) {
+      return `
+        <figure class="nature-photo">
+          <img src="${imagePath(photo)}" alt="${photo.caption}" data-photo-index="${index}" />
+          <figcaption class="nature-caption">${photo.caption}</figcaption>
+        </figure>
+      `;
+    }
+
+    function buildNatureFilmstrip() {
+      const filmstrip = document.getElementById("nature-filmstrip");
+      if (!filmstrip) return;
+
+      activeCaptureImages = shuffledCaptureImages();
+      filmstrip.innerHTML = activeCaptureImages.map(makeNatureFigure).join("");
+      attachNatureLightbox(filmstrip);
+    }
+
+    function buildLightboxFilmstrip() {
+      const strip = document.getElementById("lightbox-filmstrip");
+      if (!strip) return;
+
+      strip.innerHTML = activeCaptureImages.map((photo, index) => `
+        <img
+          class="lightbox-thumb"
+          src="${imagePath(photo)}"
+          alt="${photo.caption}"
+          onclick="openLightbox(${index})"
+        />
+      `).join("");
+    }
+
+    function updateLightbox() {
+      const lightboxImg = document.getElementById("lightbox-img");
+      const caption = document.getElementById("lightbox-caption");
+      const strip = document.getElementById("lightbox-filmstrip");
+      if (!lightboxImg || !caption || !strip || !activeCaptureImages.length) return;
+
+      const photo = activeCaptureImages[currentLightboxIndex];
+      lightboxImg.src = imagePath(photo);
+      lightboxImg.alt = photo.caption;
+      caption.textContent = photo.caption;
+
+      strip.querySelectorAll(".lightbox-thumb").forEach((thumb, index) => {
+        thumb.classList.toggle("active", index === currentLightboxIndex);
+        if (index === currentLightboxIndex) {
+          thumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+      });
+    }
+
+    function openLightbox(index) {
+      const lightbox = document.getElementById("lightbox");
+      if (!lightbox || !activeCaptureImages.length) return;
+
+      currentLightboxIndex = (index + activeCaptureImages.length) % activeCaptureImages.length;
+      buildLightboxFilmstrip();
+      updateLightbox();
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      if (lightbox) lightbox.style.display = "none";
+    }
+
+    function stepLightbox(step) {
+      openLightbox(currentLightboxIndex + step);
+    }
+
+    function attachNatureLightbox(root = document) {
+      const lightbox = document.getElementById("lightbox");
+      if (!lightbox) return;
+
+      root.querySelectorAll(".nature-photo img").forEach((img) => {
+        img.addEventListener("click", () => {
+          const index = Number(img.dataset.photoIndex || 0);
+          openLightbox(index);
+        });
+      });
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    /* =========================================================
+       Coffee easter egg
+       ========================================================= */
+    const coffeeQuotes = [
+      "Coffee mode: fully caffeinated.",
+      "Dark roast detected. Proceed with mathematical caution.",
+      "One more espresso and this page proves a theorem.",
+      "Caffeine level: reviewer-response ready.",
+      "Coffee mode: brewed, not rendered."
+    ];
+
+    function showCoffeeToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "naruto-toast";
+      toast.textContent = message;
+      document.body.appendChild(toast);
+
+      requestAnimationFrame(() => toast.classList.add("show"));
+
+      window.setTimeout(() => {
+        toast.classList.remove("show");
+        window.setTimeout(() => toast.remove(), 250);
+      }, 1800);
+    }
+
+    function setCoffeeMode(enabled) {
+      document.body.classList.toggle("coffee-mode", enabled);
+
+      if (enabled) {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.remove("naruto-mode");
+        try {
+          localStorage.setItem("naruto-mode", "off");
+        } catch (error) {
+          // Ignore storage failures.
+        }
+        const quote = coffeeQuotes[Math.floor(Math.random() * coffeeQuotes.length)];
+        showCoffeeToast(quote);
+      } else {
+        showCoffeeToast("Coffee mode: decaffeinated.");
+      }
+    }
+
+    function toggleCoffeeMode() {
+      setCoffeeMode(!document.body.classList.contains("coffee-mode"));
+    }
+
+    function toggleDarkMode() {
+      // Kept as a wrapper because the espresso icon already calls this.
+      toggleCoffeeMode();
+    }
+
+    const narutoWisdom = [
+      "It starts as a goofy ninja show. Then it becomes a suspiciously effective motivational system.",
+      "The core thesis: keep showing up, especially when nobody is impressed yet.",
+      "Hard work, found family, stubborn optimism. Also: dramatic running.",
+      "It is basically a long argument for not giving up before the story gets good.",
+      "Naruto mode is for when the website needs less restraint and more orange."
+    ];
+
+    function openNarutoModal() {
+      const modal = document.getElementById("naruto-modal");
+      if (!modal) return;
+
+      cycleNarutoWisdom();
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeNarutoModal() {
+      const modal = document.getElementById("naruto-modal");
+      if (!modal) return;
+
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function cycleNarutoWisdom() {
+      const text = document.getElementById("naruto-modal-text");
+      if (!text) return;
+
+      const randomIndex = Math.floor(Math.random() * narutoWisdom.length);
+      text.textContent = narutoWisdom[randomIndex];
+    }
+
+    function showNarutoToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "naruto-toast";
+      toast.textContent = message;
+      document.body.appendChild(toast);
+
+      requestAnimationFrame(() => toast.classList.add("show"));
+
+      window.setTimeout(() => {
+        toast.classList.remove("show");
+        window.setTimeout(() => toast.remove(), 250);
+      }, 1800);
+    }
+
+    function setNarutoMode(enabled, options = {}) {
+      document.body.classList.toggle("naruto-mode", enabled);
+
+      try {
+        localStorage.setItem("naruto-mode", enabled ? "on" : "off");
+      } catch (error) {
+        // Ignore storage failures, e.g. private browsing restrictions.
+      }
+
+      const narutoButton = document.querySelector(".nav-theme-button");
+      if (narutoButton) {
+        narutoButton.classList.toggle("active", enabled);
+        narutoButton.textContent = enabled ? "Leave Naruto" : "Naruto";
+      }
+
+      if (enabled) {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.remove("coffee-mode");
+        if (!options.silent) showNarutoToast("Coffee sage mode: activated.");
+      } else if (!options.silent) {
+        showNarutoToast("Back to regular civilian mode.");
+      }
+    }
+
+    function enterNarutoModeFromModal(button) {
+      if (button) {
+        button.classList.add("loading");
+        button.textContent = "Brewing sage coffee...";
+      }
+
+      window.setTimeout(() => {
+        setNarutoMode(true);
+        closeNarutoModal();
+
+        if (button) {
+          button.classList.remove("loading");
+          button.textContent = "Enter Naruto mode";
+        }
+      }, 850);
+    }
+
+    /* =========================================================
+       Page initialization
+       ========================================================= */
+    document.addEventListener("DOMContentLoaded", () => {
+      randomizeProfilePicture();
+      randomizeNarutoWallpaper();
+
+      try {
+        if (localStorage.getItem("naruto-mode") === "on") {
+          setNarutoMode(true, { silent: true });
+        }
+      } catch (error) {
+        // Ignore storage failures.
+      }
+
+      buildCoffeeCarousel();
+
+      buildNatureFilmstrip();
+
+      const espressoToggle = document.getElementById("espresso-toggle");
+      if (espressoToggle) {
+        espressoToggle.style.cursor = "pointer";
+        espressoToggle.addEventListener("click", toggleDarkMode);
+      }
+
+      const navLinks = Array.from(document.querySelectorAll(".site-nav a[data-section]"));
+      const observedSections = navLinks
+        .map((link) => document.getElementById(link.dataset.section))
+        .filter(Boolean);
+
+      function setActiveNav(sectionId) {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.dataset.section === sectionId);
+        });
+      }
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleEntries.length > 0) {
+          setActiveNav(visibleEntries[0].target.id);
+        }
+      }, {
+        root: null,
+        rootMargin: "-35% 0px -50% 0px",
+        threshold: [0.15, 0.35, 0.55]
+      });
+
+      observedSections.forEach((section) => sectionObserver.observe(section));
+      setActiveNav("about");
+
+      document.addEventListener("keydown", (event) => {
+        const narutoModal = document.getElementById("naruto-modal");
+        if (event.key === "Escape" && narutoModal && narutoModal.classList.contains("open")) {
+          closeNarutoModal();
+          return;
+        }
+
+        const lightbox = document.getElementById("lightbox");
+        const isOpen = lightbox && lightbox.style.display === "flex";
+        if (!isOpen) return;
+
+        if (event.key === "ArrowLeft") stepLightbox(-1);
+        if (event.key === "ArrowRight") stepLightbox(1);
+        if (event.key === "Escape") closeLightbox();
+      });
+
+    });
+  </script>
 </body>
 </html>

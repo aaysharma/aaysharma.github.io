@@ -393,6 +393,19 @@
       color: var(--nav-text-hover);
     }
 
+    .top-navbar a.active {
+      background-color: var(--link-blue);
+      color: white;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-weight: 700;
+    }
+
+    .top-navbar a.active:hover {
+      color: white;
+      background-color: var(--nav-text-hover);
+    }
+
     #vertical-navbar {
       position: fixed;
       top: 50%;
@@ -434,8 +447,9 @@
     }
 
     #vertical-navbar a.active {
-      background-color: var(--accent-orange);
+      background-color: var(--link-blue);
       color: white;
+      font-weight: 700;
     }
 
     /* Main content area. In vertical-nav mode, left margin leaves room for the sidebar. */
@@ -876,7 +890,7 @@
   <body class="nav-vertical theme-soft-green bg-none">
   <body class="nav-horizontal theme-blue-gray bg-doodle-landscape">
 -->
-<body class="nav-vertical theme-soft-green bg-none">
+<body class="nav-vertical theme-soft-green bg-doodle-portrait">
   <!-- Horizontal navbar. Shown when <body class="nav-horizontal"> is used, and automatically on smaller screens. -->
   <header class="top-header">
     <nav class="top-navbar" aria-label="Main navigation">
@@ -1673,5 +1687,91 @@
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Back to top">
     ↑
   </button>
+
+  <script>
+    /* =========================================================
+       Active-section navbar highlighting.
+       Scroll-position based, so short sections still highlight reliably.
+       Works for both the vertical navbar and the horizontal/mobile navbar.
+       ========================================================= */
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = Array.from(
+        document.querySelectorAll("#vertical-navbar a[href^='#'], .top-navbar a[href^='#']")
+      );
+
+      const sectionIds = Array.from(
+        new Set(
+          navLinks
+            .map((link) => link.getAttribute("href"))
+            .filter((href) => href && href.startsWith("#") && href.length > 1)
+            .map((href) => href.slice(1))
+        )
+      );
+
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      function setActiveNav(sectionId) {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
+        });
+      }
+
+      function currentSectionId() {
+        if (sections.length === 0) return null;
+
+        const probeY = Math.min(window.innerHeight * 0.34, 260);
+        let current = sections[0].id;
+
+        for (const section of sections) {
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top <= probeY) {
+            current = section.id;
+          }
+        }
+
+        const nearBottom =
+          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+
+        if (nearBottom) {
+          current = sections[sections.length - 1].id;
+        }
+
+        return current;
+      }
+
+      let ticking = false;
+
+      function updateActiveNav() {
+        const sectionId = currentSectionId();
+        if (sectionId) setActiveNav(sectionId);
+        ticking = false;
+      }
+
+      function requestActiveNavUpdate() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateActiveNav);
+          ticking = true;
+        }
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const target = link.getAttribute("href");
+          if (target && target.startsWith("#")) {
+            setActiveNav(target.slice(1));
+          }
+        });
+      });
+
+      updateActiveNav();
+      window.addEventListener("scroll", requestActiveNavUpdate, { passive: true });
+      window.addEventListener("resize", requestActiveNavUpdate);
+      window.addEventListener("hashchange", requestActiveNavUpdate);
+    });
+  </script>
+
 </body>
 </html>
