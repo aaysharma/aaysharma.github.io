@@ -7,29 +7,18 @@
   <meta name="author" content="Amatya Sharma">
   <link rel="icon" href="images/coffee.png">
 
-  <!-- Same broad visual language as the professional/personal pages. -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400..700&display=swap">
 
   <style>
     :root {
       --site-font: 'Alegreya Sans', Verdana, Helvetica, sans-serif;
-
-      --page-bg: #fff8ec;
-      --body-text: #302822;
-      --muted-text: #6f5f52;
-
-      --professional-main: #2f855a;
-      --professional-dark: #234923;
-      --professional-soft: rgba(237, 254, 223, 0.72);
-
-      --personal-main: #8a5c3b;
-      --personal-dark: #5c4033;
-      --personal-soft: rgba(255, 240, 216, 0.78);
-
-      --card-bg: rgba(255, 250, 243, 0.82);
-      --card-border: rgba(150, 112, 86, 0.22);
-      --shadow-soft: 0 8px 26px rgba(77, 45, 25, 0.10);
-      --shadow-hover: 0 14px 36px rgba(77, 45, 25, 0.16);
+      --page-bg: #fffdf8;
+      --body-text: #242424;
+      --muted-text: #667466;
+      --sage: #2f855a;
+      --sage-dark: #234923;
+      --coffee: #8a5c3b;
+      --coffee-dark: #5c4033;
     }
 
     * {
@@ -47,215 +36,90 @@
       font-family: var(--site-font);
       color: var(--body-text);
       background:
-        radial-gradient(circle at 18% 22%, rgba(47, 133, 90, 0.10), transparent 26%),
-        radial-gradient(circle at 82% 78%, rgba(138, 92, 59, 0.12), transparent 28%),
-        linear-gradient(135deg, #fff8ec 0%, #f6fbf2 100%);
+        radial-gradient(circle at 25% 20%, rgba(47, 133, 90, 0.07), transparent 28%),
+        radial-gradient(circle at 75% 80%, rgba(138, 92, 59, 0.07), transparent 30%),
+        var(--page-bg);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      animation: fadeIn 0.8s ease-out;
     }
 
     main {
-      width: min(980px, 100%);
+      width: min(480px, 100%);
     }
 
     .profile-photo {
-      width: min(160px, 42vw);
+      width: min(150px, 42vw);
       border-radius: 50%;
-      margin-bottom: 18px;
-      box-shadow: 0 6px 22px rgba(77, 45, 25, 0.14);
-      animation: fadeUp 0.7s ease-out both;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(2.15rem, 5vw, 3.2rem);
+      margin: 0 0 24px;
+      font-size: clamp(2.1rem, 5vw, 3rem);
       line-height: 1.05;
       font-weight: 700;
       letter-spacing: 0.01em;
-      animation: fadeUp 0.7s ease-out 0.08s both;
     }
 
-    .tagline {
-      margin: 10px auto 30px;
-      max-width: 650px;
-      color: var(--muted-text);
-      font-size: clamp(1.08rem, 2.5vw, 1.25rem);
-      line-height: 1.45;
-      animation: fadeUp 0.7s ease-out 0.16s both;
-    }
-
-    .choice-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-      animation: fadeUp 0.7s ease-out 0.24s both;
-    }
-
-    .choice-card {
-      position: relative;
+    .links {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 225px;
-      padding: 24px;
-      border-radius: 22px;
-      border: 1px solid var(--card-border);
-      background: var(--card-bg);
-      box-shadow: var(--shadow-soft);
-      text-decoration: none;
-      color: var(--body-text);
-      overflow: hidden;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      gap: 12px;
+      align-items: center;
     }
 
-    .choice-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.75;
-      pointer-events: none;
-      transition: opacity 0.22s ease;
-    }
-
-    .choice-card.professional::before {
-      background:
-        radial-gradient(circle at top left, var(--professional-soft), transparent 46%),
-        linear-gradient(135deg, rgba(47, 133, 90, 0.08), transparent);
-    }
-
-    .choice-card.personal::before {
-      background:
-        radial-gradient(circle at top right, var(--personal-soft), transparent 46%),
-        linear-gradient(135deg, rgba(138, 92, 59, 0.08), transparent);
-    }
-
-    .choice-card > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .choice-card:hover,
-    .choice-card:focus-visible {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-      text-decoration: none;
-      outline: none;
-    }
-
-    .choice-card.professional:hover,
-    .choice-card.professional:focus-visible {
-      border-color: rgba(47, 133, 90, 0.44);
-    }
-
-    .choice-card.personal:hover,
-    .choice-card.personal:focus-visible {
-      border-color: rgba(138, 92, 59, 0.46);
-    }
-
-    .choice-icon {
-      font-size: 2.15rem;
-      margin-bottom: 10px;
-    }
-
-    .choice-title {
-      margin: 0 0 8px;
-      font-size: 1.55rem;
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .professional .choice-title {
-      color: var(--professional-dark);
-    }
-
-    .personal .choice-title {
-      color: var(--personal-dark);
-    }
-
-    .choice-description {
-      margin: 0;
-      color: var(--muted-text);
-      font-size: 1.04rem;
-      line-height: 1.42;
-    }
-
-    .choice-action {
+    .page-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      align-self: center;
-      margin-top: 22px;
-      padding: 9px 18px;
+      width: min(280px, 100%);
+      padding: 11px 18px;
       border-radius: 999px;
-      color: white;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      transition: transform 0.22s ease;
-    }
-
-    .professional .choice-action {
-      background: var(--professional-main);
-    }
-
-    .personal .choice-action {
-      background: var(--personal-main);
-    }
-
-    .choice-card:hover .choice-action,
-    .choice-card:focus-visible .choice-action {
-      transform: scale(1.03);
-    }
-
-    .footer-note {
-      margin-top: 28px;
-      color: var(--muted-text);
-      font-size: 0.98rem;
-      animation: fadeUp 0.7s ease-out 0.32s both;
-    }
-
-    .footer-note a {
-      color: var(--professional-main);
-      text-decoration: none;
+      font-size: 1.05rem;
       font-weight: 600;
+      text-decoration: none;
+      color: var(--body-text);
+      background: rgba(255, 255, 255, 0.52);
+      border: 1px solid rgba(120, 120, 120, 0.18);
+      transition: color 0.18s ease, border-color 0.18s ease, background-color 0.18s ease, transform 0.18s ease;
     }
 
-    .footer-note a:hover,
-    .footer-note a:focus-visible {
-      color: var(--personal-main);
-      text-decoration: underline;
+    .page-link:hover,
+    .page-link:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.84);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .page-link.professional:hover,
+    .page-link.professional:focus-visible {
+      color: var(--sage-dark);
+      border-color: rgba(47, 133, 90, 0.38);
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
+    .page-link.personal:hover,
+    .page-link.personal:focus-visible {
+      color: var(--coffee-dark);
+      border-color: rgba(138, 92, 59, 0.40);
     }
 
-    @media (max-width: 720px) {
+    .small-note {
+      margin-top: 18px;
+      color: var(--muted-text);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 520px) {
       body {
-        padding: 1.35rem;
-        align-items: flex-start;
+        padding: 1.25rem;
       }
 
       main {
-        padding-top: 5vh;
-      }
-
-      .choice-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .choice-card {
-        min-height: 190px;
-        padding: 22px;
+        width: 100%;
       }
     }
 
@@ -263,13 +127,11 @@
       *,
       *::before,
       *::after {
-        animation: none !important;
         transition: none !important;
-        scroll-behavior: auto !important;
       }
 
-      .choice-card:hover,
-      .choice-card:focus-visible {
+      .page-link:hover,
+      .page-link:focus-visible {
         transform: none;
       }
     }
@@ -286,37 +148,12 @@
 
     <h1>Amatya Sharma</h1>
 
-    <p class="tagline">
-      Theory CS Ph.D. student at the University of Michigan. Choose the serious page or the coffee-and-mountains page.
-    </p>
+    <nav class="links" aria-label="Choose a page">
+      <a class="page-link professional" href="professional.html">Professional</a>
+      <a class="page-link personal" href="aboutme.html">Personal</a>
+    </nav>
 
-    <section class="choice-grid" aria-label="Choose a page">
-      <a class="choice-card professional" href="professional.html" aria-label="Open professional page">
-        <div>
-          <div class="choice-icon" aria-hidden="true">📘</div>
-          <h2 class="choice-title">Professional</h2>
-          <p class="choice-description">
-            Research, publications, talks, experience, CV, and academic contact.
-          </p>
-        </div>
-        <span class="choice-action">Go to professional page</span>
-      </a>
-
-      <a class="choice-card personal" href="aboutme.html" aria-label="Open personal page">
-        <div>
-          <div class="choice-icon" aria-hidden="true">☕</div>
-          <h2 class="choice-title">Personal</h2>
-          <p class="choice-description">
-            Coffee, music, photos, postcards, and a few unnecessary easter eggs.
-          </p>
-        </div>
-        <span class="choice-action">Go to personal page</span>
-      </a>
-    </section>
-
-    <p class="footer-note">
-      amatya [at] umich.edu · <a href="https://umich.edu/">University of Michigan</a>
-    </p>
+    <!-- <div class="small-note">professional / personal</div> -->
   </main>
 </body>
 </html>
