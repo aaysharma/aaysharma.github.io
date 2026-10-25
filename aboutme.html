@@ -97,11 +97,11 @@
   - bg-none
 
   Examples:
-  <body class="theme-warm-coffee bg-personal-wallpaper">
+  <body class="theme-warm-coffee bg-none">
   <body class="theme-himalayan-sage bg-personal-wallpaper">
   <body class="theme-postcard bg-none">
 
-<body class="theme-warm-coffee bg-personal-wallpaper"> class:
+<body class="theme-warm-coffee bg-none"> class:
        - theme-warm-coffee
        - theme-himalayan-sage
        - theme-postcard
@@ -415,85 +415,6 @@
       color: var(--link-color);
       font-size: 12px;
       text-align: right;
-    }
-
-    /* =========================================================
-       Ambient music controller.
-       Small fixed controller; not a blocking full-page popup.
-       ========================================================= */
-    .music-control {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      width: min(250px, calc(100vw - 36px));
-      padding: 10px 11px;
-      border: 1px solid rgba(150, 112, 86, 0.22);
-      border-radius: 999px;
-      background: var(--card-bg-strong);
-      box-shadow: 0 3px 10px rgba(77, 45, 25, 0.12);
-      backdrop-filter: blur(10px);
-      box-sizing: border-box;
-      line-height: 1.25;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .music-control strong {
-      display: inline;
-      color: var(--heading-text);
-      font-size: 0.92rem;
-      margin: 0;
-      white-space: nowrap;
-    }
-
-    .music-control span {
-      display: none;
-    }
-
-    .music-actions {
-      display: flex;
-      gap: 5px;
-      flex-wrap: nowrap;
-    }
-
-    .music-actions button,
-    .suggest-coffee {
-      border: none;
-      border-radius: 999px;
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      padding: 7px 11px;
-      font-family: var(--site-font);
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .music-actions button.secondary {
-      background: transparent;
-      color: var(--link-color);
-      box-shadow: none;
-      border: 1px solid rgba(150, 112, 86, 0.25);
-    }
-
-    .music-actions button {
-      padding: 5px 8px;
-      font-size: 0.82rem;
-    }
-
-    .music-actions button:hover,
-    .suggest-coffee:hover {
-      background-color: var(--button-hover);
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-
-    .music-actions button.secondary:hover {
-      color: var(--button-text);
     }
 
     /* =========================================================
@@ -866,35 +787,8 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* =========================================================
-       Music and postcards/dates
-       ========================================================= */
-    .music-playlists {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .playlist-card {
-      min-width: 0;
-    }
-
-    .playlist-card h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.05rem;
-      color: var(--heading-text);
-    }
-
-    .playlist-card iframe {
-      width: 100%;
-      height: 176px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(77, 45, 25, 0.13);
-    }
-
-    .postcards-dates {
+    /* Postcards */
+    .postcard-layout {
       display: grid;
       grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
       gap: 28px;
@@ -972,17 +866,7 @@
       color: #ffd166;
     }
 
-    .calendar-details {
-      padding-top: 2px;
-    }
 
-    .calendar-frame {
-      max-width: 100%;
-      border: 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(77, 45, 25, 0.10);
-      background: white;
-    }
 
     .signature {
       font-family: "Brush Script MT", cursive;
@@ -1064,9 +948,7 @@
     }
 
     body.coffee-mode .coffee-card,
-    body.coffee-mode .nature-photo,
-    body.coffee-mode .music-control,
-    body.coffee-mode .calendar-frame {
+    body.coffee-mode .nature-photo {
       box-shadow: 0 5px 18px rgba(217, 154, 95, 0.18);
     }
 
@@ -1249,8 +1131,7 @@
     }
 
     body.naruto-mode .coffee-card,
-    body.naruto-mode .nature-photo,
-    body.naruto-mode .music-control {
+    body.naruto-mode .nature-photo {
       box-shadow: 0 4px 14px rgba(255, 138, 0, 0.18);
     }
 
@@ -1266,9 +1147,6 @@
       color: #ffd166;
     }
 
-    body.naruto-mode .music-control {
-      border-color: rgba(255, 138, 0, 0.35);
-    }
 
     body.naruto-mode .coffee-carousel-btn {
       background-color: rgba(255, 138, 0, 0.74);
@@ -1523,8 +1401,6 @@
 
     body.dark-mode .coffee-card,
     body.dark-mode .captures-carousel,
-    body.dark-mode .playlist-card iframe,
-    body.dark-mode .calendar-frame,
     body.dark-mode footer {
       background-color: #2a2a2a !important;
       color: #e6e6e6 !important;
@@ -1539,15 +1415,13 @@
       color: #ffd9b3 !important;
     }
 
-    body.dark-mode .suggest-coffee,
-    body.dark-mode .music-actions button {
+    body.dark-mode .suggest-coffee {
       background-color: #ffa366 !important;
       color: #1f1f1f !important;
       box-shadow: 0 2px 6px rgba(255, 163, 102, 0.40);
     }
 
-    body.dark-mode .suggest-coffee:hover,
-    body.dark-mode .music-actions button:hover {
+    body.dark-mode .suggest-coffee:hover {
       background-color: #ffbb80 !important;
     }
 
@@ -1669,20 +1543,13 @@
         font-size: 15px;
       }
 
-      .music-control {
-        width: auto;
-        max-width: calc(100vw - 28px);
-      }
 
       .nature-photo {
         flex-basis: 260px;
       }
 
-      .music-playlists {
-        grid-template-columns: 1fr;
-      }
 
-      .postcards-dates {
+      .postcard-layout {
         grid-template-columns: 1fr;
       }
 
@@ -1744,14 +1611,9 @@
         height: 58px;
       }
 
-      .music-control {
-        right: 14px;
-        bottom: 14px;
-        width: auto;
-        max-width: calc(100vw - 28px);
-      }
     }
   </style>
+  <link rel="stylesheet" href="personal.css?v=20261024-personal" />
 </head>
 
 <!--
@@ -1760,21 +1622,8 @@
   - Nature: randomized horizontal filmstrip with expanded filmstrip viewer
 -->
 
-<body class="theme-warm-coffee bg-personal-wallpaper">
-  <!-- Optional ambient music controller. -->
-  <div id="music-control" class="music-control">
-    <strong>☕ Ambient music</strong>
-    <span>Soft background music while you browse.</span>
-    <div class="music-actions">
-      <button type="button" onclick="playAmbient()">Play</button>
-      <button type="button" onclick="pauseAmbient()">Pause</button>
-      <button type="button" class="secondary" onclick="hideAmbient()">Hide</button>
-    </div>
-  </div>
-
-  <audio id="ambient-audio" loop preload="auto" src="data/songs/onelovelyday.mp3"></audio>
-
-  <!-- Naruto popup. Hidden by default; opened by the “What’s Naruto?” button. -->
+<body class="theme-warm-coffee bg-none">
+<!-- Naruto popup. Hidden by default; opened by the “What’s Naruto?” button. -->
   <div id="naruto-modal" class="naruto-modal" aria-hidden="true">
     <div class="naruto-modal-card" role="dialog" aria-modal="true" aria-labelledby="naruto-modal-title">
       <button type="button" class="naruto-modal-close" onclick="closeNarutoModal()" aria-label="Close Naruto popup">×</button>
@@ -1795,18 +1644,25 @@
   </div>
 
   <header class="site-nav" aria-label="Personal page navigation">
-    <a href="#about" data-section="about"><span class="nav-emoji">👋</span><span class="nav-label">About</span></a>
-    <a href="#coffees" data-section="coffees"><span class="nav-emoji">☕</span><span class="nav-label">Coffees</span></a>
-    <a href="#captures" data-section="captures"><span class="nav-emoji">📸</span><span class="nav-label">Captures</span></a>
-    <a href="#music" data-section="music"><span class="nav-emoji">🎶</span><span class="nav-label">Music</span></a>
-    <a href="professional.html" class="nav-external"><span class="nav-emoji">🎓</span><span class="nav-label">Professional</span></a>
+    <a class="site-wordmark" href="#about">Amatya <span>/ off the clock</span></a>
+    <a href="#about" data-section="about"><span class="nav-label">About</span></a>
+    <a href="#coffees" data-section="coffees"><span class="nav-label">Coffees</span></a>
+    <a href="#captures" data-section="captures"><span class="nav-label">Photos</span></a>
+    <a href="#postcards" data-section="postcards"><span class="nav-label">Postcards</span></a>
+    <a href="professional.html" class="nav-external"><span class="nav-label">Professional</span></a>
     <button type="button" class="nav-theme-button" onclick="setNarutoMode(false)">Leave Naruto</button>
   </header>
 
   <main>
     <!-- About -->
     <section id="about">
-      <div class="about-header">
+      <div class="about-copy">
+        <p class="eyebrow">A little beyond research</p>
+        <h1>Amatya Sharma</h1>
+        <p class="about-text">Heyya! I'm Amatya (uh-mat(h)-yuh), a Himalayan coffee buff doing a theory CS PhD one coffee at a time. This page is a small scrapbook of coffee, mountains, and assorted chaos. For serious stuff, head to my <a href="professional.html">professional site</a>.</p>
+        <p class="about-affiliation">CSE, <a href="https://umich.edu/">UMich, Ann Arbor</a> <span aria-hidden="true">·</span> amatya [at] umich.edu</p>
+      </div>
+      <div class="about-portrait">
         <span class="profile-pic-wrap">
           <img
             id="profile-pic-random"
@@ -1824,25 +1680,11 @@
             <span class="orbit-coffee" style="--angle: 300deg; --delay: 1s;">☕</span>
           </span>
         </span>
-        <h1>Amatya Sharma</h1>
-        <p>
-          CSE, <a href="https://umich.edu/">UMich, Ann Arbor</a><br />
-          Email: amatya [at] umich.edu
-        </p>
       </div>
-
-      <p class="about-text">
-        Heyya! I'm Amatya (uh-mat(h)-yuh), a Himalayan coffee buff doing a theory CS PhD one coffee at a time. This page is a small scrapbook of coffee, mountains, music, and assorted chaos. For serious stuff, head to my <a href="index.html">professional site</a>.
-      </p>
-
       <div class="now-brewing" aria-label="Now brewing">
         <div class="now-brewing-item">
           <span class="now-brewing-label">Now brewing</span>
           Blue Tokai cold brew / whatever survives the week
-        </div>
-        <div class="now-brewing-item">
-          <span class="now-brewing-label">Currently listening</span>
-          Soft indie, Bollywood nostalgia, and coffeehouse background noise
         </div>
         <div class="now-brewing-item">
           <span class="now-brewing-label">Recent favorite view</span>
@@ -1853,14 +1695,15 @@
 
     <!-- Coffees -->
     <section id="coffees">
-      <h2><span id="espresso-toggle" title="Click for coffee mode.">☕</span> Coffees I Have Had</h2>
-
+      <div class="section-heading">
+        <div><p class="eyebrow">Coffee notes</p><h2><button type="button" id="espresso-toggle" title="Toggle coffee mode" aria-label="Toggle coffee mode">☕</button> Coffees I Have Had</h2></div>
       <div class="coffee-actions">
         <button class="suggest-coffee" type="button" onclick="window.location.href='content/suggestmecoffee.html'">
-          Suggest me a coffee ☕
+          Suggest a coffee ↗
         </button>
       </div>
 
+      </div>
       <div class="coffee-carousel" aria-label="Coffee carousel">
         <button class="coffee-carousel-btn prev" type="button" onclick="prevCoffeeSlide()" aria-label="Previous coffee">❮</button>
         <div id="coffee-track" class="coffee-track"></div>
@@ -1870,12 +1713,14 @@
 
     <!-- Nature captures -->
     <section id="captures">
-      <h2>📸 Nature Captures</h2>
+      <p class="eyebrow">Through my lens</p>
+      <h2>Nature Captures</h2>
       <p>I live in Himachal, but my camera roams wide. Here are some views I’ve clicked from India to the US.</p>
 
+      <p class="gallery-hint">Scroll to browse · select a photo to expand</p>
       <div id="nature-filmstrip" class="filmstrip"></div>
 
-      <div class="lightbox" id="lightbox" aria-label="Expanded nature photo viewer">
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded nature photo viewer">
         <button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Close viewer">×</button>
         <button class="lightbox-nav lightbox-prev" type="button" onclick="stepLightbox(-1)" aria-label="Previous photo">❮</button>
 
@@ -1889,39 +1734,12 @@
       </div>
     </section>
 
-    <!-- Music -->
-    <section id="music" class="music-section">
-      <h2>🎶 My Music</h2>
-      <p>Some playlists that usually match the page: work, coffee, nostalgia, and occasional chaos.</p>
-
-      <div class="music-playlists">
-        <div class="playlist-card">
-          <h3>Late-night work</h3>
-          <iframe src="https://open.spotify.com/embed/playlist/4KwtOuhkePvXxn2xVLtqlX?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        <div class="playlist-card">
-          <h3>Hindi nostalgia</h3>
-          <iframe src="https://open.spotify.com/embed/playlist/79T0jY3PIZzNNBm7IjOogx?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        <div class="playlist-card">
-          <h3>Coffeehouse background</h3>
-          <iframe src="https://open.spotify.com/embed/playlist/4xzNDj5QuI1NWKm6VSR0uG" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        <div class="playlist-card">
-          <h3>Assorted chaos</h3>
-          <iframe src="https://open.spotify.com/embed/playlist/3wuDOPNeGQtrw3I4MjJCf8?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Postcards and dates -->
+    <!-- Postcards -->
     <section id="postcards" class="postcards-section">
-      <h2>📫 Postcards & Dates</h2>
+      <p class="eyebrow">Keep in touch</p>
+      <h2>Postcards</h2>
 
-      <div class="postcards-dates">
+      <div class="postcard-layout">
         <div class="postcard-block">
           <h3>Love snail mail? Send me a postcard.</h3>
           <p>
@@ -1943,24 +1761,13 @@
           </div>
         </div>
 
-        <div class="calendar-details">
-          <h3>Dates are important</h3>
-          <iframe
-            class="calendar-frame"
-            src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FDetroit&bgcolor=%23ffffff&showTitle=0&showPrint=0&mode=AGENDA&src=c2NvbG9wZW5kcmE2NTU1NUBnbWFpbC5jb20&src=YW1hdHlhbnRzZUBnbWFpbC5jb20&src=YW1hdHlhQHVtaWNoLmVkdQ&src=Y18yYjYzYTM3ODdlNDA2MmZjNWFjNmFkNzViYTc1NTliOTc1MWJmNmU3MGMwODY1N2NjMTZkYmY0NzE4ODFhZmM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23616161&color=%23B39DDB&color=%23D50000"
-            width="400"
-            height="300"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-        </div>
       </div>
     </section>
 
     <p class="signature">– Amatya ☕</p>
 
     <footer>
-      Last update: 04/2025. Website adapted from <a href="https://jonbarron.info/">Jon Barron</a>.
+      Website adapted from <a href="https://jonbarron.info/">Jon Barron</a>.
     </footer>
   </main>
 
@@ -1999,7 +1806,6 @@
        ========================================================= */
     const narutoWallpapers = [
       'url("images/naruto.png")',
-      'url("images/naruto1.png")',
       'url("images/naruto2.png")',
       'url("images/naruto3.png")',
       'url("images/naruto4.png")',
@@ -2010,31 +1816,6 @@
     function randomizeNarutoWallpaper() {
       const randomIndex = Math.floor(Math.random() * narutoWallpapers.length);
       document.documentElement.style.setProperty("--naruto-wallpaper-image", narutoWallpapers[randomIndex]);
-    }
-
-    /* =========================================================
-       Ambient audio controls
-       ========================================================= */
-    function playAmbient() {
-      const audio = document.getElementById("ambient-audio");
-      if (!audio) return;
-
-      audio.volume = 0.45;
-      audio.play().catch(() => {
-        alert("Browser blocked autoplay — tap Play again after interacting with the page.");
-      });
-    }
-
-    function pauseAmbient() {
-      const audio = document.getElementById("ambient-audio");
-      if (!audio) return;
-
-      audio.pause();
-    }
-
-    function hideAmbient() {
-      const control = document.getElementById("music-control");
-      if (control) control.style.display = "none";
     }
 
     /* =========================================================
@@ -2071,7 +1852,7 @@ const coffees = [
     function makeCoffeeCard(coffee) {
       return `
         <article class="coffee-card">
-          <img src="${coffee.img}" alt="${coffee.name}" />
+          <img src="${coffee.img}" alt="${coffee.name}" loading="lazy" />
           <h3><a href="${coffee.link}" target="_blank" rel="noopener">${coffee.name}</a></h3>
           ${coffee.city ? `<p class="coffee-meta">${coffee.city}${coffee.tried ? " · " + coffee.tried : ""}</p>` : ""}
           <p>${coffee.desc}</p>
@@ -2213,8 +1994,8 @@ const captureImages = [
 
     function makeNatureFigure(photo, index) {
       return `
-        <figure class="nature-photo">
-          <img src="${imagePath(photo)}" alt="${photo.caption}" data-photo-index="${index}" />
+        <figure class="nature-photo" tabindex="0" role="button" aria-label="Open photo: ${photo.caption}">
+          <img src="${imagePath(photo)}" alt="${photo.caption}" data-photo-index="${index}" loading="lazy" />
           <figcaption class="nature-caption">${photo.caption}</figcaption>
         </figure>
       `;
@@ -2285,17 +2066,19 @@ const captureImages = [
       const lightbox = document.getElementById("lightbox");
       if (!lightbox) return;
 
-      root.querySelectorAll(".nature-photo img").forEach((img) => {
-        img.addEventListener("click", () => {
-          const index = Number(img.dataset.photoIndex || 0);
-          openLightbox(index);
+      root.querySelectorAll(".nature-photo").forEach((figure) => {
+        const openPhoto = () => openLightbox(Number(figure.querySelector("img").dataset.photoIndex));
+        figure.addEventListener("click", openPhoto);
+        figure.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openPhoto();
+          }
         });
       });
 
       lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
+        if (event.target === lightbox) closeLightbox();
       });
     }
 
@@ -2486,9 +2269,12 @@ const captureImages = [
       }, {
         root: null,
         rootMargin: "-35% 0px -50% 0px",
-        threshold: [0.15, 0.35, 0.55]
+        threshold: 0
       });
 
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => setActiveNav(link.dataset.section));
+      });
       observedSections.forEach((section) => sectionObserver.observe(section));
       setActiveNav("about");
 
