@@ -28,6 +28,7 @@ h1.name-heading { font-size: 2.35rem; border: 0; padding: 0; margin: 0 0 10px; l
 .social-links a { font-size: 0.94rem; font-weight: 400; }
 .social-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .home-intro { margin-top: 28px; }
+.job-market-notice { color: var(--nav-text-hover); font-weight: 700; text-align: center; }
 .home-intro p + p { margin-top: 12px; }
 
 #vertical-navbar { border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
